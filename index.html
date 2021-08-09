@@ -1,0 +1,160 @@
+<!-- 
+    https://coolors.co/78c0e0-449dd1-150578-0e0e52-3943b7
+    https://nology.io/trainee-portfolios/
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: SEO -->
+    <title>Development Portfolio - Saagar Shah</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- TODO: choose better fonts -->
+</head>
+<body>
+    
+    <!-- fixed header with navbar and and "logo"  -->
+    <!-- TODO: responsive navbar with hamburger menu
+    https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci 
+
+    gradients
+    -->
+    <header>        
+        <div class="nav-container">
+            <h2 class="logo"><a href="index.html">Saagar Shah</a></h2>
+            
+            <ul id="nav-menu-button">
+                <li>
+                    <a href="javascript: showNavBar()">Menu</a>
+                    <ul class="navigation">
+                        <li><a href="javascript: goToPageTop()">About</a></li>
+                        <li><a href="#portfolio-section">Portfolio</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </header>    
+    
+    <main>
+        <!-- TODO: mention somewhere that I am a software developer -->
+        <h1>Welcome</h1>
+
+        <div class="flex-body">
+            
+            <!-- section for skills grid -->
+            <div class="flex-column"><section>                
+                <h3>Skills</h3>
+                
+                <!-- TODO:                
+                    - add specific skill icons
+                    - add text that is only visible when you hover over
+                -->
+                <div id="skills">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                </div>
+            </section></div>            
+            
+            <div class="flex-column"><section>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book. It has survived not only five centuries, but also the leap into 
+                electronic typesetting, remaining essentially unchanged. It was popularised in 
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus PageMaker including 
+                versions of Lorem Ipsum.</p>
+            </section></div>
+
+            <div class="flex-column"><section>
+                <img id="profile-picture" src="images/profile_picture.jpg" alt="Profile Picture">
+            </section></div>
+        </div>
+
+        <!-- image thumbnail links to cv, linkedin, etc. -->
+        <div class="flex-body" id="about-image-links">
+            <div class="flex-column"><section>                
+                <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
+                    <img src="images/linkedIn_logo.png" alt="LinkedIn Logo" />
+                </a>                
+            </section></div>
+            <div class="flex-column"><section>
+                <a href="images/cv.png" download><img src="images/cv.png" alt="LinkedIn Logo" /></a>
+            </section></div>
+        </div>
+        
+    </main>
+        
+    <!-- TODO: will probably need some white space between these 2 main sections ("pages") -->
+    <hr />
+
+    <!-- TODO: maybe move to the footer -->
+    <div id="portfolio-section"></div>
+    <main>
+        <h1>Portfolio</h1>
+
+        <div style="text-align: center;">
+            <input type="radio" name="radFilterAppType" id="web" value="web" />
+            <label for="web">Websites</label>
+            <input type="radio" name="radFilterAppType" id="other-apps" value="otherApps" />
+            <label for="other-apps">Other Applications</label>
+        </div>
+        
+        <div class="image-container">
+        
+            <!-- main pictures for slideshow and navigation buttons-->
+            <div id="slideImageOutput"></div>        
+            <div id="slide-navigation-buttons">
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <!-- image caption taken from image alt value and pause/resume slide button -->
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>            
+
+            <!-- thumbnail images for slideshow that can be clicked on to change current selection -->
+            <div id="imgThumbnailsRow"></div><br />
+        </div>  
+    </main>
+
+    <footer>Saagar Shah &copy; 2021</footer>
+
+    <script src="image_slider.js"></script>
+    <script>
+        //when the user clicks on the button, scroll to the top of the document
+        function goToPageTop() 
+        {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        } 
+
+        
+        function showNavBar()
+        {
+            var navigation = document.getElementsByClassName('navigation')[0];
+            
+            if(navigation.style.visibility == "hidden")
+            {
+                navigation.style.visibility = 'unset';
+            }
+            else
+            {
+                navigation.style.visibility = 'hidden';
+            }
+        }
+
+    </script>
+</body>
+</html>
