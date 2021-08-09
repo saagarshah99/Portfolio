@@ -14,6 +14,62 @@
     <link rel="stylesheet" href="styles.css">
     <!-- TODO: convert to SCSS -->
     <!-- TODO: choose better fonts -->
+
+    <style>
+        #fade 
+        {
+            display: none;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+        #light 
+        {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 600px;
+            max-height: 360px;
+            margin-left: -300px;
+            margin-top: -180px;
+            border: 2px solid #FFF;
+            background: #FFF;
+            z-index: 1002;
+            overflow: visible;
+        }
+
+        #boxclose 
+        {
+            float: right;
+            cursor: pointer;
+            color: #fff;
+            border: 1px solid #AEAEAE;
+            border-radius: 3px;
+            background: #222222;
+            font-size: 31px;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 0px;
+            padding: 11px 3px;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            z-index: 1002;
+            opacity: 0.9;
+        }
+
+        .boxclose:before {content: "×";}
+        #fade:hover ~ #boxclose {display:none;}
+    </style>
 </head>
 <body>
     
@@ -118,18 +174,28 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="images/profile_picture.jpg" style="width:100%">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="images/profile_picture.jpg" style="width:100%">
+                </a>
                 <div class="text">
-                    <h3>Project 1</h3>
+                    <h3><a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Project 1
+                    </a></h3>
                     <p>Project Description</p>
-                    <p><a href="#">GitHub</a></p>
-                </div>
+                    <p>
+                        <a href="#">GitHub</a>
+                    </p>
+                </div>                
             </div>
             
             <div class="mySlides fade">
-                <img src="images/1.jpg" style="width:100%">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="images/1.jpg" style="width:100%">
+                </a>
                 <div class="text">
-                    <h3>Project 2</h3>
+                    <h3><a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Project 2
+                    </a></h3>
                     <p>Project Description</p>
                     <p><a href="#">GitHub</a></p>
                 </div>
@@ -147,7 +213,17 @@
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div id="light">
+                <a class="boxclose" id="boxclose" onclick="closeProjectDemo();"></a>
+                <video id="project-video-demo" width="600" controls>
+                <source src="" type="video/mp4"></video>
+            </div>
+
+            <!-- click outside of video to exit -->
+            <div id="fade" onClick="closeProjectDemo();"></div>
         </div>
+
     </main>
 
     <footer>Saagar Shah &copy; 2021</footer>
@@ -159,8 +235,7 @@
         {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
-        } 
-
+        }
         
         function showNavBar()
         {
@@ -175,7 +250,6 @@
                 navigation.style.visibility = 'hidden';
             }
         }
-
     </script>
 </body>
 </html>
