@@ -22,14 +22,22 @@ body {background-color: #EEEAEA;}
   transform: translate(-50%, -50%);
 }
 
+/* body
+{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(38,121,9,0.475210066936931) 35%, rgba(0,212,255,1) 92%); 
+} */
+
 /* fixed header that contains a "logo" and navbar */
 header
 {
-    background-color: #0E0E52;
+  /* background-color: #0E0E52; */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+    
     font-weight: bold;
     position: fixed;
     width: 100%;
     top: 0;
+    padding: 5px;
     
     /* prevents images from overlapping against header/navbar when scrolling */
     z-index: 1; 
@@ -57,7 +65,7 @@ header, .logo a, .navigation a, header a:visited, #nav-menu-button a
   text-decoration: none; color: #fff;
 }
 .navigation a {margin-right: 75px;}
-.navigation a:hover {color: limegreen;}
+.navigation a:hover {color: #0E0E52;}
 
 /* styles for navbar */
 .nav-container 
@@ -329,43 +337,15 @@ footer
     main {margin: 10% 0 0 2%;}
     .flex-body 
     {
-        display: flex;
-        flex-direction: column;
-        flex: wrap;
-        /* grid-gap: 10px; */
+      display: flex;
+      flex-direction: column;
+      flex: wrap;
     }
-    .flex-column section 
-    {
-        /* width: 50vw; */
-        width: 100%;
-    }
+    .flex-column section {width: 100%;}
 
 }
 
-@media all and (max-width: 600px) 
-{
-  main {margin: 20% 0 0 2%;}   
-}
-@media all and (max-width: 500px) 
-{
-  #skills
-  {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media all and (max-width: 470px) 
-{
-  .navigation
-  {
-    margin: 0;
-  }
-}
-
-@media all and (max-width: 350px) 
-{
-  .navigation
-  {
-    visibility: hidden;
-  }
-}
+@media all and (max-width: 600px) {main {margin: 20% 0 0 2%;}}
+@media all and (max-width: 500px) {#skills {grid-template-columns: 1fr 1fr;}}
+@media all and (max-width: 470px) {.navigation {margin: 0;}}
+@media all and (max-width: 350px) {.navigation {visibility: hidden;}}
