@@ -1,4 +1,3 @@
-
 // Next/previous controls (receive positive or negative value)
 function plusSlides(n) 
 {
@@ -18,8 +17,8 @@ function showSlides(n)
     {
         slides[i].style.display = "none";
     }
-  
-  slides[slideIndex-1].style.display = "block";
+
+    slides[slideIndex-1].style.display = "block";
 }
 
 //take path of video as input and load it in lightbox (video popup)

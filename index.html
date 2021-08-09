@@ -10,43 +10,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TODO: SEO -->
-    <title>Development Portfolio - Saagar Shah</title>
+    <title>Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
     <!-- TODO: convert to SCSS -->
     <!-- TODO: choose better fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"> <!-- https://devicon.dev/ -->    
+    <!-- TODO: include link to figma design in readme file on github -->
+    <link rel="shortcut icon" href="images/s_character.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
+    <style>
+
+
+    </style>
 </head>
 <body>
     
-    <!-- fixed header with navbar and and "logo"  -->
-    <!-- TODO: responsive navbar with hamburger menu
-    https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci 
-
-    Use bootstrap if I have to
-        * need to ensure this is all mobile friendly
-
-    gradients
-    -->
+    <!-- TODO: gradients -->    
     <header>        
         <div class="nav-container">
             <h2 class="logo"><a href="index.html">Saagar Shah</a></h2>
             
-            <ul id="nav-menu-button">
-                <li>
-                    <a href="javascript: showNavBar()">Menu</a>
-                    <ul class="navigation">
-                        <li><a href="javascript: goToPageTop()">About</a></li>
-                        <li><a href="#portfolio-section">Portfolio</a></li>
-                    </ul>
-                </li>
+            <ul class="navigation">
+                <li><a href="javascript: goToPageTop()">About Me</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
             </ul>
-            
-        </div>
-    </header>    
+        </div> 
+    </header>
     
+    <div id="about-section"></div>
     <main>
-        <!-- TODO: mention somewhere that I am a software developer -->
-        <h1>Software Engineer</h1>
+        <h1>Software Engineer</h1>        
 
         <div class="flex-body">
             <div class="flex-column"><section>
@@ -57,13 +49,10 @@
         <div class="flex-body">
             
             <!-- section for skills grid -->
-            <div class="flex-column"><section>                
+            <div class="flex-column">
                 <h3>Skills</h3>
                 
-                <!-- TODO:                
-                    - add text that is only visible when you hover over
-                -->
-                <div id="skills">
+                <section id="skills">
                     <i class="devicon-html5-plain-wordmark colored"></i>
                     <i class="devicon-css3-plain-wordmark colored"></i>
                     <i class="devicon-bootstrap-plain-wordmark colored"></i>
@@ -73,25 +62,25 @@
                     <i class="devicon-python-plain colored"></i>
                     <i class="devicon-mysql-plain-wordmark colored"></i>
                     <i class="devicon-linux-plain colored"></i>
-                    <i class="devicon-git-plain-wordmark colored"></i>
-                </div>
-            </section></div>            
+                    <i class="devicon-git-plain-wordmark colored"></i>                
+                </section>
+            </div>
             
-            <div class="flex-column"><section>
+            <div class="flex-column">
                 <h3>About Me</h3>
 
                 <!-- TODO: update this description -->
-                <p>Software Engineering Intern at JCA | London Fashion Academy
+                <section>Software Engineering Intern at JCA | London Fashion Academy
                 with 5+ years of development experience and a First-Class
                 Computer Science degree from Queen Mary University of
                 London. I can showcase my creative side to solve problems by
                 producing software that is user-friendly, aesthetically pleasing
-                and fit for purpose.</p>
-            </section></div>            
+                and fit for purpose.</section>
+            </div>            
         </div>        
     </main>
         
-    <!-- TODO: will probably need some white space between these 2 main sections ("pages") -->
+    <!-- TODO: may need white space here -->
     <!-- <hr /> -->
 
     <div id="portfolio-section"></div>
@@ -105,7 +94,7 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="images/projects/websites/jca_incubation.png" style="width:100%">
+                <img src="images/projects/websites/jca_incubation.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                     onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -115,12 +104,11 @@
                     Bootstrap), JavaScript (including jQuery) and Django. It allows JCA Incubation 
                     members to exclusively communicate, share events and skills with each other, 
                     access newsletters and more.</p>
-                    <p><a href="#">GitHub</a></p>
                 </div>                
             </div>
             
             <div class="mySlides fade">
-                <img src="images/projects/websites/juggling_web_app.png" style="width:100%">
+                <img src="images/projects/websites/juggling_web_app.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                     onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -137,7 +125,7 @@
             </div>
             
             <div class="mySlides fade">
-                <img src="images/projects/websites/computer_crazy.png" style="width:100%">
+                <img src="images/projects/websites/computer_crazy.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -153,7 +141,7 @@
             </div>
         
             <div class="mySlides fade">
-                <img src="images/projects/other/pizza.png" style="width:100%">
+                <img src="images/projects/other/pizza.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -167,7 +155,7 @@
             </div>
             
             <div class="mySlides fade">
-                <img src="images/projects/other/maths.png" style="width:100%">
+                <img src="images/projects/other/maths.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -195,11 +183,13 @@
             <!-- click outside of video to exit -->
             <div id="lightbox-fade" onClick="closeProjectDemo();"></div>
         </div>
+
+
+
     </main>
 
     <hr><footer>
-        <!-- TODO: generate this using JavaScript -->
-        <div>Saagar Shah &copy; 2021</div>
+        <div>Saagar Shah &copy; <span id="output-year"></span></div>
         
         <!-- image thumbnail links to cv, linkedin, etc. -->
         <div id="about-image-links">
@@ -207,32 +197,30 @@
                 <img src="images/linkedIn_logo.png" alt="LinkedIn Logo" />
             </a>
             
-            <!-- TODO: make it more obvious that this is pointing to the CV -->
-            <a href="images/cv.png" download><img src="images/cv.png" alt="LinkedIn Logo" /></a>
+            <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->
+            <div style="position: relative;">
+                <a href="images/cv.png" download>
+                    <img src="images/cv.png" alt="LinkedIn Logo" />
+                    <div class="centered">CV</div>
+                </a>
+            </div>
         </div>        
     </footer>
 
     <script src="project_slideshow.js"></script>
     <script>
-        //when the user clicks on the button, scroll to the top of the document
+        //output current year in footer
+        document.getElementById("output-year").innerHTML = new Date().getFullYear();
+        
+        //scroll/navigate to absolute top or bottom of page
         function goToPageTop() 
         {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        
-        function showNavBar()
+        function goToPageBottom()
         {
-            var navigation = document.getElementsByClassName('navigation')[0];
-            
-            if(navigation.style.visibility == "hidden")
-            {
-                navigation.style.visibility = 'unset';
-            }
-            else
-            {
-                navigation.style.visibility = 'hidden';
-            }
+            window.scrollTo(0,document.body.scrollHeight);
         }
     </script>
 </body>

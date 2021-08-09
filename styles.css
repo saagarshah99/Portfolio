@@ -13,6 +13,15 @@ main {margin: 6% 0 0 2%;}
 main h1, h3 {color: #150578; text-align: center;}
 body {background-color: #EEEAEA;}
 
+/* centered text on top of image */
+.centered 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* fixed header that contains a "logo" and navbar */
 header
 {
@@ -21,6 +30,9 @@ header
     position: fixed;
     width: 100%;
     top: 0;
+    
+    /* prevents images from overlapping against header/navbar when scrolling */
+    z-index: 1; 
 }
 
 /* styles for "logo" in header */
@@ -32,6 +44,7 @@ header
     text-transform: uppercase;  
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 10px;
     width: 200px;
     height: 50px;
@@ -41,25 +54,30 @@ header
 /* styles for links in header */
 header, .logo a, .navigation a, header a:visited, #nav-menu-button a
 {
-  text-decoration: none; color: white;
+  text-decoration: none; color: #fff;
 }
 .navigation a {margin-right: 75px;}
 .navigation a:hover {color: limegreen;}
 
 /* styles for navbar */
-.nav-container {justify-content: space-between; align-items: center;}
+.nav-container 
+{
+  justify-content: space-between; 
+  align-items: center;
+  
+}
 .nav-container, .logo  {display: flex;}
-.navigation  {display: block;}
+.navigation {display: flex;}
 
-.navigation {visibility: hidden;}
 /* TODO: use javascript to show this again, might also have to use
 display block to make it appear verticle instead */
 
 #nav-menu-button
 {
   list-style-type: none;
-
 }
+
+/* TODO: click around nav link text and still be able to activate it */
 
 footer
 {
@@ -78,8 +96,8 @@ footer
 /* styles for each image in skill grid */
 #skills i 
 {
-  width: 60%; 
-  height: 60%; 
+  font-size: auto; 
+  height: auto; 
   line-height: 60%;
 }
 
@@ -141,7 +159,7 @@ footer
 #profile-picture 
 {
   width: 40%; 
-  height: 40%;
+  height: auto;
 } 
 
 #about-image-links
@@ -185,8 +203,7 @@ footer
 .mySlides img
 {
   width: 100%;
-  height: 450px;
-  margin: 0 auto;
+  height: auto;
 }
 .mySlides {display: none;}
 
@@ -319,11 +336,36 @@ footer
     }
     .flex-column section 
     {
-        width: 50vw;
+        /* width: 50vw; */
+        width: 100%;
     }
+
 }
 
 @media all and (max-width: 600px) 
 {
-    main {margin: 20% 0 0 2%;}   
+  main {margin: 20% 0 0 2%;}   
+}
+@media all and (max-width: 500px) 
+{
+  #skills
+  {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 470px) 
+{
+  .navigation
+  {
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 350px) 
+{
+  .navigation
+  {
+    visibility: hidden;
+  }
 }
