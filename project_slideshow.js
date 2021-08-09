@@ -29,8 +29,8 @@ function openProjectDemo(newSrc)
     lightBoxVideo.src = newSrc;
     
     window.scrollTo(0, 0);
-    document.getElementById('light').style.display = 'block';
-    document.getElementById('fade').style.display = 'block';
+    document.getElementById('lightbox').style.display = 'block';
+    document.getElementById('lightbox-fade').style.display = 'block';
     //   lightBoxVideo.play();
 }
 
@@ -38,8 +38,8 @@ function openProjectDemo(newSrc)
 function closeProjectDemo() 
 {
     var lightBoxVideo = document.getElementById("project-video-demo");
-    document.getElementById('light').style.display = 'none';
-    document.getElementById('fade').style.display = 'none';
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-fade').style.display = 'none';
     lightBoxVideo.pause();
 }
 window.document.onkeydown = function(e) 

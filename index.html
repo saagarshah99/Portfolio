@@ -14,68 +14,16 @@
     <link rel="stylesheet" href="styles.css">
     <!-- TODO: convert to SCSS -->
     <!-- TODO: choose better fonts -->
-
-    <style>
-        #fade 
-        {
-            display: none;
-            position: fixed;
-            top: 0%;
-            left: 0%;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            z-index: 1001;
-            -moz-opacity: 0.8;
-            opacity: .80;
-            filter: alpha(opacity=80);
-        }
-
-        #light 
-        {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            max-width: 600px;
-            max-height: 360px;
-            margin-left: -300px;
-            margin-top: -180px;
-            border: 2px solid #FFF;
-            background: #FFF;
-            z-index: 1002;
-            overflow: visible;
-        }
-
-        #boxclose 
-        {
-            float: right;
-            cursor: pointer;
-            color: #fff;
-            border: 1px solid #AEAEAE;
-            border-radius: 3px;
-            background: #222222;
-            font-size: 31px;
-            font-weight: bold;
-            display: inline-block;
-            line-height: 0px;
-            padding: 11px 3px;
-            position: absolute;
-            right: 2px;
-            top: 2px;
-            z-index: 1002;
-            opacity: 0.9;
-        }
-
-        .boxclose:before {content: "×";}
-        #fade:hover ~ #boxclose {display:none;}
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"> <!-- https://devicon.dev/ -->    
 </head>
 <body>
     
     <!-- fixed header with navbar and and "logo"  -->
     <!-- TODO: responsive navbar with hamburger menu
     https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci 
+
+    Use bootstrap if I have to
+        * need to ensure this is all mobile friendly
 
     gradients
     -->
@@ -98,7 +46,13 @@
     
     <main>
         <!-- TODO: mention somewhere that I am a software developer -->
-        <h1>Welcome</h1>
+        <h1>Software Engineer</h1>
+
+        <div class="flex-body">
+            <div class="flex-column"><section>
+                <img id="profile-picture" src="images/profile_picture.jpg" alt="Profile Picture">
+            </section></div>
+        </div>
 
         <div class="flex-body">
             
@@ -107,105 +61,123 @@
                 <h3>Skills</h3>
                 
                 <!-- TODO:                
-                    - add specific skill icons
                     - add text that is only visible when you hover over
                 -->
                 <div id="skills">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
-                    <img src="images/profile_picture.jpg" alt="Cup of Coffee">
+                    <i class="devicon-html5-plain-wordmark colored"></i>
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                    <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-jquery-plain-wordmark colored"></i>
+                    <i class="devicon-java-plain-wordmark colored"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-mysql-plain-wordmark colored"></i>
+                    <i class="devicon-linux-plain colored"></i>
+                    <i class="devicon-git-plain-wordmark colored"></i>
                 </div>
             </section></div>            
             
             <div class="flex-column"><section>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type 
-                specimen book. It has survived not only five centuries, but also the leap into 
-                electronic typesetting, remaining essentially unchanged. It was popularised in 
-                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                and more recently with desktop publishing software like Aldus PageMaker including 
-                versions of Lorem Ipsum.</p>
-            </section></div>
+                <h3>About Me</h3>
 
-            <div class="flex-column"><section>
-                <img id="profile-picture" src="images/profile_picture.jpg" alt="Profile Picture">
-            </section></div>
-        </div>
-
-        <!-- image thumbnail links to cv, linkedin, etc. -->
-        <div class="flex-body" id="about-image-links">
-            <div class="flex-column"><section>                
-                <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
-                    <img src="images/linkedIn_logo.png" alt="LinkedIn Logo" />
-                </a>                
-            </section></div>
-            <div class="flex-column"><section>
-                <a href="images/cv.png" download><img src="images/cv.png" alt="LinkedIn Logo" /></a>
-            </section></div>
-        </div>
-        
+                <!-- TODO: update this description -->
+                <p>Software Engineering Intern at JCA | London Fashion Academy
+                with 5+ years of development experience and a First-Class
+                Computer Science degree from Queen Mary University of
+                London. I can showcase my creative side to solve problems by
+                producing software that is user-friendly, aesthetically pleasing
+                and fit for purpose.</p>
+            </section></div>            
+        </div>        
     </main>
         
     <!-- TODO: will probably need some white space between these 2 main sections ("pages") -->
-    <hr />
+    <!-- <hr /> -->
 
-    <!-- TODO: maybe move to the footer -->
     <div id="portfolio-section"></div>
     <main>
         <h1>Portfolio</h1>
 
-        <div style="text-align: center;">
-            <input type="radio" name="radFilterAppType" id="web" value="web" checked />
-            <label for="web">Websites</label>
-            <input type="radio" name="radFilterAppType" id="other-apps" value="otherApps" />
-            <label for="other-apps">Other Applications</label>
-        </div>
-
         <!-- Slideshow container -->
-        <!-- TODO: video lightbox - https://codepen.io/davidleduc/pen/EPrgqY -->
         <div class="slideshow-container">
+            <!-- TODO: use screenshots that are suitable for 16:9 aspect ratio
+            or perhaps adjust size of img element on a case by basis -->
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                    <img src="images/profile_picture.jpg" style="width:100%">
-                </a>
+                <img src="images/projects/websites/jca_incubation.png" style="width:100%">
                 <div class="text">
-                    <h3><a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        Project 1
+                    <h3><a href="#portfolio-section" 
+                    onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        JCA | London Fashion Academy Incubation
                     </a></h3>
-                    <p>Project Description</p>
-                    <p>
-                        <a href="#">GitHub</a>
-                    </p>
+                    <p>As part of my internship, I built a web app using HTML, CSS (including 
+                    Bootstrap), JavaScript (including jQuery) and Django. It allows JCA Incubation 
+                    members to exclusively communicate, share events and skills with each other, 
+                    access newsletters and more.</p>
+                    <p><a href="#">GitHub</a></p>
                 </div>                
             </div>
             
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                    <img src="images/1.jpg" style="width:100%">
-                </a>
+                <img src="images/projects/websites/juggling_web_app.png" style="width:100%">
                 <div class="text">
-                    <h3><a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        Project 2
+                    <h3><a href="#portfolio-section" 
+                    onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Juggling Web App
                     </a></h3>
-                    <p>Project Description</p>
+                    <p>For my undergraduate final year project, using HTML, CSS (including 
+                    Bootstrap), JavaScript (including jQuery) and Django, I built a social network 
+                    and portal for jugglers that integrates many tools for managing one’s juggling 
+                    experience. Users can organise juggling tricks and set goals, visually learn 
+                    tricks using a graphical simulation, communicate with others and host events.</p>
+                    <p><a href="#">GitHub</a></p>
+                    <p><a href="#">Visit Website</a></p>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/projects/websites/computer_crazy.png" style="width:100%">
+                <div class="text">
+                    <h3><a href="#portfolio-section" 
+                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Ecommerce Gaming Website
+                    </a></h3>
+                    <p>Using HTML, CSS, JavaScript and PHP, I produced an ecommerce website for an 
+                    imaginary company that sells videos games and PCs. It contains a catalogue of 
+                    available games and PCs with reviews, a registration form for monthly newsletters,
+                    contact form for customer enquiries.</p>
+                    <p><a href="#">GitHub</a></p>
+                    <p><a href="#">Visit Website</a></p>
+                </div>
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="images/projects/other/pizza.png" style="width:100%">
+                <div class="text">
+                    <h3><a href="#portfolio-section" 
+                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Pizza Takeaway Management System
+                    </a></h3>
+                    <p>Using Java, I produced a takeaway management system where staff can take
+                    relevant contact details and then the enter the order. It displays an order
+                    summary with the option to print the receipt.</p>
                     <p><a href="#">GitHub</a></p>
                 </div>
             </div>
             
             <div class="mySlides fade">
-                <img src="images/2.jpg" style="width:100%">
+                <img src="images/projects/other/maths.png" style="width:100%">
                 <div class="text">
-                    <h3>Project 3</h3>
-                    <p>Project Description</p>
+                    <h3><a href="#portfolio-section" 
+                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                        Maths Program
+                    </a></h3>
+                    <p>This project is a C# Windows Form Application that involved taking a few small maths 
+                    programs and combining them to produce a slightly bigger solution that can aid anybody 
+                    who wishes to perform different types of calculations all in the same convenient interface. 
+                    These include a number systems converter, basic calculator, number of days lived on earth 
+                    calculator, currency converter, calculator with running total and times table generator.</p>
                     <p><a href="#">GitHub</a></p>
                 </div>
             </div>
@@ -214,19 +186,31 @@
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-            <div id="light">
-                <a class="boxclose" id="boxclose" onclick="closeProjectDemo();"></a>
+            <div id="lightbox">
+                <a class="lightboxClose" id="lightboxClose" onclick="closeProjectDemo();"></a>
                 <video id="project-video-demo" width="600" controls>
                 <source src="" type="video/mp4"></video>
             </div>
 
             <!-- click outside of video to exit -->
-            <div id="fade" onClick="closeProjectDemo();"></div>
+            <div id="lightbox-fade" onClick="closeProjectDemo();"></div>
         </div>
-
     </main>
 
-    <footer>Saagar Shah &copy; 2021</footer>
+    <hr><footer>
+        <!-- TODO: generate this using JavaScript -->
+        <div>Saagar Shah &copy; 2021</div>
+        
+        <!-- image thumbnail links to cv, linkedin, etc. -->
+        <div id="about-image-links">
+            <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
+                <img src="images/linkedIn_logo.png" alt="LinkedIn Logo" />
+            </a>
+            
+            <!-- TODO: make it more obvious that this is pointing to the CV -->
+            <a href="images/cv.png" download><img src="images/cv.png" alt="LinkedIn Logo" /></a>
+        </div>        
+    </footer>
 
     <script src="project_slideshow.js"></script>
     <script>
