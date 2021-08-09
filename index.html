@@ -12,6 +12,7 @@
     <!-- TODO: SEO -->
     <title>Development Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- TODO: convert to SCSS -->
     <!-- TODO: choose better fonts -->
 </head>
 <body>
@@ -105,33 +106,53 @@
         <h1>Portfolio</h1>
 
         <div style="text-align: center;">
-            <input type="radio" name="radFilterAppType" id="web" value="web" />
+            <input type="radio" name="radFilterAppType" id="web" value="web" checked />
             <label for="web">Websites</label>
             <input type="radio" name="radFilterAppType" id="other-apps" value="otherApps" />
             <label for="other-apps">Other Applications</label>
         </div>
-        
-        <div class="image-container">
-        
-            <!-- main pictures for slideshow and navigation buttons-->
-            <div id="slideImageOutput"></div>        
-            <div id="slide-navigation-buttons">
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <!-- image caption taken from image alt value and pause/resume slide button -->
-                <div class="caption-container">
-                <p id="caption"></p>
-                </div>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>            
 
-            <!-- thumbnail images for slideshow that can be clicked on to change current selection -->
-            <div id="imgThumbnailsRow"></div><br />
-        </div>  
+        <!-- Slideshow container -->
+        <!-- TODO: video lightbox - https://codepen.io/davidleduc/pen/EPrgqY -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="images/profile_picture.jpg" style="width:100%">
+                <div class="text">
+                    <h3>Project 1</h3>
+                    <p>Project Description</p>
+                    <p><a href="#">GitHub</a></p>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/1.jpg" style="width:100%">
+                <div class="text">
+                    <h3>Project 2</h3>
+                    <p>Project Description</p>
+                    <p><a href="#">GitHub</a></p>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/2.jpg" style="width:100%">
+                <div class="text">
+                    <h3>Project 3</h3>
+                    <p>Project Description</p>
+                    <p><a href="#">GitHub</a></p>
+                </div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
     </main>
 
     <footer>Saagar Shah &copy; 2021</footer>
 
-    <script src="image_slider.js"></script>
+    <script src="project_slideshow.js"></script>
     <script>
         //when the user clicks on the button, scroll to the top of the document
         function goToPageTop() 

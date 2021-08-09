@@ -19,7 +19,7 @@ function showSlides(n)
 {
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
-    // var captionText = document.getElementById("caption");
+    var captionText = document.getElementById("caption");
 
     if (n > slides.length) {slideIndex = 1;}
     if (n < 1) {slideIndex = slides.length;}
@@ -39,23 +39,24 @@ function showSlides(n)
     // captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// [File name, youtube ID]
-var fileObject = [
-["profile_picture.jpg", "ABfQuZqq8wg"],
-["1.jpg", "TLV4_xaYynY"],
-["2.jpg", "UfmkgQRmmeE"]
-];
-
 //generating output for image slides (w/ embedded youtube links) and thumbnails
 function generateImages()
 {
+  // [File name, youtube ID]
+  var fileObject = [
+    ["profile_picture.jpg", "ABfQuZqq8wg"],
+    ["1.jpg", "TLV4_xaYynY"],
+    ["2.jpg", "UfmkgQRmmeE"]
+  ]; 
   
   var slideOutput = "";
   var captionOutput = "";
+  var captions = [];
     for(var i=0; i<Object.keys(fileObject).length; i++)
     {
         var altText = fileObject[i][1]; //TODO: this text will go below the image (e.g. profile description and links)
 
+        // TODO: put alt text in this image
         slideOutput += "<div class='mySlides'>" + 
         "<a href='#'><img src=\"images/"+fileObject[i][0]+"\"></a>" +
         "</div>";
@@ -63,9 +64,20 @@ function generateImages()
         // TODO: use id to only output the caption for the current image
         /* TODO: hard code the images and captions and hide the ones that 
         aren't currently selected if it doesn't work*/
-        captionOutput += altText;
+        // captionOutput += altText;
+
+        captionOutput += "<div id='caption"+i+"'>"+fileObject[i][1]+"</div>";
     }
+
+
+    // slideOutput = "<div class='mySlides'>" + 
+    // "<a href='#'><img src=\"images/"+fileObject[slideIndex][0]+"\"></a>" +
+    // "</div>";
+
+    // captionOutput = fileObject[slideIndex][1];
+
     
     document.getElementById("slideImageOutput").innerHTML = slideOutput;
+    // document.getElementById("caption").innerHTML = document.getElementById("caption"+slideIndex+1).innerHTML;
     document.getElementById("caption").innerHTML = captionOutput;
 }
