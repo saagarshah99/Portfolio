@@ -15,11 +15,9 @@
     <title>Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
     <!-- TODO: convert to SCSS -->
-    <!-- TODO: choose better fonts -->
     <link rel="shortcut icon" href="images/s_character.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
     <style>
-
 
     </style>
 </head>
@@ -34,6 +32,9 @@
             </ul>
         </div> 
     </header>
+
+    <!-- button for scrolling to top of page (hidden by default) -->
+    <button onclick="goToPageTop()" id="btnScrollToTop">&#8593;</button> 
     
     <div id="about-section"></div>
     <main>
@@ -79,9 +80,6 @@
         </div>        
     </main>
         
-    <!-- TODO: may need white space here -->
-    <!-- <hr /> -->
-
     <div id="portfolio-section"></div>
     <main>
         <h1>Portfolio</h1>
@@ -204,6 +202,19 @@
         function goToPageBottom()
         {
             window.scrollTo(0,document.body.scrollHeight);
+        }
+
+        //show top scroll button when user scrolls down at least 20px from top of document
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() 
+        {
+            var btnScrollToTop = document.getElementById("btnScrollToTop");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+            {
+                btnScrollToTop.style.display = "block";
+            } 
+            else {btnScrollToTop.style.display = "none";}
         }
     </script>
 </body>
