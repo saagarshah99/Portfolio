@@ -25,7 +25,7 @@ body
   transform: translate(-50%, -50%);
 }
 
-/* fixed header that contains a "logo" and navbar */
+/* fixed header with blended opaque gradient background that contains a "logo" and navbar */
 header
 {
   background-color: #0E0E52;
@@ -61,7 +61,7 @@ header
 .logo, .navigation {list-style: none;}
 
 /* styles for links in header */
-header, .logo a, .navigation a, header a:visited, #nav-menu-button a
+header, .logo a, .navigation a, header a:visited
 {
   text-decoration: none; color: #fff;
 }
@@ -76,21 +76,9 @@ header, .logo a, .navigation a, header a:visited, #nav-menu-button a
   
 }
 .nav-container, .logo  {display: flex;}
-.navigation 
-{
-  display: flex;
-}
+.navigation {display: flex;}
 
-/* TODO: use javascript to show this again, might also have to use
-display block to make it appear verticle instead */
-
-#nav-menu-button
-{
-  list-style-type: none;
-}
-
-/* TODO: click around nav link text and still be able to activate it */
-
+/* styles for footer at bottom of page */
 footer
 {
     display: flex;
@@ -336,7 +324,7 @@ footer
 
 /***************ADDITIONAL STYLES FOR RESPONSIVE DESIGN*******************/
 
-/* TOOD: https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
+/* TODO: https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ */
 
 @media all and (max-width: 960px) 
 {
@@ -355,6 +343,7 @@ footer
 
 }
 
+@media all and (max-width: 700px) {main {margin: 12% 0 0 2%;}}
 @media all and (max-width: 600px) {main {margin: 20% 0 0 2%;}}
 
 /* hide navbar and make logo cover entire body width, change number of rows/columns in skills grid  */
