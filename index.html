@@ -15,7 +15,7 @@
     <title>Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
     <!-- TODO: convert to SCSS -->
-    <link rel="shortcut icon" href="images/s_character.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/s_character.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
     <style>
 
@@ -23,10 +23,10 @@
 </head>
 <body>    
     <header>        
-        <div class="nav-container">
-            <h2 class="logo"><a href="index.html">Saagar Shah</a></h2>
+        <div class="flexbox nav-container">
+            <h2 class="flexbox logo">Saagar Shah</h2>
             
-            <ul class="navigation">
+            <ul class="flexbox navigation">
                 <li><a href="javascript: goToPageTop()">About Me</a></li>
                 <li><a href="#portfolio-section">Portfolio</a></li>
             </ul>
@@ -40,19 +40,19 @@
     <main>
         <h1>Software Engineer</h1>        
 
-        <div class="flex-body">
-            <div class="flex-column"><section>
-                <img id="profile-picture" src="images/profile_picture.jpg" alt="Profile Picture">
+        <div class="flex-body flexbox">
+            <div class="flex-column flexbox"><section class="flexbox">
+                <img id="profile-picture" src="assets/images/profile_picture.jpg" alt="Profile Picture">
             </section></div>
         </div>
 
-        <div class="flex-body">
+        <div class="flex-body flexbox">
             
             <!-- section for skills grid -->
-            <div class="flex-column">
+            <div class="flex-column flexbox">
                 <h3>Skills</h3>
                 
-                <section id="skills">
+                <section class="flexbox" id="skills">
                     <i class="devicon-html5-plain-wordmark colored"></i>
                     <i class="devicon-css3-plain-wordmark colored"></i>
                     <i class="devicon-bootstrap-plain-wordmark colored"></i>
@@ -66,11 +66,11 @@
                 </section>
             </div>
             
-            <div class="flex-column">
+            <div class="flex-column flexbox">
                 <h3>About Me</h3>
 
                 <!-- TODO: update this description -->
-                <section>Hi my name is Saagar! I am a Software Engineering Intern at JCA | London 
+                <section class="flexbox">Hi my name is Saagar! I am a Software Engineering Intern at JCA | London 
                 Fashion Academy with 5+ years of development experience and a First-Class
                 Computer Science degree from Queen Mary University of
                 London. I can showcase my creative side to solve problems by
@@ -94,7 +94,7 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="images/projects/jca_incubation.png">
+                <img src="assets/images/projects/jca_incubation.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                     onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -108,7 +108,7 @@
             </div>
             
             <div class="mySlides fade">
-                <img src="images/projects/juggling_web_app.png">
+                <img src="assets/images/projects/juggling_web_app.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                     onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -125,7 +125,7 @@
             </div>
             
             <div class="mySlides fade">
-                <img src="images/projects/computer_crazy.png">
+                <img src="assets/images/projects/computer_crazy.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -141,7 +141,7 @@
             </div>
         
             <div class="mySlides fade">
-                <img src="images/projects/pizza.png">
+                <img src="assets/images/projects/pizza.png">
                 <div class="text">
                     <h3><a href="#portfolio-section" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
@@ -169,19 +169,19 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="flexbox">
         <div>Saagar Shah &copy; <span id="output-year"></span></div>
         
         <!-- image thumbnail links to cv, linkedin, etc. -->
         <div id="about-image-links">
             <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
-                <img src="images/linkedIn_logo.png" alt="LinkedIn Logo" />
+                <img src="assets/images/linkedIn_logo.png" alt="LinkedIn Logo" />
             </a>
             
             <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->
             <div style="position: relative;">
-                <a href="images/cv.png" onclick="alert('CV Downloaded')" download>
-                    <img src="images/cv.png" alt="LinkedIn Logo" />
+                <a href="assets/images/cv.png" onclick="alert('CV Downloaded')" download>
+                    <img src="assets/images/cv.png" alt="LinkedIn Logo" />
                     <div class="centered">CV</div>
                 </a>
             </div>

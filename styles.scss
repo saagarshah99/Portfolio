@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap');
+
+$primary-blue: #150578;
+$secondary-blue : #00d4ff;
+
+
+/********************************GENERIC PAGE STYLES********************************/
+
+/* reset rule and other generic page styles */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Georama', sans-serif;
+}
+html {scroll-behavior: smooth;} 
+
+main 
+{  
+  margin: 7% 0 0 2%;
+
+  h1, h3 {color: $primary-blue;}
+}
+main h1, h3 { text-align: center;}
+body {background-color: #EEEAEA;}
+
+/* centered text on top of image */
+.centered 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flexbox {display: flex;} //add flex to any element that references this class
+
+/* fixed header with blended opaque gradient background that contains a "logo" and navbar */
+header
+{
+  background-color: #0E0E52;
+  background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+  rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+  background-blend-mode: screen;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  opacity: 0.9;  
+  z-index: 1; // specify element stack order to prevent overlapping
+
+  /* styles for "logo" in header */
+  .logo
+  {
+      color: white;
+      text-shadow: 0 0 0.1em white, 0 0 0.2em white, 0px 0px 0.3em white,
+      0px 0px 0.4em #77f,
+      0px 0px 0.6em #00f, 0px 0px 0.8em #0ff, 0px 0px 1.0em #00f, 0px 0px 1.2em white;
+      font-size: x-large;
+      text-transform: uppercase;  
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      width: 200px;
+      height: 50px;
+  }
+
+  /* styles for navbar */
+  .nav-container 
+  {
+    justify-content: space-between; 
+    align-items: center;
+    
+    .navigation
+    {
+      list-style: none;
+      
+      /* styles for links in header */
+      a, a:visited
+      {
+        color: white;
+        margin-right: 75px;
+        text-decoration: none; 
+
+        &:hover {color: $primary-blue;}
+      }    
+    }
+  }
+}
+
+/* fixed scroll to top button that is hidden by default */
+#btnScrollToTop 
+{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* avoid overlapping */
+    border: none;
+    outline: none;
+    background-color: $secondary-blue; 
+    opacity: 0.5;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: xx-large;
+
+    &:hover {background-color: darkgrey;}
+}
+
+/* styles for footer at bottom of page */
+footer
+{
+    align-items: flex-end;
+    justify-content: center;
+    grid-gap: 10px;
+    // align-items: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+/********************************SKILLS GRID STYLES********************************/
+
+
+/* arranging images in rows/columns */
+#skills
+{
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); /* new row if more than 3 images */
+  margin-top: 10px;
+  grid-gap: 50px;
+  font-size: 50px;
+  align-items: center;
+  justify-items: center;
+
+  /* styles for each image in skill grid */
+  i 
+  {
+    height: auto; 
+    line-height: 60%;
+    
+    &:hover {cursor: pointer;}
+  }
+}
+
+
+
+
+
+
+/***************POSITIONING AND ALIGNING FLEXBOX ROWS/COLUMNS*******************/
+
+.flex-body 
+{
+    justify-content: center;
+    align-items: center;
+    grid-gap: 50px;
+    flex: wrap;
+
+    .flex-column 
+    {
+        flex-direction: column;
+        flex: wrap;
+        grid-gap: 10px; /* amend this value */
+
+        div {border: 0px solid black;} 
+
+        section 
+        {
+            width: 40vw;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            ul {list-style-position: inside;}
+            h3 {margin-bottom: 10px;}
+        }
+    }
+}
+
+/* profile picture in the about section */
+#profile-picture 
+{
+  width: 40%; 
+  height: auto;
+  /* border-radius: 100%; */
+  /*filter: grayscale(100%); */
+} 
+
+/* images links for linkedin, cv, etc. */
+#about-image-links
+{
+  display: flex;
+  grid-gap: 10px;
+
+  img
+  {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+/***************PROJECT SLIDESHOW STYLES*******************/
+
+/* Slideshow container */
+.slideshow-container 
+{
+  max-width: 900px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Hide the images by default and set size/align center */
+.mySlides 
+{
+  display: none;
+
+  img
+  {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Next & previous buttons */
+.prev, .next 
+{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+  &:hover, &:hover {background-color: $primary-blue;}
+}
+.next {right: 0; border-radius: 3px 0 0 3px;}
+
+/* Caption text */
+.text 
+{
+  /* position: absolute;
+  color: #f2f2f2; */
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade 
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}  
+@keyframes fade 
+{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* fade effect/animation when opening and closing lightbox */
+#lightbox-fade
+{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+/* styles for project demo video popup */
+#lightbox
+{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 600px;
+    max-height: 360px;
+    margin-left: -300px;
+    margin-top: -180px;
+    border: 2px solid white;
+    background: white;
+    z-index: 1002;
+    overflow: visible;
+    
+    /* styles for close video button in lightbox */
+    &Close
+    {
+        float: right;
+        cursor: pointer;
+        color: white;
+        border: 1px solid #AEAEAE;
+        border-radius: 3px;
+        background: #222222;
+        font-size: 31px;
+        font-weight: bold;
+        display: inline-block;
+        line-height: 0px;
+        padding: 11px 3px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        z-index: 1002;
+        opacity: 0.9;
+    
+        &:hover {color: red;}
+    }
+}
+#lightbox-fade:hover ~ #lightboxClose {display:none;}
+.lightboxClose:before {content: "×";}
+
+
+
+
+
+
+
+/***************ADDITIONAL STYLES FOR RESPONSIVE DESIGN*******************/
+
+@media all and (max-width: 960px) 
+{
+    main {margin: 10% 0 0 2%;}
+
+    .flex-body 
+    {
+      flex-direction: column;
+      flex: wrap;
+    }
+    .flex-column section {width: 100vw;}
+}
+@media all and (max-width: 700px) {main {margin-top: 12%;}}
+@media all and (max-width: 600px) {main {margin-top: 20%;}}
+
+/* hide navbar and make logo cover entire body width, 
+change number of rows/columns in skills grid  */
+@media all and (max-width: 500px) 
+{
+  #skills {grid-template-columns: repeat(2, 1fr);}
+  .navigation {display: none;}  
+  
+  .logo 
+  {
+    width: 100vw;
+    font-size: xx-large;
+  }
+}
+@media all and (max-width: 400px) 
+{
+  main {margin-top: 30%;}
+  #btnScrollToTop {bottom: 70px;}
+}
+@media all and (max-width: 360px) {main {margin-top: 30%;}}
+@media all and (max-width: 190px) {main {margin-top: 50%;}}
