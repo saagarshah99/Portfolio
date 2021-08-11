@@ -115,6 +115,20 @@ footer {
   justify-content: center;
   grid-gap: 10px;
   padding: 20px;
+  /* images links for linkedin, cv, etc. */
+}
+footer #about-image-links {
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+footer #about-image-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+footer #about-image-links #cv-link {
+  position: relative;
 }
 
 /********************************SKILLS GRID STYLES********************************/
@@ -172,20 +186,6 @@ footer {
 #profile-picture {
   width: 15vw;
   height: auto;
-}
-
-/* images links for linkedin, cv, etc. */
-#about-image-links {
-  display: flex;
-  grid-gap: 10px;
-}
-#about-image-links img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-}
-#about-image-links #cv-link {
-  position: relative;
 }
 
 /***************PROJECT SLIDESHOW STYLES*******************/
@@ -306,7 +306,6 @@ footer {
   background: #222222;
   font-size: 31px;
   font-weight: bold;
-  display: inline-block;
   line-height: 0px;
   padding: 11px 3px;
   position: absolute;

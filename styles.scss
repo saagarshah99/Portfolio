@@ -123,6 +123,27 @@ footer
     grid-gap: 10px;
     // align-items: center;
     padding: 20px;
+
+    /* images links for linkedin, cv, etc. */
+    #about-image-links
+    {
+      justify-content: center;
+      align-items: center;
+      grid-gap: 10px;
+      
+      img
+      {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+
+      #cv-link
+      {
+        position: relative;
+        
+      }
+    }
 }
 
 
@@ -202,26 +223,6 @@ footer
   height: auto;
   // filter: grayscale(100%);
 } 
-
-/* images links for linkedin, cv, etc. */
-#about-image-links
-{
-  display: flex;
-  grid-gap: 10px;
-
-  img
-  {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
-
-  #cv-link
-  {
-    position: relative;
-    
-  }
-}
 
 
 
@@ -356,7 +357,6 @@ footer
         background: #222222;
         font-size: 31px;
         font-weight: bold;
-        display: inline-block;
         line-height: 0px;
         padding: 11px 3px;
         position: absolute;
