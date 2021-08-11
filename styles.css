@@ -364,13 +364,13 @@ change number of rows/columns in skills grid  */
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .navigation {
+  header .navigation {
     display: none;
   }
-
-  .logo {
+  header .logo {
     width: 100vw;
     font-size: xx-large;
+    text-align: center;
   }
 }
 @media all and (max-width: 400px) {

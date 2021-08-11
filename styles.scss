@@ -411,12 +411,18 @@ change number of rows/columns in skills grid  */
 @media all and (max-width: 500px) 
 {
   #skills {grid-template-columns: repeat(2, 1fr);}
-  .navigation {display: none;}  
   
-  .logo 
+  header
   {
-    width: 100vw;
-    font-size: xx-large;
+    .navigation {display: none;}  
+    
+    .logo 
+    {
+      width: 100vw;
+      font-size: xx-large;
+      text-align: center;
+    }
+
   }
 }
 @media all and (max-width: 400px) 
