@@ -170,19 +170,21 @@ footer
     justify-content: center;
     align-items: center;
     grid-gap: 50px;
-    flex: wrap;
+    flex-wrap: wrap;
 
     .flex-column 
     {
         flex-direction: column;
-        flex: wrap;
+        flex-wrap: wrap;
         grid-gap: 10px; /* amend this value */
-
+        // width: 100vw;
+        
         div {border: 0px solid black;} 
-
+        
         section 
         {
-            width: 40vw;
+            // margin: 0 auto;
+            width: 45vw;
             padding: 20px;
             flex-wrap: wrap;
             justify-content: center;
@@ -385,9 +387,21 @@ footer
     .flex-body 
     {
       flex-direction: column;
-      flex: wrap;
-    }
-    .flex-column section {width: 100vw;}
+      flex-wrap: wrap;
+      
+      .flex-column 
+      {
+  
+        section 
+        {
+          width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }    
 }
 @media all and (max-width: 700px) {main {margin-top: 12%;}}
 @media all and (max-width: 600px) {main {margin-top: 20%;}}
