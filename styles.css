@@ -46,12 +46,12 @@ header {
   background-color: #0E0E52;
   background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
   background-blend-mode: screen;
+  opacity: 0.95;
   font-weight: bold;
   position: fixed;
   width: 100%;
   top: 0;
   padding: 10px;
-  opacity: 0.9;
   z-index: 1;
   /* styles for "logo" in header */
   /* styles for navbar */
@@ -97,6 +97,7 @@ header .nav-container .navigation a:hover, header .nav-container .navigation a:v
   outline: none;
   background-color: #00d4ff;
   opacity: 0.5;
+  transition: 0.6s ease;
   color: black;
   font-weight: bold;
   cursor: pointer;
@@ -135,6 +136,7 @@ footer {
 }
 #skills i:hover {
   cursor: pointer;
+  color: #00d4ff;
 }
 
 /***************POSITIONING AND ALIGNING FLEXBOX ROWS/COLUMNS*******************/
@@ -184,59 +186,70 @@ footer {
   height: 40px;
   border-radius: 10px;
 }
+#about-image-links #cv-link {
+  position: relative;
+}
 
 /***************PROJECT SLIDESHOW STYLES*******************/
 /* Slideshow container */
 .slideshow-container {
-  max-width: 900px;
   position: relative;
-  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Hide the images by default and set size/align center */
 .mySlides {
   display: none;
+  /* Caption text */
+}
+.mySlides a:any-link {
+  text-decoration: none;
 }
 .mySlides img {
-  width: 100%;
+  width: 60vw;
   height: auto;
+  border-radius: 10px 10px 0 0;
 }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+.mySlides .project-caption-bar, .mySlides .text {
+  width: 60vw;
+}
+.mySlides .text {
+  font-size: 15px;
+  margin: 0 auto;
+  /* Next & previous buttons */
+}
+.mySlides .text .project-caption-bar {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #474343;
+  border-radius: 0 0 10px 10px;
+}
+.mySlides .text .project-caption-bar a:any-link {
   color: white;
-  background-color: black;
-  opacity: 0.8;
+}
+.mySlides .text .prev, .mySlides .text .next {
+  cursor: pointer;
+  padding: 10px;
+  align-items: center;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3vw;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  color: #00d4ff;
+  opacity: 0.5;
 }
-.prev:hover, .prev:hover, .next:hover, .next:hover {
-  background-color: #150578;
+.mySlides .text .prev:hover, .mySlides .text .next:hover {
+  color: lightgray;
 }
-
-.next {
+.mySlides .text .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-/* Caption text */
-.text {
-  /* position: absolute;
-  color: #f2f2f2; */
-  font-size: 15px;
-  padding: 8px 12px;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.mySlides .text .project-description {
+  margin-top: 10px;
 }
 
 /* Fading animation */

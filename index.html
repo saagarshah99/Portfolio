@@ -14,12 +14,8 @@
     <meta name="author" content="Saagar Shah">
     <title>Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- TODO: convert to SCSS -->
     <link rel="shortcut icon" href="assets/images/s_character.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
-    <style>
-
-    </style>
 </head>
 <body>    
     <header>        
@@ -34,7 +30,9 @@
     </header>
 
     <!-- button for scrolling to top of page (hidden by default) -->
-    <button onclick="goToPageTop()" id="btnScrollToTop">&#8593;</button> 
+    <a href="javascript: goToPageTop()" id="btnScrollToTop">
+        <i class="fas fa-arrow-alt-circle-up"></i>
+    </a>
     
     <div id="about-section"></div>
     <main>
@@ -90,35 +88,53 @@
             or perhaps adjust size of img element on a case by basis
         
                 Record video demos to include in here
+
+                - include alt text, can be same as project title 
+                (maybe include screenshot/demo keyword at the end)
+                - join the prev/next buttons with the caption (project title)
+                    * make this mobile friendly
             -->
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
                 <img src="assets/images/projects/jca_incubation.png">
                 <div class="text">
-                    <h3><a href="#portfolio-section" 
-                    onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        JCA | London Fashion Academy Incubation Portal
-                    </a></h3>
-                    <p>As part of my internship, I built a web app using HTML, CSS (including 
-                    Bootstrap), JavaScript (including jQuery) and Django. It allows JCA Incubation 
-                    members to exclusively communicate, share events and skills with each other, 
-                    access newsletters and more.</p>
+                    <div class="flexbox project-caption-bar">
+                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <h4><a href="#portfolio-section" 
+                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                            JCA | London Fashion Academy Incubation Portal
+                        </a></h4>
+                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                    </div>
+                    <p class="project-description">
+                        As part of my internship, I built a web app using HTML, CSS (including 
+                        Bootstrap), JavaScript (including jQuery) and Django. It allows JCA Incubation 
+                        members to exclusively communicate, share events and skills with each other, 
+                        access newsletters and more.
+                    </p>
                 </div>                
             </div>
             
             <div class="mySlides fade">
                 <img src="assets/images/projects/juggling_web_app.png">
                 <div class="text">
-                    <h3><a href="#portfolio-section" 
-                    onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        Juggling Web App
-                    </a></h3>
-                    <p>For my undergraduate final year project, using HTML, CSS (including 
-                    Bootstrap), JavaScript (including jQuery) and Django, I built a social network 
-                    and portal for jugglers that integrates many tools for managing one’s juggling 
-                    experience. Users can organise juggling tricks and set goals, visually learn 
-                    tricks using a graphical simulation, communicate with others and host events.</p>
+                    <div class="flexbox project-caption-bar">
+                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <h4><a href="#portfolio-section" 
+                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                            Juggling Web App
+                        </a></h4>
+                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                    </div>
+                    <p class="project-description">
+                        For my undergraduate final year project, using 
+                        HTML, CSS (including Bootstrap), JavaScript (including jQuery) and Django, I 
+                        built a social network and portal for jugglers that integrates many tools for 
+                        managing one’s juggling experience. Users can organise juggling tricks and set 
+                        goals, visually learn tricks using a graphical simulation, communicate with 
+                        others and host events.
+                    </p>
                     <p><a href="#">GitHub</a></p>
                     <p><a href="#">Visit Website</a></p>
                 </div>
@@ -127,14 +143,20 @@
             <div class="mySlides fade">
                 <img src="assets/images/projects/computer_crazy.png">
                 <div class="text">
-                    <h3><a href="#portfolio-section" 
-                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        Ecommerce Gaming Website
-                    </a></h3>
-                    <p>Using HTML, CSS, JavaScript and PHP, I produced an ecommerce website for an 
-                    imaginary company that sells videos games and PCs. It contains a catalogue of 
-                    available games and PCs with reviews, a registration form for monthly newsletters,
-                    contact form for customer enquiries.</p>
+                    <div class="flexbox project-caption-bar">
+                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <h4><a href="#portfolio-section" 
+                            onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                            Ecommerce Gaming Website
+                        </a></h4>
+                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                    </div>
+                    <p class="project-description">
+                        Using HTML, CSS, JavaScript and PHP, I produced an ecommerce website for an 
+                        imaginary company that sells videos games and PCs. It contains a catalogue of 
+                        available games and PCs with reviews, a registration form for monthly newsletters,
+                        contact form for customer enquiries.
+                    </p>
                     <p><a href="#">GitHub</a></p>
                     <p><a href="#">Visit Website</a></p>
                 </div>
@@ -143,21 +165,23 @@
             <div class="mySlides fade">
                 <img src="assets/images/projects/pizza.png">
                 <div class="text">
-                    <h3><a href="#portfolio-section" 
-                        onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
-                        Pizza Takeaway Management System
-                    </a></h3>
-                    <p>Using Java, I produced a takeaway management system where staff can take
-                    relevant contact details and then the enter the order. It displays an order
-                    summary with the option to print the receipt.</p>
+                    <div class="flexbox project-caption-bar">
+                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <h4><a href="#portfolio-section" 
+                            onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                            Pizza Takeaway Management System
+                        </a></h4>
+                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                    </div>
+                    <p class="project-description">
+                        Using Java, I produced a takeaway management system where staff can take
+                        relevant contact details and then the enter the order. It displays an order
+                        summary with the option to print the receipt.
+                    </p>
                     <p><a href="#">GitHub</a></p>
                 </div>
             </div>
         
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
             <div id="lightbox">
                 <a class="lightboxClose" id="lightboxClose" onclick="closeProjectDemo();"></a>
                 <video id="project-video-demo" width="600" controls>
@@ -178,16 +202,15 @@
                 <img src="assets/images/linkedIn_logo.png" alt="LinkedIn Logo" />
             </a>
             
-            <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->
-            <div style="position: relative;">
-                <a href="assets/images/cv.png" onclick="alert('CV Downloaded')" download>
-                    <img src="assets/images/cv.png" alt="LinkedIn Logo" />
-                    <div class="centered">CV</div>
-                </a>
-            </div>
+            <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->            
+            <a id="cv-link" href="assets/images/cv.png" onclick="alert('CV Downloaded')" download>
+                <img src="assets/images/cv.png" alt="LinkedIn Logo" />
+                <div class="centered">CV</div>
+            </a>
         </div>        
     </footer>
 
+    <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>
     <script src="project_slideshow.js"></script>
     <script>
         //output current year in footer
