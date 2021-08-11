@@ -12,7 +12,7 @@
     <meta name="description" content="Welcome to my programming portfolio!">
     <meta name="keywords" content="Programming, Portfolio, Saagar Shah, HTML, CSS, JavaScript, Bootstrap, jQuery, Java, Python, Linux, Git">
     <meta name="author" content="Saagar Shah">
-    <title>Portfolio - Saagar Shah</title>
+    <title>Development Portfolio - Saagar Shah</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/images/s_character.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
@@ -44,9 +44,8 @@
             </section></div>
         </div>
 
-        <div class="flex-body flexbox">
-            
-            <!-- section for skills grid -->
+        <!-- skills grid and about me description sections -->
+        <div class="flex-body flexbox">            
             <div class="flex-column flexbox">
                 <h3>Skills</h3>
                 
@@ -66,38 +65,32 @@
             
             <div class="flex-column flexbox" id="about-me-description">
                 <h3>About Me</h3>
-
-                <!-- TODO: update this description -->
-                <section class="flexbox">Hi my name is Saagar! I am a Software Engineering Intern at JCA | London 
-                Fashion Academy with 5+ years of development experience and a First-Class
-                Computer Science degree from Queen Mary University of
-                London. I can showcase my creative side to solve problems by
-                producing software that is user-friendly, aesthetically pleasing
-                and fit for purpose.</section>
+                <section class="flexbox">
+                    I am currently in the middle of a 12-week intensive web development course 
+                    course as part of the _nology Tech Consultancy Programme. It focuses on key 
+                    areas of programming, covering concepts in HTML, CSS, JavaScript, Java, 
+                    Testing Strategy and Agile Projects. I will also be given the opportunity to 
+                    complete a real-life client project. I decided to enrol myself onto this 
+                    programme to fuel my hunger for solving problems using creative and analytical 
+                    skills.
+                </section>
             </div>            
         </div>        
     </main>
         
     <div id="portfolio-section"></div>
     <main>
-        <h1>Portfolio</h1>
+        <h1>Development Portfolio</h1>
 
         <!-- Slideshow container -->
         <div class="slideshow-container">
-            <!-- TODO: use screenshots that are suitable for 16:9 aspect ratio
-            or perhaps adjust size of img element on a case by basis
-        
-                Record video demos to include in here
-
-                - include alt text, can be same as project title 
-                (maybe include screenshot/demo keyword at the end)
-                - join the prev/next buttons with the caption (project title)
-                    * make this mobile friendly
-            -->
+            <!-- TODO: Record video demos to include in here-->
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="assets/images/projects/jca_incubation.png">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="assets/images/projects/jca_incubation.png" alt="JCA Incubation Portal Screenshot">
+                </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
@@ -117,7 +110,9 @@
             </div>
             
             <div class="mySlides fade">
-                <img src="assets/images/projects/juggling_web_app.png">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="assets/images/projects/juggling_web_app.png" alt="Juggling Web App Screenshot">
+                </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
@@ -135,13 +130,18 @@
                         goals, visually learn tricks using a graphical simulation, communicate with 
                         others and host events.
                     </p>
-                    <p><a href="#">GitHub</a></p>
-                    <p><a href="#">Visit Website</a></p>
+                    <p class="project-links">
+                        <input type="button" value="GitHub" />
+                        <input type="button" value="Visit Website" />
+                    </p>
                 </div>
             </div>
             
             <div class="mySlides fade">
-                <img src="assets/images/projects/computer_crazy.png">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="assets/images/projects/computer_crazy.png" 
+                    alt="Ecommerce Gaming Website Screenshot">
+                </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
@@ -157,13 +157,18 @@
                         available games and PCs with reviews, a registration form for monthly newsletters,
                         contact form for customer enquiries.
                     </p>
-                    <p><a href="#">GitHub</a></p>
-                    <p><a href="#">Visit Website</a></p>
+                    <p class="project-links">
+                        <input type="button" value="GitHub" />
+                        <input type="button" value="Visit Website" />
+                    </p>
                 </div>
             </div>
         
             <div class="mySlides fade">
-                <img src="assets/images/projects/pizza.png">
+                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                    <img src="assets/images/projects/pizza.png" 
+                    alt="Pizza Takeaway Management System Screenshot">
+                </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
@@ -178,18 +183,20 @@
                         relevant contact details and then the enter the order. It displays an order
                         summary with the option to print the receipt.
                     </p>
-                    <p><a href="#">GitHub</a></p>
+                    <p class="project-links"><input type="button" value="GitHub" /></p>
                 </div>
             </div>
         
-            <div id="lightbox">
-                <a class="lightboxClose" id="lightboxClose" onclick="closeProjectDemo();"></a>
-                <video id="project-video-demo" width="600" controls>
-                <source src="" type="video/mp4"></video>
-            </div>
+            <div class="flexbox lightbox-container">            
+                <div id="lightbox">
+                    <a class="lightboxClose" id="lightboxClose" onclick="closeProjectDemo();"></a>
+                    <video id="project-video-demo" width="600" controls>
+                    <source src="" type="video/mp4"></video>
+                </div>
 
-            <!-- click outside of video to exit -->
-            <div id="lightbox-fade" onClick="closeProjectDemo();"></div>
+                <!-- click outside of video to exit -->
+                <div id="lightbox-fade" onClick="closeProjectDemo();"></div>
+            </div>
         </div>
     </main>
 

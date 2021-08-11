@@ -31,14 +31,17 @@ function showSlides(n) {
 
 function openProjectDemo(newSrc) {
   var lightBoxVideo = document.getElementById("project-video-demo");
-  lightBoxVideo.src = newSrc;
-  window.scrollTo(0, 0);
+  lightBoxVideo.src = newSrc; // window.scrollTo(0, 0);
+
   document.getElementById('lightbox').style.display = 'block';
   document.getElementById('lightbox-fade').style.display = 'block'; //   lightBoxVideo.play();
+
+  window.scrollTo(0, document.body.scrollHeight);
 } //exit the lightbox if the exit button/outside fade area is clicked
 
 
 function closeProjectDemo() {
+  goToPageBottom();
   var lightBoxVideo = document.getElementById("project-video-demo");
   document.getElementById('lightbox').style.display = 'none';
   document.getElementById('lightbox-fade').style.display = 'none';

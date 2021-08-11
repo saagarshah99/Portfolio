@@ -160,8 +160,8 @@ footer
   display: grid; 
   grid-template-columns: repeat(5, 1fr); /* new row if more than 3 images */
   margin-top: 10px;
-  grid-gap: 50px;
-  font-size: 50px;
+  grid-gap: 50px;  
+  font-size: 5vw;
   align-items: center;
   justify-items: center;
 
@@ -199,8 +199,7 @@ footer
         flex-wrap: wrap;
         grid-gap: 10px; /* amend this value */
         // width: 100vw;
-        
-        div {border: 0px solid black;} 
+        // border: 1px solid black;
         
         section 
         {
@@ -292,7 +291,14 @@ footer
     }
     .next {right: 0; border-radius: 3px 0 0 3px;}
 
-    .project-description {margin-top: 10px;}
+    .project-description, .project-links {margin-top: 10px;}
+
+    input[type='button']
+    {
+      padding: 10px;
+
+      &:hover {cursor: pointer; background-color: $secondary-blue;}
+    }
   }
 }
 
@@ -330,21 +336,27 @@ footer
     filter: alpha(opacity=80);
 }
 
+.lightbox-container
+{
+  justify-content: center;
+  align-items: center;
+}
+
 /* styles for project demo video popup */
 #lightbox
 {
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 600px;
-    max-height: 360px;
-    margin-left: -300px;
-    margin-top: -180px;
-    border: 2px solid white;
-    background: white;
+    position: relative;
+    // bottom: 50%;
+    // left: 50%;
     z-index: 1002;
-    overflow: visible;
+    overflow: hidden;
+    
+    video
+    {
+      width: 75vw;
+      height: auto;
+    }
     
     /* styles for close video button in lightbox */
     &Close
@@ -383,13 +395,16 @@ footer
 {
     main {margin: 10% 0 0 2%;}
 
+    
     .flex-body 
     {
       flex-direction: column;
       flex-wrap: wrap;
+      align-items: center;
       
       .flex-column 
       {
+        #skills {font-size: 10vw;}
   
         section 
         {
@@ -402,14 +417,29 @@ footer
       }
     }    
 }
-@media all and (max-width: 700px) {main {margin-top: 12%;}}
+@media all and (max-width: 700px) 
+{
+  main {margin-top: 12%;}
+
+  
+}
 @media all and (max-width: 600px) {main {margin-top: 20%;}}
 
 /* hide navbar and make logo cover entire body width, 
 change number of rows/columns in skills grid  */
 @media all and (max-width: 500px) 
 {
-  #skills {grid-template-columns: repeat(2, 1fr);}
+  .flex-body 
+  {
+    .flex-column 
+    {
+      #skills 
+      {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 12vw;
+      }
+    }
+  }
   
   header
   {
@@ -429,5 +459,19 @@ change number of rows/columns in skills grid  */
   main {margin-top: 30%;}
   #btnScrollToTop {bottom: 70px;}
 }
-@media all and (max-width: 360px) {main {margin-top: 30%;}}
+@media all and (max-width: 360px) 
+{
+  main {margin-top: 30%;}
+
+  .flex-body 
+  {
+    .flex-column 
+    {
+      #skills 
+      {
+        font-size: 15vw;
+      }
+    }
+  }
+}
 @media all and (max-width: 190px) {main {margin-top: 50%;}}

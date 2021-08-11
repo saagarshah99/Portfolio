@@ -139,7 +139,7 @@ footer #about-image-links #cv-link {
   /* new row if more than 3 images */
   margin-top: 10px;
   grid-gap: 50px;
-  font-size: 50px;
+  font-size: 5vw;
   align-items: center;
   justify-items: center;
   /* styles for each image in skill grid */
@@ -165,9 +165,6 @@ footer #about-image-links #cv-link {
   flex-wrap: wrap;
   grid-gap: 10px;
   /* amend this value */
-}
-.flex-body .flex-column div {
-  border: 0px solid black;
 }
 .flex-body .flex-column section {
   width: 45vw;
@@ -246,8 +243,15 @@ footer #about-image-links #cv-link {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.mySlides .text .project-description {
+.mySlides .text .project-description, .mySlides .text .project-links {
   margin-top: 10px;
+}
+.mySlides .text input[type=button] {
+  padding: 10px;
+}
+.mySlides .text input[type=button]:hover {
+  cursor: pointer;
+  background-color: #00d4ff;
 }
 
 /* Fading animation */
@@ -281,21 +285,22 @@ footer #about-image-links #cv-link {
   filter: alpha(opacity=80);
 }
 
+.lightbox-container {
+  justify-content: center;
+  align-items: center;
+}
+
 /* styles for project demo video popup */
 #lightbox {
   display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 600px;
-  max-height: 360px;
-  margin-left: -300px;
-  margin-top: -180px;
-  border: 2px solid white;
-  background: white;
+  position: relative;
   z-index: 1002;
-  overflow: visible;
+  overflow: hidden;
   /* styles for close video button in lightbox */
+}
+#lightbox video {
+  width: 75vw;
+  height: auto;
 }
 #lightboxClose {
   float: right;
@@ -335,6 +340,10 @@ footer #about-image-links #cv-link {
   .flex-body {
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+  }
+  .flex-body .flex-column #skills {
+    font-size: 10vw;
   }
   .flex-body .flex-column section {
     width: 80vw;
@@ -357,8 +366,9 @@ footer #about-image-links #cv-link {
 /* hide navbar and make logo cover entire body width, 
 change number of rows/columns in skills grid  */
 @media all and (max-width: 500px) {
-  #skills {
+  .flex-body .flex-column #skills {
     grid-template-columns: repeat(2, 1fr);
+    font-size: 12vw;
   }
 
   header .navigation {
@@ -382,6 +392,10 @@ change number of rows/columns in skills grid  */
 @media all and (max-width: 360px) {
   main {
     margin-top: 30%;
+  }
+
+  .flex-body .flex-column #skills {
+    font-size: 15vw;
   }
 }
 @media all and (max-width: 190px) {
