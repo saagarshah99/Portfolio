@@ -156,7 +156,7 @@ footer #about-image-links #cv-link {
 /***************POSITIONING AND ALIGNING FLEXBOX ROWS/COLUMNS*******************/
 .flex-body {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   grid-gap: 50px;
   flex-wrap: wrap;
 }

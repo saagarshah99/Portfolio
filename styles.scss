@@ -189,7 +189,7 @@ footer
 .flex-body 
 {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     grid-gap: 50px;
     flex-wrap: wrap;
 
@@ -198,8 +198,6 @@ footer
         flex-direction: column;
         flex-wrap: wrap;
         grid-gap: 10px; /* amend this value */
-        // width: 100vw;
-        // border: 1px solid black;
         
         section 
         {
@@ -347,8 +345,7 @@ footer
 {
     display: none;
     position: relative;
-    // bottom: 50%;
-    // left: 50%;
+    // bottom: 50%; left: 50%;
     z-index: 1002;
     overflow: hidden;
     
