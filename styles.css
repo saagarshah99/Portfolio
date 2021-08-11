@@ -170,10 +170,8 @@ footer {
 
 /* profile picture in the about section */
 #profile-picture {
-  width: 40%;
+  width: 15vw;
   height: auto;
-  /* border-radius: 100%; */
-  /*filter: grayscale(100%); */
 }
 
 /* images links for linkedin, cv, etc. */
