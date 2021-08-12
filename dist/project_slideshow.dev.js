@@ -31,7 +31,7 @@ function showSlides(n) {
 
 function openProjectDemo(newSrc) {
   var lightBoxVideo = document.getElementById("project-video-demo");
-  lightBoxVideo.src = newSrc;
+  lightBoxVideo.src = "assets/videos/project_demos/" + newSrc;
   document.getElementById('lightbox').style.display = 'block';
   document.getElementById('lightbox-fade').style.display = 'block'; // lightBoxVideo.play();
 } //exit the lightbox if the exit button/outside fade area is clicked
