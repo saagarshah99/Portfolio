@@ -99,10 +99,10 @@
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="javascript: goToPageBottom()" 
+                        <a href="javascript: goToPageBottom()" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             JCA | London Fashion Academy Incubation Portal
-                        </a></h4>
+                        </a>
                         <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
                     </div>
                     <p class="project-description">
@@ -121,10 +121,10 @@
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="javascript: goToPageBottom()" 
+                        <a href="javascript: goToPageBottom()" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Juggling Web App
-                        </a></h4>
+                        </a>
                         <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
                     </div>
                     <p class="project-description">
@@ -150,10 +150,10 @@
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="javascript: goToPageBottom()" 
+                        <a class="caption-link" href="javascript: goToPageBottom()" 
                             onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Ecommerce Gaming Website
-                        </a></h4>
+                        </a>
                         <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
                     </div>
                     <p class="project-description">
@@ -177,10 +177,10 @@
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="javascript: goToPageBottom()" 
+                        <a href="javascript: goToPageBottom()" 
                             onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Pizza Takeaway Management System
-                        </a></h4>
+                        </a>
                         <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
                     </div>
                     <p class="project-description">
@@ -205,7 +205,7 @@
         </div>
     </main>
 
-    <footer id="page-bottom" class="flexbox">
+    <footer class="flexbox">
         
         <!-- image thumbnail links to cv, linkedin, etc. -->
         <div class="flexbox" id="about-image-links">
@@ -237,7 +237,6 @@
         function goToPageBottom()
         {
             window.scrollTo(0,document.body.scrollHeight);
-            console.log("running");
         }
 
         //show top scroll button when user scrolls down at least 20px from top of document

@@ -223,6 +223,7 @@ footer #about-image-links #cv-link {
 }
 .mySlides .text .project-caption-bar a:any-link {
   color: white;
+  font-size: large;
 }
 .mySlides .text .prev, .mySlides .text .next {
   cursor: pointer;
@@ -357,6 +358,21 @@ footer #about-image-links #cv-link {
 @media all and (max-width: 700px) {
   main {
     margin-top: 12%;
+  }
+
+  .mySlides {
+    display: none;
+  }
+  .mySlides a:any-link {
+    text-decoration: none;
+  }
+  .mySlides img {
+    width: 80vw;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+  .mySlides .project-caption-bar, .mySlides .text {
+    width: 80vw;
   }
 }
 @media all and (max-width: 600px) {

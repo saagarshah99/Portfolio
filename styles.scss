@@ -268,7 +268,12 @@ footer
       background-color: rgb(71, 67, 67);
       border-radius: 0 0 10px 10px;
 
-      a:any-link {color: white;}
+      a:any-link 
+      {
+        color: white;
+        font-size: large;
+        // font-weight: bold;
+      }
     }
   
     /* Next & previous buttons */
@@ -418,6 +423,21 @@ footer
 @media all and (max-width: 700px) 
 {
   main {margin-top: 12%;}
+
+  .mySlides 
+  {
+    display: none;
+
+    a:any-link {text-decoration: none;}
+
+    img 
+    {    
+      width: 80vw;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+    .project-caption-bar, .text {width: 80vw;}
+  }
 
   
 }
