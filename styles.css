@@ -282,9 +282,7 @@ footer #about-image-links #cv-link {
   height: 100%;
   background-color: black;
   z-index: 1001;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.7;
 }
 
 .lightbox-container {
@@ -302,7 +300,7 @@ footer #about-image-links #cv-link {
   /* styles for close video button in lightbox */
 }
 #lightbox video {
-  width: 75vw;
+  width: 70vw;
   height: auto;
 }
 #lightboxClose {
