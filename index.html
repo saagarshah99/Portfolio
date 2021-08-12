@@ -4,7 +4,6 @@
  -->
 
  <!-- TODO: 
-    * update README file
     * B.E.M. naming conventions - find and replace mostly
     * Each feature should be its own branch
 -->
@@ -94,13 +93,13 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                <a href="javascript: goToPageBottom()" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                     <img src="assets/images/projects/jca_incubation.png" alt="JCA Incubation Portal Screenshot">
                 </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="#portfolio-section" 
+                        <h4><a href="javascript: goToPageBottom()" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             JCA | London Fashion Academy Incubation Portal
                         </a></h4>
@@ -116,13 +115,13 @@
             </div>
             
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                <a href="javascript: goToPageBottom()" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                     <img src="assets/images/projects/juggling_web_app.png" alt="Juggling Web App Screenshot">
                 </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="#portfolio-section" 
+                        <h4><a href="javascript: goToPageBottom()" 
                         onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Juggling Web App
                         </a></h4>
@@ -144,14 +143,14 @@
             </div>
             
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                <a href="javascript: goToPageBottom()" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                     <img src="assets/images/projects/computer_crazy.png" 
                     alt="Ecommerce Gaming Website Screenshot">
                 </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="#portfolio-section" 
+                        <h4><a href="javascript: goToPageBottom()" 
                             onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Ecommerce Gaming Website
                         </a></h4>
@@ -171,14 +170,14 @@
             </div>
         
             <div class="mySlides fade">
-                <a href="#portfolio-section" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
+                <a href="javascript: goToPageBottom()" onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                     <img src="assets/images/projects/pizza.png" 
                     alt="Pizza Takeaway Management System Screenshot">
                 </a>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
                         <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        <h4><a href="#portfolio-section" 
+                        <h4><a href="javascript: goToPageBottom()" 
                             onclick="openProjectDemo('https://www.w3schools.com/html/mov_bbb.mp4');">
                             Pizza Takeaway Management System
                         </a></h4>
@@ -206,7 +205,7 @@
         </div>
     </main>
 
-    <footer class="flexbox">
+    <footer id="page-bottom" class="flexbox">
         
         <!-- image thumbnail links to cv, linkedin, etc. -->
         <div class="flexbox" id="about-image-links">
@@ -224,8 +223,7 @@
         </div>        
     </footer>
 
-    <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>
-    <script src="project_slideshow.js"></script>
+    <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>    
     <script>
         //output current year in footer
         document.getElementById("output-year").innerHTML = new Date().getFullYear();
@@ -239,6 +237,7 @@
         function goToPageBottom()
         {
             window.scrollTo(0,document.body.scrollHeight);
+            console.log("running");
         }
 
         //show top scroll button when user scrolls down at least 20px from top of document
@@ -254,5 +253,6 @@
             else {btnScrollToTop.style.display = "none";}
         }
     </script>
+    <script src="project_slideshow.js"></script>
 </body>
 </html>

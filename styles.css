@@ -288,6 +288,7 @@ footer #about-image-links #cv-link {
 .lightbox-container {
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* styles for project demo video popup */
