@@ -41,6 +41,7 @@
     
     <div id="about-section"></div>
     <main>
+        <div id="output-alert"></div>
         <h1>Software Engineer</h1>        
 
         <div class="flex-body flexbox">
@@ -216,7 +217,9 @@
             </a>
             
             <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->            
-            <a id="cv-link" href="assets/images/cv.png" onclick="alert('CV Downloaded')" download>
+            <a id="cv-link" href="assets/images/cv.png" download
+            onclick="outputAlert('CV Successfully Downloaded', 'Green')" >
+
                 <img src="assets/images/cv.png" alt="LinkedIn Logo" />
                 <div class="centered">CV</div>
             </a>
@@ -250,6 +253,17 @@
                 btnScrollToTop.style.display = "block";
             } 
             else {btnScrollToTop.style.display = "none";}
+        }
+
+        //output alert message which specified colour depending on type at top of page
+        function outputAlert(message, alertColour)
+        {
+            var alertDiv = document.getElementById("output-alert");
+            alertDiv.innerHTML = message;
+            alertDiv.style.color = alertColour;
+            alertDiv.style.fontWeight = "Bold";
+
+            goToPageTop();
         }
     </script>
     <script src="project_slideshow.js"></script>

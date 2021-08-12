@@ -224,6 +224,7 @@ footer #about-image-links #cv-link {
 .mySlides .text .project-caption-bar a:any-link {
   color: white;
   font-size: large;
+  font-weight: bold;
 }
 .mySlides .text .prev, .mySlides .text .next {
   cursor: pointer;
