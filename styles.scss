@@ -150,10 +150,10 @@ footer
         height: 40px;
         border-radius: 10px;
 
-        &:hover {visibility: hidden;}
+        &:hover {filter: opacity(0.5);}
       }
 
-      #cv-link {position: relative;}
+      #cv-link:hover {position: relative;}
     }
 }
 

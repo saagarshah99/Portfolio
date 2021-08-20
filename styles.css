@@ -133,9 +133,9 @@ footer #about-image-links img {
   border-radius: 10px;
 }
 footer #about-image-links img:hover {
-  visibility: hidden;
+  filter: opacity(0.5);
 }
-footer #about-image-links #cv-link {
+footer #about-image-links #cv-link:hover {
   position: relative;
 }
 
