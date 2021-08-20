@@ -39,6 +39,13 @@ function outputAlert(message, alertColour)
     goToPageTop();
 }
 
+//open given link in new tab
+const linkNewTab = (url, linkType) => 
+{
+    if(linkType === "GitHub") url = "https://github.com/saagarshah99/"+url;
+    window.open(url, '_blank').focus();
+};
+
 //takes a selector and piece of text and slowly outputs each character (typing effect)
 const typeWriter = (selector, txt, i) =>
 {

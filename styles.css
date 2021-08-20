@@ -332,7 +332,7 @@ footer #about-image-links #cv-link {
   .mySlides a:any-link {
     text-decoration: none;
   }
-  .mySlides img {
+  .mySlides video {
     width: 80vw;
     height: auto;
     border-radius: 10px 10px 0 0;
