@@ -35,3 +35,26 @@ function outputAlert(message, alertColour)
 
     goToPageTop();
 }
+
+
+
+
+
+let currentChar = 0;
+const typingSpeed = 50;
+const typewriter = (selector, text) =>
+{
+    // const text = selector.replace("#", "")
+    
+    if (currentChar < text.length) 
+    {
+        document.querySelector(selector).innerHTML += text.charAt(currentChar);
+        currentChar++;
+        setTimeout(typewriter, typingSpeed);
+    }
+
+    //currentChar = 0;
+}
+
+
+//typewriter("#software-developer", "Software Developer");
