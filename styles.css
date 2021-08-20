@@ -72,14 +72,16 @@ header .nav-container {
   justify-content: space-between;
   align-items: center;
 }
+header .nav-container a, header .nav-container a:visited, header .nav-container a:focus {
+  color: white;
+  text-decoration: none;
+}
 header .nav-container .navigation {
   list-style: none;
   /* styles for links in header */
 }
 header .nav-container .navigation a, header .nav-container .navigation a:visited {
-  color: white;
   margin-right: 75px;
-  text-decoration: none;
 }
 header .nav-container .navigation a:hover, header .nav-container .navigation a:visited:hover {
   color: #150578;

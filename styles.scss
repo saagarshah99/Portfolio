@@ -75,6 +75,12 @@ header
     justify-content: space-between; 
     align-items: center;
     
+    a, a:visited, a:focus 
+    {
+      color: white;
+      text-decoration: none;
+    }
+    
     .navigation
     {
       list-style: none;
@@ -82,9 +88,7 @@ header
       /* styles for links in header */
       a, a:visited
       {
-        color: white;
-        margin-right: 75px;
-        text-decoration: none; 
+        margin-right: 75px;         
 
         &:hover {color: $primary-blue;}
       }    
@@ -138,11 +142,7 @@ footer
         border-radius: 10px;
       }
 
-      #cv-link
-      {
-        position: relative;
-        
-      }
+      #cv-link {position: relative;}
     }
 }
 
