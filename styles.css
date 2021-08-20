@@ -17,6 +17,10 @@ html {
 main {
   margin: 7% 0 0 2%;
 }
+main b {
+  color: #3943B7;
+  cursor: pointer;
+}
 main h1, main h3 {
   color: #150578;
 }
@@ -72,14 +76,16 @@ header .nav-container {
   justify-content: space-between;
   align-items: center;
 }
+header .nav-container a, header .nav-container a:visited, header .nav-container a:focus {
+  color: white;
+  text-decoration: none;
+}
 header .nav-container .navigation {
   list-style: none;
   /* styles for links in header */
 }
 header .nav-container .navigation a, header .nav-container .navigation a:visited {
-  color: white;
   margin-right: 75px;
-  text-decoration: none;
 }
 header .nav-container .navigation a:hover, header .nav-container .navigation a:visited:hover {
   color: #150578;
@@ -131,6 +137,22 @@ footer #about-image-links #cv-link {
   position: relative;
 }
 
+.blink-text {
+  animation: blink-text 1s step-start infinite;
+  font-weight: bold;
+}
+
+@keyframes blink-text {
+  0% {
+    color: inherit;
+  }
+  25% {
+    color: transparent;
+  }
+  100% {
+    color: inherit;
+  }
+}
 /********************************SKILLS GRID STYLES********************************/
 /* arranging images in rows/columns */
 #skills {
@@ -181,7 +203,7 @@ footer #about-image-links #cv-link {
 
 /* profile picture in the about section */
 #profile-picture {
-  width: 15vw;
+  width: 30vw;
   height: auto;
 }
 
@@ -353,6 +375,10 @@ footer #about-image-links #cv-link {
     text-align: center;
     justify-content: center;
   }
+
+  #profile-picture {
+    width: 50vw;
+  }
 }
 @media all and (max-width: 700px) {
   main {
@@ -403,6 +429,10 @@ change number of rows/columns in skills grid  */
 
   #btnScrollToTop {
     bottom: 70px;
+  }
+
+  #profile-picture {
+    width: 60vw;
   }
 }
 @media all and (max-width: 360px) {

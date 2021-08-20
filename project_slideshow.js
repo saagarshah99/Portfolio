@@ -1,4 +1,4 @@
-//generateProjectSlides();
+// TODO: refactor into ES6, replace onclick with addEventListener
 
 // Next/previous controls (receive positive or negative value)
 function plusSlides(n) 

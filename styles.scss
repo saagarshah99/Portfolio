@@ -3,6 +3,7 @@
 
 $primary-blue: #150578;
 $secondary-blue : #00d4ff;
+$tertiary-blue : #3943B7;
 
 
 /********************************GENERIC PAGE STYLES********************************/
@@ -17,9 +18,16 @@ $secondary-blue : #00d4ff;
 }
 html {scroll-behavior: smooth;} 
 
+//generic styles for main content areas
 main 
 {  
   margin: 7% 0 0 2%;
+
+  b 
+  {
+    color: $tertiary-blue;
+    cursor: pointer;
+  }
 
   h1, h3 {color: $primary-blue;}
 }
@@ -75,6 +83,14 @@ header
     justify-content: space-between; 
     align-items: center;
     
+    a, a:visited, a:focus 
+    {
+      color: white;
+      text-decoration: none;
+
+      
+    }
+    
     .navigation
     {
       list-style: none;
@@ -82,9 +98,7 @@ header
       /* styles for links in header */
       a, a:visited
       {
-        color: white;
-        margin-right: 75px;
-        text-decoration: none; 
+        margin-right: 75px;         
 
         &:hover {color: $primary-blue;}
       }    
@@ -138,12 +152,21 @@ footer
         border-radius: 10px;
       }
 
-      #cv-link
-      {
-        position: relative;
-        
-      }
+      #cv-link {position: relative;}
     }
+}
+
+//styles for blinking text e.g. blinking cursor effect
+.blink-text 
+{
+  animation: blink-text 1s step-start infinite;
+  font-weight: bold;
+}
+@keyframes blink-text 
+{
+  0% {color: inherit}
+  25% {color: transparent}
+  100% {color: inherit}
 }
 
 
@@ -216,9 +239,8 @@ footer
 /* profile picture in the about section */
 #profile-picture 
 {
-  width: 15vw; 
+  width: 30vw; 
   height: auto;
-  // filter: grayscale(100%);
 } 
 
 
@@ -395,7 +417,6 @@ footer
 @media all and (max-width: 960px) 
 {
     main {margin: 10% 0 0 2%;}
-
     
     .flex-body 
     {
@@ -416,7 +437,9 @@ footer
           justify-content: center;
         }
       }
-    }    
+    }
+    
+    #profile-picture {width: 50vw;} 
 }
 @media all and (max-width: 700px) 
 {
@@ -474,6 +497,7 @@ change number of rows/columns in skills grid  */
 {
   main {margin-top: 30%;}
   #btnScrollToTop {bottom: 70px;}
+  #profile-picture {width: 60vw;} 
 }
 @media all and (max-width: 360px) 
 {

@@ -25,11 +25,11 @@
 <body>    
     <header>        
         <div class="flexbox nav-container">
-            <h2 class="flexbox logo">Saagar Shah</h2>
+            <h2 class="flexbox logo"><a href="javascript: goToPageTop()">Saagar Shah</a></h2>
             
             <ul class="flexbox navigation">
                 <li><a href="javascript: goToPageTop()">About Me</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="javascript: goToPageBottom()">Projects</a></li>
             </ul>
         </div> 
     </header>
@@ -42,11 +42,11 @@
     <div id="about-section"></div>
     <main>
         <div id="output-alert"></div>
-        <h1>Software Engineer</h1>        
+        <h1 id="software-developer"></h1>        
 
         <div class="flex-body flexbox">
             <div class="flex-column flexbox"><section class="flexbox">
-                <img id="profile-picture" src="assets/images/profile_picture.jpg" alt="Profile Picture">
+                <img id="profile-picture" src="assets/images/profile_picture.png" alt="Profile Picture">
             </section></div>
         </div>
 
@@ -72,13 +72,13 @@
             <div class="flex-column flexbox" id="about-me-description">
                 <h3>About Me</h3>
                 <section class="">
-                    I am currently in the middle of a 12-week intensive web development course 
-                    course as part of the <b>_nology Tech Consultancy Programme</b>. It focuses on key 
-                    areas of programming, covering concepts in <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, 
-                    <b>Java</b>, <b>Testing Strategy</b> and <b>Agile Projects</b>. I will also be given 
-                    the opportunity to complete a <b>real-life client project</b>. I decided to enrol myself 
-                    onto this programme to fuel my hunger for solving problems using creative and analytical 
-                    skills.
+                    I am a London-based software developer currently in the middle of a 12-week 
+                    intensive web development course as part of the <b>_nology Tech Consultancy 
+                    Programme</b>. It focuses on key areas of programming, covering concepts in 
+                    <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Java</b>, <b>Testing Strategy</b> 
+                    and <b>Agile Projects</b>. I will also be given the opportunity to complete a 
+                    <b>real-life client project</b>. I decided to enrol myself onto this programme 
+                    to fuel my hunger for solving problems using creative and analytical skills.
                 </section>
             </div>            
         </div>        
@@ -86,7 +86,7 @@
         
     <div id="portfolio-section"></div>
     <main>
-        <h1>Development Portfolio</h1>
+        <h1 id="development-portfolio"></h1>
 
         <!-- Slideshow container -->
         <div class="slideshow-container">            
@@ -226,45 +226,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>    
-    <script>
-        //output current year in footer
-        document.getElementById("output-year").innerHTML = new Date().getFullYear();
-        
-        //scroll/navigate to absolute top or bottom of page
-        function goToPageTop() 
-        {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        function goToPageBottom()
-        {
-            window.scrollTo(0,document.body.scrollHeight);
-        }
-
-        //show top scroll button when user scrolls down at least 20px from top of document
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction() 
-        {
-            var btnScrollToTop = document.getElementById("btnScrollToTop");
-
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
-            {
-                btnScrollToTop.style.display = "block";
-            } 
-            else {btnScrollToTop.style.display = "none";}
-        }
-
-        //output alert message which specified colour depending on type at top of page
-        function outputAlert(message, alertColour)
-        {
-            var alertDiv = document.getElementById("output-alert");
-            alertDiv.innerHTML = message;
-            alertDiv.style.color = alertColour;
-            alertDiv.style.fontWeight = "Bold";
-
-            goToPageTop();
-        }
-    </script>
+    <script src="generic.js"></script>
     <script src="project_slideshow.js"></script>
 </body>
 </html>
