@@ -98,9 +98,9 @@
                 </video>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
-                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <a class="prev fas fa-chevron-circle-left"></a>
                         JCA | London Fashion Academy Incubation Portal
-                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                        <a class="next fas fa-chevron-circle-right"></a>
                     </div>
                     <p class="project-description">
                         As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
@@ -117,9 +117,9 @@
                 </video>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
-                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <a class="prev fas fa-chevron-circle-left"></a>
                         Juggling Web App
-                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                        <a class="next fas fa-chevron-circle-right"></a>
                     </div>
                     <p class="project-description">
                         For my undergraduate final year project, using <b>HTML</b>, <b>CSS</b> (including 
@@ -130,33 +130,8 @@
                         others and host events.
                     </p>
                     <p class="project-links">
-                        <input type="button" value="GitHub" 
-                        onclick="linkNewTab('Juggleology', 'GitHub')" />
-                        <input type="button" value="Visit Website" 
-                        onclick="linkNewTab('https://saagarshah.pythonanywhere.com/Juggleology/', '')" />
-                    </p>
-                </div>
-            </div>
-            
-            <div class="mySlides fade">
-                <video controls>
-                    <source src="/assets/videos/project_demos/computer_crazy.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-caption-bar">
-                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
-                        Ecommerce Gaming Website
-                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
-                    </div>
-                    <p class="project-description">
-                        Using <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> and <b>PHP</b>, I produced an 
-                        ecommerce website for an imaginary company that sells videos games and PCs. It 
-                        contains a catalogue of available games and PCs with reviews, a registration 
-                        form for monthly newsletters, contact form for customer enquiries.
-                    </p>
-                    <p class="project-links">
-                        <input type="button" value="GitHub" />
-                        <input type="button" value="Visit Website" />
+                        <input type="button" value="GitHub" id="btnJugglingGit" />
+                        <input type="button" value="Visit Website" id="btnJugglingWeb" />
                     </p>
                 </div>
             </div>
@@ -167,16 +142,18 @@
                 </video>
                 <div class="text">
                     <div class="flexbox project-caption-bar">
-                        <a class="prev fas fa-chevron-circle-left" onclick="plusSlides(-1)"></a>
+                        <a class="prev fas fa-chevron-circle-left"></a>
                         Pizza Takeaway Management System
-                        <a class="next fas fa-chevron-circle-right" onclick="plusSlides(1)"></a>
+                        <a class="next fas fa-chevron-circle-right"></a>
                     </div>
                     <p class="project-description">
                         Using <b>Java</b>, I produced a takeaway management system where staff can take
                         relevant contact details and then the enter the order. It displays an order
                         summary with the option to print the receipt.
                     </p>
-                    <p class="project-links"><input type="button" value="GitHub" /></p>
+                    <p class="project-links">
+                        <input type="button" value="GitHub" id="btnPizzaGit" />
+                    </p>
                 </div>
             </div>
         </div>
@@ -193,9 +170,7 @@
             </a>
             
             <!-- TODO: link to actual CV and maybe output confirmation that it's been downloaded -->            
-            <a id="cv-link" href="assets/images/cv.png" download
-            onclick="outputAlert('CV Successfully Downloaded', 'Green')" >
-
+            <a id="cv-link" href="assets/images/cv.png" download>
                 <img src="assets/images/cv.png" alt="LinkedIn Logo" />
                 <div class="centered">CV</div>
             </a>

@@ -1,5 +1,3 @@
-// TODO: replace onclick with addEventListener
-
 // Next/previous controls (receive positive or negative value)
 const plusSlides = (n) => showSlides(slideIndex += n);
 
@@ -19,6 +17,12 @@ const showSlides = (n) =>
     slides[slideIndex-1].style.display = "block";
 }
 showSlides(slideIndex);
+
+//if previous or next buttons clicked, navigate to appropriate slides
+const btnPreviousSlide = document.querySelectorAll(".fa-chevron-circle-left");
+btnPreviousSlide.forEach(button => button.addEventListener("click", e => plusSlides(-1)));
+const btnNextSlide = document.querySelectorAll(".fa-chevron-circle-right");
+btnNextSlide.forEach(button => button.addEventListener("click", e => plusSlides(1)));
 
 /*const projectSlidesObject = [
     ["jca_incubation.png", "JCA | London Fashion Academy Incubation Portal", 

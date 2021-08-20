@@ -40,11 +40,7 @@ const outputAlert = (message, alertColour) =>
 }
 
 //open given link in new tab
-const linkNewTab = (url, linkType) => 
-{
-    if(linkType === "GitHub") url = "https://github.com/saagarshah99/"+url;
-    window.open(url, '_blank').focus();
-};
+const linkNewTab = (url) => window.open(url, '_blank').focus();
 
 //takes a selector and piece of text and slowly outputs each character (typing effect)
 const typeWriter = (selector, txt, i) =>
@@ -69,3 +65,23 @@ for (let i = 0; i < Object.keys(linkHeadingArr).length; i++)
 {
     typeWriter(linkHeadingArr[i][0], linkHeadingArr[i][1]);    
 }
+
+//output success message if CV is successfully download
+const btnCV = document.querySelector("#cv-link");
+btnCV.addEventListener("click", e => outputAlert('CV Successfully Downloaded', 'Green'));
+
+//looping through different links to listen to a click, opening in new tab
+const projectLinks = [
+    ["#btnJugglingGit", "Juggleology", "GitHub"],
+    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""]
+];
+projectLinks.forEach(link => 
+{
+    document.querySelector(link[0]).addEventListener("click", e => 
+    {
+        const url = link[1];
+        if(link[2] === "GitHub") url = "https://github.com/saagarshah99/"+url;
+        
+        linkNewTab(url);
+    })
+})
