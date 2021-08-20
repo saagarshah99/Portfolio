@@ -73,13 +73,14 @@ btnCV.addEventListener("click", e => outputAlert('CV Successfully Downloaded', '
 //looping through different links to listen to a click, opening in new tab
 const projectLinks = [
     ["#btnJugglingGit", "Juggleology", "GitHub"],
-    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""]
+    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""],
+    ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
 ];
 projectLinks.forEach(link => 
 {
     document.querySelector(link[0]).addEventListener("click", e => 
     {
-        const url = link[1];
+        let url = link[1];
         if(link[2] === "GitHub") url = "https://github.com/saagarshah99/"+url;
         
         linkNewTab(url);
