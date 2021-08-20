@@ -3,6 +3,7 @@
 
 $primary-blue: #150578;
 $secondary-blue : #00d4ff;
+$tertiary-blue : #3943B7;
 
 
 /********************************GENERIC PAGE STYLES********************************/
@@ -17,14 +18,14 @@ $secondary-blue : #00d4ff;
 }
 html {scroll-behavior: smooth;} 
 
+//generic styles for main content areas
 main 
 {  
   margin: 7% 0 0 2%;
 
   b 
   {
-    // color: #449DD1;
-    color: #3943B7;
+    color: $tertiary-blue;
     cursor: pointer;
   }
 
@@ -225,9 +226,8 @@ footer
 /* profile picture in the about section */
 #profile-picture 
 {
-  width: 15vw; 
+  width: 30vw; 
   height: auto;
-  // filter: grayscale(100%);
 } 
 
 
@@ -404,7 +404,6 @@ footer
 @media all and (max-width: 960px) 
 {
     main {margin: 10% 0 0 2%;}
-
     
     .flex-body 
     {
@@ -425,7 +424,9 @@ footer
           justify-content: center;
         }
       }
-    }    
+    }
+    
+    #profile-picture {width: 50vw;} 
 }
 @media all and (max-width: 700px) 
 {
@@ -483,6 +484,7 @@ change number of rows/columns in skills grid  */
 {
   main {margin-top: 30%;}
   #btnScrollToTop {bottom: 70px;}
+  #profile-picture {width: 60vw;} 
 }
 @media all and (max-width: 360px) 
 {
