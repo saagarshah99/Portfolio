@@ -23,32 +23,6 @@ function showSlides(n)
     slides[slideIndex-1].style.display = "block";
 }
 
-//take path of video as input and load it in lightbox (video popup)
-function openProjectDemo(newSrc) 
-{
-    var lightBoxVideo = document.getElementById("project-video-demo");
-    lightBoxVideo.src = "assets/videos/project_demos/"+newSrc;
-    
-    document.getElementById('lightbox').style.display = 'block';
-    document.getElementById('lightbox-fade').style.display = 'block';
-    // lightBoxVideo.play();
-}
-
-//exit the lightbox if the exit button/outside fade area is clicked
-function closeProjectDemo() 
-{
-    // goToPageBottom();
-    var lightBoxVideo = document.getElementById("project-video-demo");
-    document.getElementById('lightbox').style.display = 'none';
-    document.getElementById('lightbox-fade').style.display = 'none';
-    lightBoxVideo.pause();
-}
-window.document.onkeydown = function(e) 
-{
-    if (!e) {e = event;}
-    if (e.keyCode == 27) {closeProjectDemo();} //esc key
-}
-
 /*var projectSlidesObject = [
     ["jca_incubation.png", "JCA | London Fashion Academy Incubation Portal", 
     "https://www.w3schools.com/html/mov_bbb.mp4",
