@@ -2,13 +2,13 @@
 document.getElementById("output-year").innerHTML = new Date().getFullYear();
         
 //scroll/navigate to absolute top or bottom of page
-function goToPageTop() 
+const goToPageTop = () =>
 {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     typeWriter("#software-developer", "Software Developer");
 }
-function goToPageBottom()
+const goToPageBottom = () =>
 {
     // window.scrollTo(0,document.body.scrollHeight);
     location.href = "#portfolio-section";
@@ -16,20 +16,20 @@ function goToPageBottom()
 }
 
 //show top scroll button when user scrolls down at least 20px from top of document
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() 
+const scrollFunction = () =>
 {
     var btnScrollToTop = document.getElementById("btnScrollToTop");
-
+    
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
     {
         btnScrollToTop.style.display = "block";
     } 
     else {btnScrollToTop.style.display = "none";}
 }
+window.onscroll = () => scrollFunction();
 
 //output alert message which specified colour depending on type at top of page
-function outputAlert(message, alertColour)
+const outputAlert = (message, alertColour) =>
 {
     var alertDiv = document.getElementById("output-alert");
     alertDiv.innerHTML = message;
@@ -61,5 +61,11 @@ const typeWriter = (selector, txt, i) =>
     }
     else selectedText.innerHTML += "<span class='blink-text'> |</a>";
 }
-typeWriter("#software-developer", "Software Developer");
-typeWriter("#development-portfolio", "Development Portfolio");
+
+//created array to invoke typewriter for multiple headings upon page load
+const linkHeadingArr = [["#software-developer", "Software Developer"], 
+["#development-portfolio", "Development Portfolio"]];
+for (let i = 0; i < Object.keys(linkHeadingArr).length; i++) 
+{
+    typeWriter(linkHeadingArr[i][0], linkHeadingArr[i][1]);    
+}
