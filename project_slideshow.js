@@ -1,29 +1,26 @@
-// TODO: refactor into ES6, replace onclick with addEventListener
+// TODO: replace onclick with addEventListener
 
 // Next/previous controls (receive positive or negative value)
-function plusSlides(n) 
-{
-    showSlides(slideIndex += n);
-}
+const plusSlides = (n) => showSlides(slideIndex += n);
 
 //set default project slide value and choose which image to output depending on which index it receives
-var slideIndex = 1;
-showSlides(slideIndex);
-function showSlides(n) 
+let slideIndex = 1;
+const showSlides = (n) =>
 {
-    var slides = document.getElementsByClassName("mySlides");
+    const slides = document.getElementsByClassName("mySlides");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
 
-    for (var i = 0; i < slides.length; i++) 
+    for (let i = 0; i < slides.length; i++) 
     {
         slides[i].style.display = "none";
     }
 
     slides[slideIndex-1].style.display = "block";
 }
+showSlides(slideIndex);
 
-/*var projectSlidesObject = [
+/*const projectSlidesObject = [
     ["jca_incubation.png", "JCA | London Fashion Academy Incubation Portal", 
     "https://www.w3schools.com/html/mov_bbb.mp4",
     "As part of my internship, I built a web app using HTML, CSS (including Bootstrap), \

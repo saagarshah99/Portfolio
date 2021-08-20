@@ -18,7 +18,7 @@ const goToPageBottom = () =>
 //show top scroll button when user scrolls down at least 20px from top of document
 const scrollFunction = () =>
 {
-    var btnScrollToTop = document.getElementById("btnScrollToTop");
+    const btnScrollToTop = document.getElementById("btnScrollToTop");
     
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
     {
@@ -31,7 +31,7 @@ window.onscroll = () => scrollFunction();
 //output alert message which specified colour depending on type at top of page
 const outputAlert = (message, alertColour) =>
 {
-    var alertDiv = document.getElementById("output-alert");
+    const alertDiv = document.getElementById("output-alert");
     alertDiv.innerHTML = message;
     alertDiv.style.color = alertColour;
     alertDiv.style.fontWeight = "Bold";
