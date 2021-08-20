@@ -132,6 +132,9 @@ footer #about-image-links img {
   height: 40px;
   border-radius: 10px;
 }
+footer #about-image-links img:hover {
+  visibility: hidden;
+}
 footer #about-image-links #cv-link {
   position: relative;
 }
