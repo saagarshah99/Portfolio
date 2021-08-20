@@ -51,4 +51,3 @@ const typeWriter = (selector, txt, i) =>
 }
 typeWriter("#software-developer", "Software Developer", 0);
 typeWriter("#development-portfolio", "Development Portfolio", 0);
-typeWriter(".logo", "Saagar Shah", 0);
