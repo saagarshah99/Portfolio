@@ -268,13 +268,16 @@ footer
 
   a:any-link {text-decoration: none;}
 
-  img 
+  video 
   {    
     width: 60vw;
     height: auto;
     border-radius: 10px 10px 0 0;
   }
-  .project-caption-bar, .text {width: 60vw;}
+  .project-caption-bar, .text 
+  {
+    width: 60vw; 
+  }
   
   /* Caption text */
   .text 
@@ -284,6 +287,8 @@ footer
     
     .project-caption-bar
     {
+      color: white; 
+      font-weight: bold;
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
@@ -327,10 +332,6 @@ footer
   }
 }
 
-
-
-
-
 /* Fading animation */
 .fade 
 {
@@ -344,67 +345,6 @@ footer
     from {opacity: .4}
     to {opacity: 1}
 }
-
-/* fade effect/animation when opening and closing lightbox */
-#lightbox-fade
-{
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    opacity: 0.7;
-}
-
-.lightbox-container
-{
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* styles for project demo video popup */
-#lightbox
-{
-    display: none;
-    position: relative;
-    // bottom: 50%; left: 50%;
-    z-index: 1002;
-    overflow: hidden;
-    
-    video
-    {
-      width: 70vw;
-      height: auto;
-    }
-    
-    /* styles for close video button in lightbox */
-    &Close
-    {
-        float: right;
-        cursor: pointer;
-        color: white;
-        border: 1px solid #AEAEAE;
-        border-radius: 3px;
-        background: #222222;
-        font-size: 31px;
-        font-weight: bold;
-        line-height: 0px;
-        padding: 11px 3px;
-        position: absolute;
-        right: 2px;
-        top: 2px;
-        z-index: 1002;
-        opacity: 0.9;
-    
-        &:hover {color: red;}
-    }
-}
-#lightbox-fade:hover ~ #lightboxClose {display:none;}
-.lightboxClose:before {content: "×";}
 
 
 

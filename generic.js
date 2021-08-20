@@ -10,7 +10,8 @@ function goToPageTop()
 }
 function goToPageBottom()
 {
-    window.scrollTo(0,document.body.scrollHeight);
+    // window.scrollTo(0,document.body.scrollHeight);
+    location.href = "#portfolio-section";
     typeWriter("#development-portfolio", "Development Portfolio");
 }
 
