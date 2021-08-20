@@ -6,12 +6,12 @@ function goToPageTop()
 {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    typeWriter("#software-developer", "Software Developer", 0);
+    typeWriter("#software-developer", "Software Developer");
 }
 function goToPageBottom()
 {
     window.scrollTo(0,document.body.scrollHeight);
-    typeWriter("#development-portfolio", "Development Portfolio", 0);
+    typeWriter("#development-portfolio", "Development Portfolio");
 }
 
 //show top scroll button when user scrolls down at least 20px from top of document
@@ -43,6 +43,7 @@ const typeWriter = (selector, txt, i) =>
 {
     const selectedText = document.querySelector(selector);
     
+    if(i === undefined) i = 0;
     if(i === 0) selectedText.innerHTML = "";
     if (i < txt.length) 
     {
@@ -52,5 +53,5 @@ const typeWriter = (selector, txt, i) =>
     }
     else selectedText.innerHTML += "<span class='blink-text'> |</a>";
 }
-typeWriter("#software-developer", "Software Developer", 0);
-typeWriter("#development-portfolio", "Development Portfolio", 0);
+typeWriter("#software-developer", "Software Developer");
+typeWriter("#development-portfolio", "Development Portfolio");
