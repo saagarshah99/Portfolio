@@ -156,14 +156,12 @@ footer
     }
 }
 
-
+//styles for blinking text e.g. blinking cursor effect
 .blink-text 
 {
   animation: blink-text 1s step-start infinite;
-  // font-size: 150px;
   font-weight: bold;
 }
-
 @keyframes blink-text 
 {
   0% {color: inherit}
