@@ -36,25 +36,19 @@ function outputAlert(message, alertColour)
     goToPageTop();
 }
 
-
-
-
-
-let currentChar = 0;
-const typingSpeed = 50;
-const typewriter = (selector, text) =>
+//takes a selector and piece of text and slowly outputs each character (typing effect)
+const typeWriter = (selector, txt, i) =>
 {
-    // const text = selector.replace("#", "")
+    const selectedText = document.querySelector(selector);
     
-    if (currentChar < text.length) 
+    if (i < txt.length) 
     {
-        document.querySelector(selector).innerHTML += text.charAt(currentChar);
-        currentChar++;
-        setTimeout(typewriter, typingSpeed);
+        selectedText.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100, selector, txt, i);
     }
-
-    //currentChar = 0;
+    else selectedText.innerHTML += "<span class='blink-text'> |</a>";
 }
-
-
-//typewriter("#software-developer", "Software Developer");
+typeWriter("#software-developer", "Software Developer", 0);
+typeWriter("#development-portfolio", "Development Portfolio", 0);
+typeWriter(".logo", "Saagar Shah", 0);

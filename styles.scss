@@ -157,6 +157,21 @@ footer
 }
 
 
+.blink-text 
+{
+  animation: blink-text 1s step-start infinite;
+  // font-size: 150px;
+  font-weight: bold;
+}
+
+@keyframes blink-text 
+{
+  0% {color: inherit}
+  25% {color: transparent}
+  100% {color: inherit}
+}
+
+
 
 
 

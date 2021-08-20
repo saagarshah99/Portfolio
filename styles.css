@@ -137,6 +137,22 @@ footer #about-image-links #cv-link {
   position: relative;
 }
 
+.blink-text {
+  animation: blink-text 1s step-start infinite;
+  font-weight: bold;
+}
+
+@keyframes blink-text {
+  0% {
+    color: inherit;
+  }
+  25% {
+    color: transparent;
+  }
+  100% {
+    color: inherit;
+  }
+}
 /********************************SKILLS GRID STYLES********************************/
 /* arranging images in rows/columns */
 #skills {
