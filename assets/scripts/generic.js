@@ -67,14 +67,15 @@ for (let i = 0; i < Object.keys(linkHeadingArr).length; i++)
 }
 
 //output success message if CV is successfully download
-const btnCV = document.querySelector("#cv-link");
-btnCV.addEventListener("click", e => outputAlert('CV Successfully Downloaded', 'Green'));
+// const btnCV = document.querySelector("#cv-link");
+// btnCV.addEventListener("click", e => outputAlert('CV Successfully Downloaded', 'Green'));
 
 //looping through different links to listen to a click, opening in new tab
 const projectLinks = [
     ["#btnJugglingGit", "Juggleology", "GitHub"],
     ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""],
     ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
+    ["#btnCalculatorWeb", "calculator.html", ""]
 ];
 projectLinks.forEach(link => 
 {
