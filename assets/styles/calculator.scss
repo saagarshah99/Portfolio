@@ -1,0 +1,83 @@
+$primary-blue: rgb(10, 218, 255);
+
+body
+{
+    // height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+//whole calculator container
+.calculator   
+{    
+    min-width: 220px;
+    max-width: 400px;
+    // max-height: 60vh;
+    width: 50vw;
+    height: auto;
+    border-radius: 20px;
+    background-color: rgb(58, 55, 55);
+
+    //calculator textbox
+    &__input
+    {
+        overflow: scroll;
+        outline: none;
+        background: none;
+        border: none;  
+        padding: 10px;
+        width: 100%;
+        border-bottom: 2px solid white;
+        text-align: right;
+        color: $primary-blue;
+        font-size: 5vw;
+    }
+
+    //container for buttons
+    &__buttons 
+    {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+
+        //individual buttons
+        .calculator__button  
+        {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1vw;
+            height: auto;
+            color: $primary-blue;
+            border-radius: 50px;
+            font-size: 2vw;
+            cursor: pointer;
+
+            &:hover 
+            {
+                background: limegreen; 
+                color: white; 
+                font-weight: bold;
+            }
+        }
+
+        //more specific button styles
+        .light 
+        {
+            background: gray; 
+            font-weight: bolder;
+        }    
+        .orange {background: rgb(15, 56, 75);}    
+        #calculator__button- {&0 {grid-column: 1/ span 2;}} //1 button taking up space of 2
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    .calculator {&__buttons {.calculator__button {font-size: 3vw;}}}
+}
+@media screen and (max-width: 700px)
+{
+    .calculator {&__buttons {.calculator__button {font-size: 4vw;}}}
+}

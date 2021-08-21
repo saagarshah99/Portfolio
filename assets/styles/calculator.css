@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator {
+  min-width: 220px;
+  max-width: 400px;
+  width: 50vw;
+  height: auto;
+  border-radius: 20px;
+  background-color: #3a3737;
+}
+.calculator__input {
+  overflow: scroll;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid white;
+  text-align: right;
+  color: #0adaff;
+  font-size: 5vw;
+}
+.calculator__buttons {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.calculator__buttons .calculator__button {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  height: auto;
+  color: #0adaff;
+  border-radius: 50px;
+  font-size: 2vw;
+  cursor: pointer;
+}
+.calculator__buttons .calculator__button:hover {
+  background: limegreen;
+  color: white;
+  font-weight: bold;
+}
+.calculator__buttons .light {
+  background: gray;
+  font-weight: bolder;
+}
+.calculator__buttons .orange {
+  background: #0f384b;
+}
+.calculator__buttons #calculator__button-0 {
+  grid-column: 1/span 2;
+}
+
+@media screen and (max-width: 900px) {
+  .calculator__buttons .calculator__button {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .calculator__buttons .calculator__button {
+    font-size: 4vw;
+  }
+}
