@@ -75,15 +75,17 @@ const projectLinks = [
     ["#btnJugglingGit", "Juggleology", "GitHub"],
     ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""],
     ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
-    ["#btnCalculatorWeb", "calculator.html", ""]
+    ["#btnCalculatorWeb", "calculator.html", "Project"]
 ];
 projectLinks.forEach(link => 
 {
     document.querySelector(link[0]).addEventListener("click", e => 
     {
-        let url = link[1];
-        if(link[2] === "GitHub") url = "https://github.com/saagarshah99/"+url;
-        
-        linkNewTab(url);
+        if(link[2] === "Project") location.href = link[1];
+        else if(link[2] === "GitHub") 
+        {
+            linkNewTab("https://github.com/saagarshah99/"+link[1]);
+        }
+        else linkNewTab(link[1]);
     })
 })
