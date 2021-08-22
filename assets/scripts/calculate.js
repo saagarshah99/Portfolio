@@ -95,10 +95,7 @@ for(let i=0; i<=9; i++)
 {
   const decimalButton = document.querySelector(buttonIDStart+"decimal");  
   if(i === 0) decimalButton.addEventListener("click", e => receiveNumber("."));
-  else
-  {
-    document.querySelector(buttonIDStart+i).addEventListener("click",e => receiveNumber(i));
-  }
+  document.querySelector(buttonIDStart+i).addEventListener("click",e => receiveNumber(i));
 };
 document.querySelector(buttonIDStart+"reset").addEventListener("click", e => resetCalculator());
 document.querySelector(buttonIDStart+"equals").addEventListener("click", e => calculateSum());
