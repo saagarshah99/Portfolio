@@ -1,131 +1,53 @@
-<!-- 
-    https://coolors.co/78c0e0-449dd1-150578-0e0e52-3943b7
-    https://nology.io/trainee-portfolios/
- -->
-
- <!-- TODO: 
-    * B.E.M. naming conventions - find and replace mostly
-    * Edit video demos
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my programming portfolio!">
-    <meta name="keywords" content="Programming, Portfolio, Saagar Shah, HTML, CSS, JavaScript, Bootstrap, jQuery, Java, Python, Linux, Git">
-    <meta name="author" content="Saagar Shah">
-    <title>Calculator - Saagar Shah</title>
-    <link rel="stylesheet" href="assets/styles/styles.css">
-    <link rel="stylesheet" href="assets/styles/calculator.css">
-    <link rel="shortcut icon" href="assets/images/s_character.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saagar's Calculator</title>
+  <link rel="stylesheet" href="assets/styles/calculator.css">
 </head>
-<body>    
-    <header>        
-        <div class="flexbox nav-container">
-            <h2 class="flexbox logo"><a href="javascript: goToPageTop()">Saagar Shah</a></h2>
-            
-            <ul class="flexbox navigation">
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="index.html#development-portfolio">Projects</a></li>
-            </ul>
-        </div> 
-    </header>
-
-    <!-- button for scrolling to top of page (hidden by default) -->
-    <a href="javascript: goToPageTop()" id="btnScrollToTop">
-        <i class="fas fa-arrow-alt-circle-up"></i>
-    </a>
+<body>
+  <div class="calculator">
+    <form>
+      
+      <!-- calculator input text -->
+      <input type="number" class="calculator__input" id="txtCalculator" 
+      value="0" readonly style="-moz-appearance: textfield;" />
     
-    <main>    
-        <h1 id="calculator">Calculator</h1>        
+      <div class="calculator__buttons">
+
+        <!-- reset, square root, percent and divide buttons -->
+        <input type="reset" class="calculator__button light" value="C" id="calculator__button-reset">
+        <input type="button" class="calculator__button light" value="&Sqrt;" id="calculator__button-sqrt">
+        <input type="button" class="calculator__button light" value="%" id="calculator__button-percent">
+        <input type="button" class="calculator__button orange" value="&divide;" id="calculator__button-divide">
         
-        <div class="calculator">
-            <form>
-                <!-- calculator input text -->
-                <input type="number" class="calculator__input" id="txtCalculator" 
-                value="0" readonly style="-moz-appearance: textfield;" />
-
-                <div class="calculator__buttons">
-
-                    <!-- reset, square root, percent and divide buttons -->
-                    <input type="reset" class="calculator__button light" value="C"
-                    id="calculator__button-reset" onclick="resetCalculator()" >
-                    <input type="button" class="calculator__button light" value="&Sqrt;"
-                    id="calculator__button-sqrt" onclick="receiveOperation('sqrt')" >
-                    <input type="button" class="calculator__button light" value="%"
-                    id="calculator__button-percent" onclick="receiveOperation('%')" >
-                    <input type="button" class="calculator__button orange" value="&divide;"
-                    id="calculator__button-divide" onclick="receiveOperation('/')" >
-
-                    <!-- #7-9 and multiply buttons -->
-                    <input type="button" class="calculator__button" value="7"
-                    id="calculator__button-7" onclick="receiveNumber(7)" >
-                    <input type="button" class="calculator__button" value="8"
-                    id="calculator__button-8" onclick="receiveNumber(8)" >
-                    <input type="button" class="calculator__button" value="9"
-                    id="calculator__button-9" onclick="receiveNumber(9)" >
-                    <input type="button" class="calculator__button orange" value="x"
-                    id="calculator__button-multiply" onclick="receiveOperation('*')" >
-
-                    <!-- #4-6 and minus buttons -->
-                    <input type="button" class="calculator__button" value="4"
-                    id="calculator__button-4" onclick="receiveNumber(4)" >
-                    <input type="button" class="calculator__button" value="5"
-                    id="calculator__button-5" onclick="receiveNumber(5)" >
-                    <input type="button" class="calculator__button" value="6"
-                    id="calculator__button-6" onclick="receiveNumber(6)" >
-                    <input type="button" class="calculator__button orange" value="-"
-                    id="calculator__button-minus" onclick="receiveOperation('-')" >
-
-                    <!-- #1-3 and plus buttons -->
-                    <input type="button" class="calculator__button" value="1"
-                    id="calculator__button-1" onclick="receiveNumber(1)" >
-                    <input type="button" class="calculator__button" value="2"
-                    id="calculator__button-2" onclick="receiveNumber(2)" >
-                    <input type="button" class="calculator__button" value="3"
-                    id="calculator__button-3" onclick="receiveNumber(3)" >
-                    <input type="button" class="calculator__button orange" value="+"
-                    id="calculator__button-plus" onclick="receiveOperation('+')" >
-
-                    <!-- 0, decimal and equals button -->
-                    <input type="button" class="calculator__button" value="0"
-                    id="calculator__button-0" onclick="receiveNumber(0)" >
-                    <input type="button" class="calculator__button" value="."
-                    id="calculator__button-decimal" onclick="receiveNumber('.')" >
-                    <input type="button" class="calculator__button orange" value="="
-                    id="calculator__button-equals" onclick="calculateSum()" >
-                </div>
-            </form>  
-        </div>
-    </main>
-
-    <footer class="flexbox">
+        <!-- #7-9 and multiply buttons -->
+        <input type="button" class="calculator__button" value="7" id="calculator__button-7">
+        <input type="button" class="calculator__button" value="8" id="calculator__button-8">
+        <input type="button" class="calculator__button" value="9" id="calculator__button-9">
+        <input type="button" class="calculator__button orange" value="x" id="calculator__button-multiply">
         
-        <!-- image thumbnail links to cv, linkedin, etc. -->
-        <div class="flexbox" id="about-image-links">
-            <div>Saagar Shah &copy; <span id="output-year"></span></div>
-            
-            <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
-                <img src="assets/images/linkedIn_logo.png" alt="LinkedIn Logo" />
-            </a>
-            
-            <a href="https://github.com/saagarshah99/" target="_blank">
-                <img src="assets/images/github_logo.png" alt="GitHub Logo" />
-            </a>
-            
-            <!-- <a id="cv-link" href="assets/images/cv.png" download>
-                <img src="assets/images/cv.png" alt="LinkedIn Logo" />
-                <div class="centered">CV</div>
-            </a> -->
-        </div>        
-    </footer>
-
-    <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>    
-    <script src="assets/scripts/generic.js"></script>
-    <script src="assets/scripts/calculate.js"></script>
+        <!-- #4-6 and minus buttons -->
+        <input type="button" class="calculator__button" value="4" id="calculator__button-4">
+        <input type="button" class="calculator__button" value="5" id="calculator__button-5">
+        <input type="button" class="calculator__button" value="6" id="calculator__button-6">
+        <input type="button" class="calculator__button orange" value="-" id="calculator__button-minus">
+        
+        <!-- #1-3 and plus buttons -->
+        <input type="button" class="calculator__button" value="1" id="calculator__button-1">
+        <input type="button" class="calculator__button" value="2" id="calculator__button-2">
+        <input type="button" class="calculator__button" value="3" id="calculator__button-3">
+        <input type="button" class="calculator__button orange" value="+" id="calculator__button-plus">
+        
+        <!-- 0, decimal and equals button -->
+        <input type="button" class="calculator__button" value="0" id="calculator__button-0">
+        <input type="button" class="calculator__button" value="." id="calculator__button-decimal">
+        <input type="button" class="calculator__button orange" value="=" id="calculator__button-equals">
+      </div>
+    </form>  
+  </div>
+  <script src="assets/scripts/calculate.js"></script>
 </body>
 </html>

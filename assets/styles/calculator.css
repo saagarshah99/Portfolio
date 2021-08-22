@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .calculator {
@@ -26,14 +34,14 @@ body {
   font-size: 5vw;
 }
 .calculator__buttons {
-  padding: 10px;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
 .calculator__buttons .calculator__button {
   background: rgba(0, 0, 0, 0.5);
-  padding: 1vw;
+  padding: 2vw;
   height: auto;
   color: #0adaff;
   border-radius: 50px;
