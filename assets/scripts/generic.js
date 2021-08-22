@@ -73,9 +73,10 @@ for (let i = 0; i < Object.keys(linkHeadingArr).length; i++)
 //looping through different links to listen to a click, opening in new tab
 const projectLinks = [
     ["#btnJugglingGit", "Juggleology", "GitHub"],
-    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", ""],
+    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", "Other"],
     ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
-    ["#btnCalculatorWeb", "calculator.html", "Project"]
+    ["#btnCalculatorWeb", "calculator.html", "Project"],
+    ["#btnPizzaGit", "Java-Pizza-Program", "GitHub"]
 ];
 projectLinks.forEach(link => 
 {
