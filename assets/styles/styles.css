@@ -120,7 +120,7 @@ footer {
   justify-content: center;
   grid-gap: 10px;
   padding: 20px;
-  /* images links for linkedin, cv, etc. */
+  /* images links for linkedin and github */
 }
 footer #about-image-links {
   justify-content: center;
@@ -218,27 +218,27 @@ footer #about-image-links #cv-link:hover {
 }
 
 /* Hide the images by default and set size/align center */
-.mySlides {
+.project-slides {
   display: none;
   /* Caption text */
 }
-.mySlides a:any-link {
+.project-slides a:any-link {
   text-decoration: none;
 }
-.mySlides video {
+.project-slides video {
   width: 60vw;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
-.mySlides .project-caption-bar, .mySlides .text {
+.project-slides .project-slides__caption-bar, .project-slides .text {
   width: 60vw;
 }
-.mySlides .text {
+.project-slides .text {
   font-size: 15px;
   margin: 0 auto;
   /* Next & previous buttons */
 }
-.mySlides .text .project-caption-bar {
+.project-slides .text .project-slides__caption-bar {
   color: white;
   font-weight: bold;
   justify-content: space-between;
@@ -247,12 +247,12 @@ footer #about-image-links #cv-link:hover {
   background-color: #474343;
   border-radius: 0 0 10px 10px;
 }
-.mySlides .text .project-caption-bar a:any-link {
+.project-slides .text .project-slides__caption-bar a:any-link {
   color: white;
   font-size: large;
   font-weight: bold;
 }
-.mySlides .text .prev, .mySlides .text .next {
+.project-slides .text .prev, .project-slides .text .next {
   cursor: pointer;
   padding: 10px;
   align-items: center;
@@ -264,20 +264,20 @@ footer #about-image-links #cv-link:hover {
   color: #00d4ff;
   opacity: 0.5;
 }
-.mySlides .text .prev:hover, .mySlides .text .next:hover {
+.project-slides .text .prev:hover, .project-slides .text .next:hover {
   color: lightgray;
 }
-.mySlides .text .next {
+.project-slides .text .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.mySlides .text .project-description, .mySlides .text .project-links {
+.project-slides .text .project-slides__description, .project-slides .text .project-slides__links {
   margin-top: 10px;
 }
-.mySlides .text input[type=button] {
+.project-slides .text input[type=button] {
   padding: 10px;
 }
-.mySlides .text input[type=button]:hover {
+.project-slides .text input[type=button]:hover {
   cursor: pointer;
   background-color: #00d4ff;
 }
@@ -329,18 +329,18 @@ footer #about-image-links #cv-link:hover {
     margin-top: 12%;
   }
 
-  .mySlides {
+  .project-slides {
     display: none;
   }
-  .mySlides a:any-link {
+  .project-slides a:any-link {
     text-decoration: none;
   }
-  .mySlides video {
+  .project-slides video {
     width: 80vw;
     height: auto;
     border-radius: 10px 10px 0 0;
   }
-  .mySlides .project-caption-bar, .mySlides .text {
+  .project-slides .project-slides__caption-bar, .project-slides .text {
     width: 80vw;
   }
 }
