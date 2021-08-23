@@ -138,7 +138,7 @@ footer
     grid-gap: 10px;
     padding: 20px;
 
-    /* images links for linkedin, cv, etc. */
+    /* images links for linkedin and github */
     #about-image-links
     {
       justify-content: center;
@@ -264,7 +264,7 @@ footer
 }
 
 /* Hide the images by default and set size/align center */
-.mySlides 
+.project-slides 
 {
   display: none;
 
@@ -276,7 +276,7 @@ footer
     height: auto;
     border-radius: 10px 10px 0 0;
   }
-  .project-caption-bar, .text 
+  .project-slides__caption-bar, .text 
   {
     width: 60vw; 
   }
@@ -287,7 +287,7 @@ footer
     font-size: 15px;
     margin: 0 auto;    
     
-    .project-caption-bar
+    .project-slides__caption-bar
     {
       color: white; 
       font-weight: bold;
@@ -323,7 +323,7 @@ footer
     }
     .next {right: 0; border-radius: 3px 0 0 3px;}
 
-    .project-description, .project-links {margin-top: 10px;}
+    .project-slides__description, .project-slides__links {margin-top: 10px;}
 
     input[type='button']
     {
@@ -387,7 +387,7 @@ footer
 {
   main {margin-top: 12%;}
 
-  .mySlides 
+  .project-slides 
   {
     display: none;
 
@@ -399,7 +399,7 @@ footer
       height: auto;
       border-radius: 10px 10px 0 0;
     }
-    .project-caption-bar, .text {width: 80vw;}
+    .project-slides__caption-bar, .text {width: 80vw;}
   }
 
   
