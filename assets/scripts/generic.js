@@ -65,20 +65,3 @@ for (let i = 0; i < Object.keys(linkHeadingArr).length; i++)
 {
     typeWriter(linkHeadingArr[i][0], linkHeadingArr[i][1]);    
 }
-
-//looping through different links to listen to a click, opening in new tab
-const projectLinks = [
-    ["#btnJugglingGit", "Juggleology", "GitHub"],
-    ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", "Other"],
-    ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
-    ["#btnCalculatorWeb", "calculator.html", "Other"],
-    ["#btnPizzaGit", "Java-Pizza-Program", "GitHub"]
-];
-projectLinks.forEach(link => 
-{
-    document.querySelector(link[0]).addEventListener("click", e => 
-    {
-        if(link[2] === "GitHub") linkNewTab("https://github.com/saagarshah99/"+link[1]);
-        else linkNewTab(link[1]);
-    })
-})
