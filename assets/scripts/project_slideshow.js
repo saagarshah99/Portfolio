@@ -35,7 +35,9 @@ const projectLinks = [
     ["#btnJugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", "Other"],
     ["#btnCalculatorGit", "JS-Calculator", "GitHub"],
     ["#btnCalculatorWeb", "JS-Calculator", "GitHub-Site"],
-    ["#btnPizzaGit", "Java-Pizza-Program", "GitHub"]
+    ["#btnPizzaGit", "Java-Pizza-Program", "GitHub"],
+    ["#btnSpaceshipsGit", "Spaceships", "GitHub"],
+    ["#btnSpaceshipsWeb", "Spaceships", "GitHub-Site"]
 ];
 projectLinks.forEach(link => 
 {
