@@ -1,0 +1,57 @@
+@import "variables";
+
+/********************************SKILLS GRID STYLES********************************/
+
+
+/* arranging images in rows/columns */
+#skills {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); /* new row if more than 3 images */
+    margin-top: 10px;
+    grid-gap: 50px;  
+    font-size: 5vw;
+    align-items: center;
+    justify-items: center;
+
+    /* styles for each image in skill grid */
+    i {
+        height: auto; 
+        line-height: 60%;
+
+        &:hover {
+            cursor: pointer; 
+            color: $secondary-blue;
+        }
+    }
+}
+
+
+
+/***************POSITIONING AND ALIGNING FLEXBOX ROWS/COLUMNS*******************/
+
+.flex-body {
+    justify-content: center;
+    align-items: flex-start;
+    grid-gap: 50px;
+    flex-wrap: wrap;
+
+    .flex-column {
+        flex-direction: column;
+        flex-wrap: wrap;
+        grid-gap: 10px; /* amend this value */
+        
+        section {
+            // margin: 0 auto;
+            width: 45vw;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            ul {list-style-position: inside;}
+            h3 {margin-bottom: 10px;}
+        }
+    }
+}
+
+/* profile picture in the about section */
+#profile-picture {width: 30vw; height: auto;} 

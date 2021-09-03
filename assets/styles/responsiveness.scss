@@ -1,0 +1,83 @@
+@import "variables";
+
+/***************ADDITIONAL STYLES FOR RESPONSIVE DESIGN*******************/
+
+@media all and (max-width: 960px) {
+    main {margin: 10% 0 0 2%;}
+
+    .flex-body {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .flex-column {
+            #skills {font-size: 10vw;}
+
+            section {
+                width: 80vw;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    #profile-picture {width: 50vw;} 
+}
+@media all and (max-width: 700px) {
+    main {margin-top: 12%;}
+
+    .project-slides {
+        display: none;
+
+        a:any-link {text-decoration: none;}
+
+        video {    
+            width: 80vw;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .project-slides__caption-bar, .text {width: 80vw;}
+    }
+}
+@media all and (max-width: 600px) {main {margin-top: 20%;}}
+
+/* hide navbar and make logo cover entire body width, 
+change number of rows/columns in skills grid  */
+@media all and (max-width: 500px) {
+    .flex-body {
+        .flex-column {
+            #skills 
+            {
+                grid-template-columns: repeat(2, 1fr);
+                font-size: 12vw;
+            }
+        }
+    }
+
+    header {
+        .navigation {display: none;}  
+
+        .logo {
+            width: 100vw;
+            font-size: xx-large;
+            text-align: center;
+        }
+    }
+}
+@media all and (max-width: 400px) {
+    main {margin-top: 30%;}
+    #btnScrollToTop {bottom: 70px;}
+    #profile-picture {width: 60vw;} 
+}
+@media all and (max-width: 360px) {
+    main {margin-top: 30%;}
+
+    .flex-body {
+        .flex-column {
+            #skills {font-size: 15vw;}
+        }
+    }
+}
+@media all and (max-width: 190px) {main {margin-top: 50%;}}
