@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
+/********************************SKILLS GRID STYLES********************************/
+/* arranging images in rows/columns */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* new row if more than 3 images */
+  margin-top: 10px;
+  grid-gap: 50px;
+  font-size: 5vw;
+  align-items: center;
+  justify-items: center;
+  /* styles for each image in skill grid */
+}
+#skills i {
+  height: auto;
+  line-height: 60%;
+}
+#skills i:hover {
+  cursor: pointer;
+  color: #00d4ff;
+}
+
+/***************POSITIONING AND ALIGNING FLEXBOX ROWS/COLUMNS*******************/
+.flex-body {
+  justify-content: center;
+  align-items: flex-start;
+  grid-gap: 50px;
+  flex-wrap: wrap;
+}
+.flex-body .flex-column {
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  /* amend this value */
+}
+.flex-body .flex-column section {
+  width: 45vw;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-body .flex-column section ul {
+  list-style-position: inside;
+}
+.flex-body .flex-column section h3 {
+  margin-bottom: 10px;
+}
+
+/* profile picture in the about section */
+#profile-picture {
+  width: 30vw;
+  height: auto;
+}
