@@ -39,7 +39,9 @@ const projectLinks = [
     ["PizzaGit", "Java-Pizza-Program", "GitHub"],
     
     ["SpaceshipsGit", "Spaceships", "GitHub"],
-    ["SpaceshipsWeb", "Spaceships", "GitHub-Site"]
+    ["SpaceshipsWeb", "Spaceships", "GitHub-Site"],
+    
+    ["RenameGit", "Rename-Files", "GitHub"]
 ];
 projectLinks.forEach(link => {
     document.querySelector("#btn"+link[0]).addEventListener("click", event => {
