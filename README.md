@@ -1,5 +1,7 @@
 # Portfolio
 
+<img src="./assets/images/Portfolio_Screenshot.png" />
+
 ## Figma Design:
 https://www.figma.com/file/S6IOqyfNFTbyJfAigcj5cf/Portfolio-Draft-Design
 
