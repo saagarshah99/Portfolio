@@ -64,9 +64,14 @@
         .project-slides__description, .project-slides__links {margin-top: 10px;}
 
         input[type='button'] {
-        padding: 10px;
+            background-color: $secondary-blue;
+            padding: 10px;
+            border-radius: 10px;
 
-        &:hover {cursor: pointer; background-color: $secondary-blue;}
+            &:hover {
+                cursor: pointer; 
+                background-color: lightgray;
+            }
         }
     }
 }

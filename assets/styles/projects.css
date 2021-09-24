@@ -66,11 +66,13 @@
   margin-top: 10px;
 }
 .project-slides .text input[type=button] {
+  background-color: #00d4ff;
   padding: 10px;
+  border-radius: 10px;
 }
 .project-slides .text input[type=button]:hover {
   cursor: pointer;
-  background-color: #00d4ff;
+  background-color: lightgray;
 }
 
 /* Fading animation */
