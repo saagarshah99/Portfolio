@@ -1,3 +1,95 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
+/***************PROJECT SLIDESHOW STYLES*******************/
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Hide the images by default and set size/align center */
+.project-slides {
+  display: none;
+  /* Caption text */
+}
+.project-slides a:any-link {
+  text-decoration: none;
+}
+.project-slides video {
+  width: 60vw;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+.project-slides .project-slides__caption-bar, .project-slides .text {
+  width: 60vw;
+}
+.project-slides .text {
+  font-size: 15px;
+  margin: 0 auto;
+  /* Next & previous buttons */
+}
+.project-slides .text .project-slides__caption-bar {
+  color: white;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #474343;
+  border-radius: 0 0 10px 10px;
+}
+.project-slides .text .project-slides__caption-bar a:any-link {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.project-slides .text .prev, .project-slides .text .next {
+  cursor: pointer;
+  padding: 10px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  color: #00d4ff;
+  opacity: 0.5;
+}
+.project-slides .text .prev:hover, .project-slides .text .next:hover {
+  color: lightgray;
+}
+.project-slides .text .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.project-slides .text .project-slides__description, .project-slides .text .project-slides__links {
+  margin-top: 10px;
+}
+.project-slides .text input[type=button] {
+  padding: 10px;
+}
+.project-slides .text input[type=button]:hover {
+  cursor: pointer;
+  background-color: #00d4ff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+=======
 @import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
 /***************PROJECT SLIDESHOW STYLES*******************/
@@ -90,4 +182,5 @@
   to {
     opacity: 1;
   }
+>>>>>>> a5a33533984cd53f6f2455dca15ee77a9890d38f
 }
