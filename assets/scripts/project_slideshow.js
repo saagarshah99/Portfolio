@@ -41,7 +41,16 @@ const projectLinks = [
     ["SpaceshipsGit", "Spaceships", "GitHub"],
     ["SpaceshipsWeb", "Spaceships", "GitHub-Site"],
     
-    ["RenameGit", "Rename-Files", "GitHub"]
+    ["RenameGit", "Rename-Files", "GitHub"],
+    
+    ["MorseGit", "Morse-Code-Translator", "GitHub"],
+    ["MorseWeb", "Morse-Code-Translator", "GitHub-Site"],
+
+    ["PunkGit", "punk-api", "GitHub"],
+    ["PunkWeb", "punk-api", "GitHub-Site"],
+
+    ["TicketGit", "ticket-tracker", "GitHub"],
+    ["TicketWeb", "ticket-tracker", "GitHub-Site"],
 ];
 projectLinks.forEach(link => {
     document.querySelector("#btn"+link[0]).addEventListener("click", event => {
