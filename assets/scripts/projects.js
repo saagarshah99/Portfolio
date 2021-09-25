@@ -113,13 +113,12 @@ const projects = [
         github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
         site: {id: "", text: "", link: ""}
     },
+
 ].sort(() => Math.random() - 0.5); //shuffle array before loading
 
 
 
-
-
-/***************************PROJECT DISPLAY FUNCTIONS******************************/
+/***************************PROJECT DISPLAY******************************/
 
 
 // receive button object containing specific attributes and generate button if there's an id

@@ -8,7 +8,6 @@ const goToPageTop = () => {
     typeWriter("#software-developer", "Software Developer");
 }
 const goToPageBottom = () => {
-    // window.scrollTo(0,document.body.scrollHeight);
     location.href = "#portfolio-section";
     typeWriter("#development-portfolio", "Development Portfolio");
 }

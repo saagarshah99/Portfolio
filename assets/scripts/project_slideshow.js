@@ -1,3 +1,5 @@
+/***************************PROJECT SLIDESHOW NAVIGATION******************************/
+
 // Next/previous controls (receive positive or negative value)
 const plusSlides = (n) => showSlides(slideIndex += n);
 
