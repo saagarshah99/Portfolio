@@ -1,3 +1,6 @@
+/***********************************PROJECT DATA*************************************/
+
+
 const githubLink = "https://github.com/saagarshah99/";
 const githubPagesLink = "https://saagarshah99.github.io/";
 
@@ -132,8 +135,14 @@ const projects = [
         github: {id: "btnPizzaGit", text: "GitHub", link: githubLink + "Java-Pizza-Program"},
         site: {id: "", text: "", link: ""}
     },
-
 ];
+
+
+
+
+
+/***************************PROJECT DISPLAY FUNCTIONS******************************/
+
 
 // receive button object containing specific attributes and generate button if there's an id
 const generateButton = ({ id, text }) => {
@@ -151,9 +160,7 @@ const buttonClick = ({ id, link }) => {
 
 // looping through projects to output them to slideshow container
 projects.forEach(({ video, title, description, github, site }) => {
-    const container = document.querySelectorAll(".slideshow-container")[0];
-
-    container.innerHTML += `
+    document.querySelectorAll(".slideshow-container")[0].innerHTML += `
         <div class="project-slides fade">
             <video controls>
                 <source src="./assets/videos/project_demos/${video}.mp4" type="video/mp4">
