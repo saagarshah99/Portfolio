@@ -53,3 +53,6 @@
   width: 30vw;
   height: auto;
 }
+#profile-picture:hover {
+  cursor: pointer;
+}

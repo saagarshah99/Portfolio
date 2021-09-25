@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to my programming portfolio!">
-    <meta name="keywords" content="Programming, Portfolio, Saagar Shah, HTML, CSS, JavaScript, Bootstrap, jQuery, Java, Python, Linux, Git">
+    <meta name="keywords" content="Programming, Portfolio, Saagar Shah, HTML, CSS, JavaScript, Bootstrap, jQuery, Java, Python, Linux, Git, React, GitHub, NodeJS">
     <meta name="author" content="Saagar Shah">
     <title>Saagar Shah</title>
     <link rel="stylesheet" href="./assets/styles/styles.css">
@@ -39,7 +39,8 @@
 
         <div class="flex-body flexbox">
             <div class="flex-column flexbox"><section class="flexbox">
-                <img id="profile-picture" src="./assets/images/profile_picture.png" alt="Profile Picture">
+                <img id="profile-picture" src="./assets/images/profile_picture.png" 
+                title="Saagar Shah" alt="Profile Picture">
             </section></div>
         </div>
 
@@ -47,24 +48,7 @@
         <div class="flex-body flexbox">            
             <div class="flex-column flexbox">
                 <h3>Skills</h3>
-                
-                <section class="" id="skills">
-                    <i class="devicon-html5-plain-wordmark colored" title="HTML5"></i>
-                    <i class="devicon-css3-plain-wordmark colored" title="CSS3"></i>
-                    <i class="devicon-bootstrap-plain-wordmark colored" title="Bootstrap"></i>
-                    <i class="devicon-javascript-plain colored" title="JavaScript"></i>
-                    <i class="devicon-nodejs-plain-wordmark colored" title="NodeJS"></i>
-                    <i class="devicon-react-original-wordmark colored" title="React"></i>
-                    <i class="devicon-jquery-plain-wordmark colored" title="jQuery"></i>
-                    <i class="devicon-jest-plain colored" title="Jest"></i>
-                    <i class="devicon-java-plain-wordmark colored" title="Java"></i>
-                    <i class="devicon-python-plain colored" title="Python"></i>
-                    <i class="devicon-csharp-plain-wordmark colored" title="C#"></i>
-                    <i class="devicon-mysql-plain-wordmark colored" title="SQL"></i>
-                    <i class="devicon-linux-plain colored" title="Linux"></i>
-                    <i class="devicon-git-plain-wordmark colored" title="Git"></i>
-                    <i class="devicon-github-original-wordmark colored" title="GitHub"></i>
-                </section>
+                <section id="skills"></section>
             </div>
             
             <div class="flex-column flexbox" id="about-me-description">
@@ -86,212 +70,10 @@
     <main>
         <h1 id="development-portfolio"></h1>
 
-        <!-- Slideshow container -->
-        <!-- TODO: record and add videos for new projects -->
-        <div class="slideshow-container">    
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/punk_api.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Punk API
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        This web app fetches data from an API created by Brewdog containing various pieces 
-                        of information pertaining to some of their beers. It displays information about each 
-                        individual beer in a card and users can search or filter by certain attributes to 
-                        find more specifically what they are looking for. It was built using <b>HTML</b>, 
-                        <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and <b>JSON</b>.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnPunkGit" />
-                        <input type="button" value="View Web App" id="btnPunkWeb" />
-                    </p>
-                </div>
-            </div>
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/morse_code_translator.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Morse Code Translator
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        A basic web app built using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>JavaScript</b> 
-                        and <b>Jest</b>. It takes some English text as input and returns a morse code 
-                        translation.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnMorseGit" />
-                        <input type="button" value="View Translator" id="btnMorseWeb" />
-                    </p>
-                </div>
-            </div>
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/spaceships.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Spaceships Game
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        Here is a basic spaceship game built using <b>HTML</b>, <b>CSS</b> 
-                        and <b>JavaScript</b>. The objective is to move the spaceship around 
-                        to keep destroying all planets and stars on the screen. It accepts 
-                        both keyboard input and mouse clicking/tapping. 
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnSpaceshipsGit" />
-                        <input type="button" value="Play Game" id="btnSpaceshipsWeb" />
-                    </p>
-                </div>
-            </div>            
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/calculator.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Calculator Web App
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        Here is a basic calculator implemented using <b>HTML</b>, <b>CSS</b> 
-                        and <b>JavaScript</b>. It accepts both mouse and keyboard input.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnCalculatorGit" />
-                        <input type="button" value="View Calculator" id="btnCalculatorWeb" />
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/ticket_tracker.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Ticket Tracking System
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        This is a web app that allows you to track the number of project tickets different 
-                        employees within a company have completed. You can also increase or decrease the 
-                        number for each employee if the situation changes. This was a paired programming 
-                        task completed alongside one of my colleagues on the _nology bootcamp. It was built 
-                        using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and 
-                        <b>JSON</b>.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnTicketGit" />
-                        <input type="button" value="View Web App" id="btnTicketWeb" />
-                    </p>
-                </div>
-            </div>
-
-            <!-- Full-width images with number and caption text -->
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/jca_incubation.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        JCA | London Fashion Academy Incubation Portal
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
-                        <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>. It 
-                        allows JCA Incubation members to exclusively communicate, share events and skills with 
-                        each other, access newsletters and more.
-                    </p>
-                </div>                
-            </div>
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/rename_files.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Rename Files
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        A basic <b>C#</b> program that takes a given directory and renames a group of files 
-                        that are similar to one another in a convenient way. The user can even change the file extension if they wish.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnRenameGit" />
-                    </p>
-                </div>
-            </div>
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/juggling_web_app.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Juggling Web App
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        For my undergraduate final year project, using <b>HTML</b>, <b>CSS</b> (including 
-                        <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>, I 
-                        built a social network and portal for jugglers that integrates many tools for 
-                        managing one’s juggling experience. Users can organise juggling tricks and set 
-                        goals, visually learn tricks using a graphical simulation, communicate with 
-                        others and host events.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnJugglingGit" />
-                        <input type="button" value="Visit Website" id="btnJugglingWeb" />
-                    </p>
-                </div>
-            </div>
-                        
-
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/pizza.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Pizza Takeaway Management System
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        Using <b>Java</b>, I produced a takeaway management system where staff can take
-                        relevant contact details and then the enter the order. It displays an order
-                        summary with the option to print the receipt.
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnPizzaGit" />
-                    </p>
-                </div>
-            </div>
-        </div>
+        <!-- TODO: 
+            * change order more flexibly?
+        -->
+        <div class="slideshow-container"></div>
     </main>
 
     <footer class="flexbox">
@@ -312,6 +94,8 @@
 
     <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>    
     <script src="./assets/scripts/generic.js"></script>
+    <script src="./assets/scripts/skills.js"></script>
+    <script src="./assets/scripts/projects.js"></script>
     <script src="./assets/scripts/project_slideshow.js"></script>
 </body>
 </html>

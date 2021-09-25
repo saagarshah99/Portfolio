@@ -54,4 +54,9 @@
 }
 
 /* profile picture in the about section */
-#profile-picture {width: 30vw; height: auto;} 
+#profile-picture {
+    width: 30vw; 
+    height: auto;
+    
+    &:hover {cursor: pointer;}
+}
