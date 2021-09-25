@@ -97,9 +97,9 @@ const projects = [
             others and host events.
         `,
         github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
-        site: {
-            id: "btnJugglingWeb", 
-            text: "Visit Website", 
+        site: 
+        {
+            id: "btnJugglingWeb", text: "Visit Website", 
             link: "https://saagarshah.pythonanywhere.com/Juggleology/"
         }
     },
