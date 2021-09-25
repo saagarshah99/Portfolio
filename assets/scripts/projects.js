@@ -1,7 +1,5 @@
 /***********************************PROJECT DATA*************************************/
 
-// TODO: tidy up/improve overall project folder/file structure
-
 // object storing specific project details, all videos assumed to be .mp4's
 const projects = [
     {
