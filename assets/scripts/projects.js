@@ -1,6 +1,7 @@
 /***********************************PROJECT DATA*************************************/
 
-// TODO: amend order of projects
+// TODO: tidy up/improve overall project folder/file structure
+
 // object storing specific project details, all videos assumed to be .mp4's
 const projects = [
     {
@@ -13,17 +14,6 @@ const projects = [
         `,
         github: {id: "btnSpaceshipsGit", text: "GitHub", link: "Spaceships"},
         site: {id: "btnSpaceshipsWeb", text: "Play Game", link: "Spaceships"}
-    },
-
-    {
-        video: "rename_files", title: "Rename Files",
-        description: `
-            A basic <b>C#</b> program that takes a given directory and renames a group 
-            of files that are similar to one another in a convenient way. The user can 
-            even change the file extension if they wish.
-        `,
-        github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
-        site: {id: "", text: "", link: ""}
     },
 
     {
@@ -61,32 +51,6 @@ const projects = [
     },
 
     {
-        video: "ticket_tracker", title: "Ticket Tracking System",
-        description: `
-            This is a web app that allows you to track the number of project tickets different 
-            employees within a company have completed. You can also increase or decrease the 
-            number for each employee if the situation changes. This was a paired programming 
-            task completed alongside one of my colleagues on the _nology bootcamp. It was built 
-            using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and 
-            <b>JSON</b>.
-        `,
-        github: {id: "btnTicketGit", text: "GitHub", link: "ticket-tracker"},
-        site: {id: "btnTicketWeb", text: "View Web App", link: "ticket-tracker"}
-    },
-
-    {
-        video: "jca_incubation", title: "JCA | London Fashion Academy Incubation Portal",
-        description: `
-            As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
-            <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>. It 
-            allows JCA Incubation members to exclusively communicate, share events and skills with 
-            each other, access newsletters and more.
-        `,
-        github: {id: "", text: "", link: ""},
-        site: {id: "", text: "", link: ""}
-    },
-
-    {
         video: "juggling_web_app", title: "Juggling Web App",
         description: `
             For my undergraduate final year project, using <b>HTML</b>, <b>CSS</b> (including 
@@ -105,6 +69,32 @@ const projects = [
     },
 
     {
+        video: "jca_incubation", title: "JCA | London Fashion Academy Incubation Portal",
+        description: `
+            As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
+            <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>. It 
+            allows JCA Incubation members to exclusively communicate, share events and skills with 
+            each other, access newsletters and more.
+        `,
+        github: {id: "", text: "", link: ""},
+        site: {id: "", text: "", link: ""}
+    },
+
+    {
+        video: "ticket_tracker", title: "Ticket Tracking System",
+        description: `
+            This is a web app that allows you to track the number of project tickets different 
+            employees within a company have completed. You can also increase or decrease the 
+            number for each employee if the situation changes. This was a paired programming 
+            task completed alongside one of my colleagues on the _nology bootcamp. It was built 
+            using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and 
+            <b>JSON</b>.
+        `,
+        github: {id: "btnTicketGit", text: "GitHub", link: "ticket-tracker"},
+        site: {id: "btnTicketWeb", text: "View Web App", link: "ticket-tracker"}
+    },
+
+    {
         video: "pizza", title: "Pizza Takeaway Management System",
         description: `
             Using <b>Java</b>, I produced a takeaway management system where staff can take
@@ -114,7 +104,18 @@ const projects = [
         github: {id: "btnPizzaGit", text: "GitHub", link: "Java-Pizza-Program"},
         site: {id: "", text: "", link: ""}
     },
-];
+
+    {
+        video: "rename_files", title: "Rename Files",
+        description: `
+            A basic <b>C#</b> program that takes a given directory and renames a group 
+            of files that are similar to one another in a convenient way. The user can 
+            even change the file extension if they wish.
+        `,
+        github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
+        site: {id: "", text: "", link: ""}
+    },
+].sort(() => Math.random() - 0.5); //shuffle array before loading
 
 
 
