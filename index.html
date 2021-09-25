@@ -39,7 +39,8 @@
 
         <div class="flex-body flexbox">
             <div class="flex-column flexbox"><section class="flexbox">
-                <img id="profile-picture" src="./assets/images/profile_picture.png" alt="Profile Picture">
+                <img id="profile-picture" src="./assets/images/profile_picture.png" 
+                title="Saagar Shah" alt="Profile Picture">
             </section></div>
         </div>
 
@@ -86,9 +87,33 @@
     <main>
         <h1 id="development-portfolio"></h1>
 
-        <!-- Slideshow container -->
-        <!-- TODO: record and add videos for new projects -->
-        <div class="slideshow-container">    
+        <!-- TODO: 
+            * store projects in array of objects in separate file and map through them like that 
+            * change order more flexibly?
+        -->
+        <div class="slideshow-container">
+            <div class="project-slides fade">
+                <video controls>
+                    <source src="./assets/videos/project_demos/spaceships.mp4" type="video/mp4">
+                </video>
+                <div class="text">
+                    <div class="flexbox project-slides__caption-bar">
+                        <a class="prev fas fa-chevron-circle-left"></a>
+                        Spaceships Game
+                        <a class="next fas fa-chevron-circle-right"></a>
+                    </div>
+                    <p class="project-slides__description">
+                        Here is a basic spaceship game built using <b>HTML</b>, <b>CSS</b> 
+                        and <b>JavaScript</b>. The objective is to move the spaceship around 
+                        to keep destroying all planets and stars on the screen. It accepts 
+                        both keyboard input and mouse clicking/tapping. 
+                    </p>
+                    <p class="project-slides__links">
+                        <input type="button" value="GitHub" id="btnSpaceshipsGit" />
+                        <input type="button" value="Play Game" id="btnSpaceshipsWeb" />
+                    </p>
+                </div>
+            </div>
             
             <div class="project-slides fade">
                 <video controls>
@@ -135,29 +160,6 @@
                     </p>
                 </div>
             </div>
-            
-            <div class="project-slides fade">
-                <video controls>
-                    <source src="./assets/videos/project_demos/spaceships.mp4" type="video/mp4">
-                </video>
-                <div class="text">
-                    <div class="flexbox project-slides__caption-bar">
-                        <a class="prev fas fa-chevron-circle-left"></a>
-                        Spaceships Game
-                        <a class="next fas fa-chevron-circle-right"></a>
-                    </div>
-                    <p class="project-slides__description">
-                        Here is a basic spaceship game built using <b>HTML</b>, <b>CSS</b> 
-                        and <b>JavaScript</b>. The objective is to move the spaceship around 
-                        to keep destroying all planets and stars on the screen. It accepts 
-                        both keyboard input and mouse clicking/tapping. 
-                    </p>
-                    <p class="project-slides__links">
-                        <input type="button" value="GitHub" id="btnSpaceshipsGit" />
-                        <input type="button" value="Play Game" id="btnSpaceshipsWeb" />
-                    </p>
-                </div>
-            </div>            
             
             <div class="project-slides fade">
                 <video controls>
