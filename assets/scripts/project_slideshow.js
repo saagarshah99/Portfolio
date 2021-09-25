@@ -29,35 +29,35 @@ btnNextSlide.forEach(button => button.addEventListener("click", e => plusSlides(
 
 
 //looping through different links to listen to a click, opening in new tab
-const projectLinks = [
-    ["JugglingGit", "Juggleology", "GitHub"],
-    ["JugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", "Other"],
+// const projectLinks = [
+//     ["JugglingGit", "Juggleology", "GitHub"],
+//     ["JugglingWeb", "https://saagarshah.pythonanywhere.com/Juggleology/", "Other"],
     
-    ["CalculatorGit", "JS-Calculator", "GitHub"],
-    ["CalculatorWeb", "JS-Calculator", "GitHub-Site"],
+//     ["CalculatorGit", "JS-Calculator", "GitHub"],
+//     ["CalculatorWeb", "JS-Calculator", "GitHub-Site"],
     
-    ["PizzaGit", "Java-Pizza-Program", "GitHub"],
+//     ["PizzaGit", "Java-Pizza-Program", "GitHub"],
     
-    ["SpaceshipsGit", "Spaceships", "GitHub"],
-    ["SpaceshipsWeb", "Spaceships", "GitHub-Site"],
+//     ["SpaceshipsGit", "Spaceships", "GitHub"],
+//     ["SpaceshipsWeb", "Spaceships", "GitHub-Site"],
     
-    ["RenameGit", "Rename-Files", "GitHub"],
+//     ["RenameGit", "Rename-Files", "GitHub"],
     
-    ["MorseGit", "Morse-Code-Translator", "GitHub"],
-    ["MorseWeb", "Morse-Code-Translator", "GitHub-Site"],
+//     ["MorseGit", "Morse-Code-Translator", "GitHub"],
+//     ["MorseWeb", "Morse-Code-Translator", "GitHub-Site"],
 
-    ["PunkGit", "punk-api", "GitHub"],
-    ["PunkWeb", "punk-api", "GitHub-Site"],
+//     ["PunkGit", "punk-api", "GitHub"],
+//     ["PunkWeb", "punk-api", "GitHub-Site"],
 
-    ["TicketGit", "ticket-tracker", "GitHub"],
-    ["TicketWeb", "ticket-tracker", "GitHub-Site"],
-];
-projectLinks.forEach(link => {
-    document.querySelector("#btn"+link[0]).addEventListener("click", event => {
-        if(link[2] === "GitHub") linkNewTab("https://github.com/saagarshah99/"+link[1]);
+//     ["TicketGit", "ticket-tracker", "GitHub"],
+//     ["TicketWeb", "ticket-tracker", "GitHub-Site"],
+// ];
+// projectLinks.forEach(link => {
+//     document.querySelector("#btn"+link[0]).addEventListener("click", event => {
+//         if(link[2] === "GitHub") linkNewTab("https://github.com/saagarshah99/"+link[1]);
         
-        if(link[2] === "GitHub-Site") linkNewTab("https://saagarshah99.github.io/"+link[1]);
+//         if(link[2] === "GitHub-Site") linkNewTab("https://saagarshah99.github.io/"+link[1]);
         
-        else linkNewTab(link[1]);
-    })
-})
+//         else linkNewTab(link[1]);
+//     })
+// })
