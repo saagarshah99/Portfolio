@@ -1,9 +1,6 @@
 /***********************************PROJECT DATA*************************************/
 
-
-const githubLink = "https://github.com/saagarshah99/";
-const githubPagesLink = "https://saagarshah99.github.io/";
-
+// TODO: amend order of projects
 // object storing specific project details, all videos assumed to be .mp4's
 const projects = [
     {
@@ -14,8 +11,8 @@ const projects = [
             to keep destroying all planets and stars on the screen. It accepts 
             both keyboard input and mouse clicking/tapping. 
         `,
-        github: {id: "btnSpaceshipsGit", text: "GitHub", link: githubLink + "Spaceships"},
-        site: {id: "btnSpaceshipsWeb", text: "Play Game", link: githubPagesLink + "Spaceships"}
+        github: {id: "btnSpaceshipsGit", text: "GitHub", link: "Spaceships"},
+        site: {id: "btnSpaceshipsWeb", text: "Play Game", link: "Spaceships"}
     },
 
     {
@@ -25,7 +22,7 @@ const projects = [
             of files that are similar to one another in a convenient way. The user can 
             even change the file extension if they wish.
         `,
-        github: {id: "btnRenameGit", text: "GitHub", link: githubLink + "Rename-Files"},
+        github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
         site: {id: "", text: "", link: ""}
     },
 
@@ -38,8 +35,8 @@ const projects = [
             find more specifically what they are looking for. It was built using <b>HTML</b>, 
             <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and <b>JSON</b>.
         `,
-        github: {id: "btnPunkGit", text: "GitHub", link: githubLink + "punk-api"},
-        site: {id: "btnPunkWeb", text: "View Web App", link: githubPagesLink + "punk-api"}
+        github: {id: "btnPunkGit", text: "GitHub", link: "punk-api"},
+        site: {id: "btnPunkWeb", text: "View Web App", link: "punk-api"}
     },
 
     {
@@ -49,13 +46,8 @@ const projects = [
             and <b>Jest</b>. It takes some English text as input and returns a morse code 
             translation.
         `,
-        github: {id: "btnMorseGit", text: "GitHub", link: githubLink + "Morse-Code-Translator"},
-        site: 
-        {
-            id: "btnMorseWeb", 
-            text: "View Translator", 
-            link: githubPagesLink + "Morse-Code-Translator"
-        }
+        github: {id: "btnMorseGit", text: "GitHub", link: "Morse-Code-Translator"},
+        site: {id: "btnMorseWeb", text: "View Translator", link: "Morse-Code-Translator"}
     },
 
     {
@@ -64,16 +56,8 @@ const projects = [
             Here is a basic calculator implemented using <b>HTML</b>, <b>CSS</b> 
             and <b>JavaScript</b>. It accepts both mouse and keyboard input.
         `,
-        github: 
-        {
-            id: "btnCalculatorGit", text: "GitHub", link: githubLink + "JS-Calculator"
-        },
-        site: 
-        {
-            id: "btnCalculatorWeb", 
-            text: "View Calculator", 
-            link: githubPagesLink + "JS-Calculator"
-        }
+        github: {id: "btnCalculatorGit", text: "GitHub", link: "JS-Calculator"},
+        site: {id: "btnCalculatorWeb", text: "View Calculator", link: "JS-Calculator"}
     },
 
     {
@@ -86,13 +70,8 @@ const projects = [
             using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and 
             <b>JSON</b>.
         `,
-        github: {id: "btnTicketGit", text: "GitHub", link: githubLink + "ticket-tracker"},
-        site: 
-        {
-            id: "btnTicketWeb", 
-            text: "View Web App", 
-            link: githubPagesLink + "ticket-tracker"
-        }
+        github: {id: "btnTicketGit", text: "GitHub", link: "ticket-tracker"},
+        site: {id: "btnTicketWeb", text: "View Web App", link: "ticket-tracker"}
     },
 
     {
@@ -117,7 +96,7 @@ const projects = [
             goals, visually learn tricks using a graphical simulation, communicate with 
             others and host events.
         `,
-        github: {id: "btnJugglingGit", text: "GitHub", link: githubLink + "Juggleology"},
+        github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
         site: {
             id: "btnJugglingWeb", 
             text: "Visit Website", 
@@ -132,7 +111,7 @@ const projects = [
             relevant contact details and then the enter the order. It displays an order
             summary with the option to print the receipt.
         `,
-        github: {id: "btnPizzaGit", text: "GitHub", link: githubLink + "Java-Pizza-Program"},
+        github: {id: "btnPizzaGit", text: "GitHub", link: "Java-Pizza-Program"},
         site: {id: "", text: "", link: ""}
     },
 ];
@@ -146,13 +125,20 @@ const projects = [
 
 // receive button object containing specific attributes and generate button if there's an id
 const generateButton = ({ id, text }) => {
-    return id!=="" ? `<input type="button" value="${text}" id="${id}" />` : "";
+    return id !== "" ? `<input type="button" value="${text}" id="${id}" />` : "";
 }
 
 // receive button object and add event listener if there is an id
-const buttonClick = ({ id, link }) => {
+const buttonClick = ({ id, text, link }) => {
     if(id !== "") {
-        document.querySelector("#"+id).addEventListener("click", (event) => {
+        if(text === "GitHub") {
+            link = "https://github.com/saagarshah99/" + link;
+        }
+        else if(id !== "btnJugglingWeb") {
+            link = "https://saagarshah99.github.io/" + link;
+        }
+
+        document.querySelector("#"+id).addEventListener("click", (e) => {
             linkNewTab(link);
         });
     }
