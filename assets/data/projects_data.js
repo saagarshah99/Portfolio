@@ -26,16 +26,17 @@ const projects = [
         github: {id: "btnPunkGit", text: "GitHub", link: "punk-api"},
         site: {id: "btnPunkWeb", text: "View Web App", link: "punk-api"}
     },
-    
+
     {
-        title: "Morse Code Translator",
-        skills: ["HTML", "CSS", "SCSS", "JavaScript", "Jest"],
-        image: "morse_code",
+        title: "OOP Game",
+        skills: ["Java"],
+        video: "oop_quiz",
         description: `
-            A basic web app that takes some English text as input and returns a morse code translation.
+            Here is a basic multiple choice quiz with a graphical user interface where
+            the user selects the number of questions they would like and that many questions
+            are fetched from an API.
         `,
-        github: {id: "btnMorseGit", text: "GitHub", link: "Morse-Code-Translator"},
-        site: {id: "btnMorseWeb", text: "View Translator", link: "Morse-Code-Translator"}
+        github: {id: "btnOOPGameGit", text: "GitHub", link: "OOP-Quiz"},
     },
     
     {
@@ -74,6 +75,17 @@ const projects = [
             exclusively communicate, share events and skills with each other, access newsletters 
             and more.
         `,
+    },
+
+    {
+        title: "Morse Code Translator",
+        skills: ["HTML", "CSS", "SCSS", "JavaScript", "Jest"],
+        image: "morse_code",
+        description: `
+            A basic web app that takes some English text as input and returns a morse code translation.
+        `,
+        github: {id: "btnMorseGit", text: "GitHub", link: "Morse-Code-Translator"},
+        site: {id: "btnMorseWeb", text: "View Translator", link: "Morse-Code-Translator"}
     },
 
     {
