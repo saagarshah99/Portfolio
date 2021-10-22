@@ -1,55 +1,75 @@
 /***********************************PROJECT DATA*************************************/
 
+/*TODO: 
+    - add "technologies used" array to array of objects
+
+    - additional projects (take screenshots and record videos for both of these)
+        * java OOP game
+        * client project
+    
+    - delete unwanted videos and commented out video names in array of objects
+*/
+
 // object storing specific project details, all videos assumed to be .mp4's
 const projects = [
     {
-        video: "spaceships", title: "Spaceships Game",
+        // video: "spaceships", 
+        title: "Spaceships Game",
+        skills: ["HTML", "CSS", "SCSS", "JavaScript"],
+        image: "spaceships",
         description: `
-            Here is a basic spaceship game built using <b>HTML</b>, <b>CSS</b> 
-            and <b>JavaScript</b>. The objective is to move the spaceship around 
+            Here is a basic spaceship game where the objective is to move the spaceship around 
             to keep destroying all planets and stars on the screen. It accepts 
             both keyboard input and mouse clicking/tapping. 
         `,
         github: {id: "btnSpaceshipsGit", text: "GitHub", link: "Spaceships"},
         site: {id: "btnSpaceshipsWeb", text: "Play Game", link: "Spaceships"}
     },
-
+    
     {
-        video: "punk_api", title: "Punk API",
+        // video: "punk_api", 
+        title: "Punk API",
+        skills: ["HTML", "CSS", "SCSS", "Vanilla JS", "React", "JSON"],
+        image: "punk_api",
         description: `
             This web app fetches data from an API created by Brewdog containing various pieces 
             of information pertaining to some of their beers. It displays information about each 
             individual beer in a card and users can search or filter by certain attributes to 
-            find more specifically what they are looking for. It was built using <b>HTML</b>, 
-            <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and <b>JSON</b>.
+            find more specifically what they are looking for.
         `,
         github: {id: "btnPunkGit", text: "GitHub", link: "punk-api"},
         site: {id: "btnPunkWeb", text: "View Web App", link: "punk-api"}
     },
-
+    
     {
-        video: "morse_code_translator", title: "Morse Code Translator",
+        // video: "morse_code_translator", 
+        title: "Morse Code Translator",
+        skills: ["HTML", "CSS", "SCSS", "JavaScript", "Jest"],
+        image: "morse_code",
         description: `
-            A basic web app built using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>JavaScript</b> 
-            and <b>Jest</b>. It takes some English text as input and returns a morse code 
-            translation.
+            A basic web app that takes some English text as input and returns a morse code translation.
         `,
         github: {id: "btnMorseGit", text: "GitHub", link: "Morse-Code-Translator"},
         site: {id: "btnMorseWeb", text: "View Translator", link: "Morse-Code-Translator"}
     },
-
+    
     {
-        video: "calculator", title: "Calculator Web App",
+        // video: "calculator", 
+        title: "Calculator Web App",
+        skills: ["HTML", "CSS", "JavaScript"],
+        image: "calculator",
         description: `
-            Here is a basic calculator implemented using <b>HTML</b>, <b>CSS</b> 
-            and <b>JavaScript</b>. It accepts both mouse and keyboard input.
+        Here is a basic calculator that accepts both mouse and keyboard input.
         `,
         github: {id: "btnCalculatorGit", text: "GitHub", link: "JS-Calculator"},
         site: {id: "btnCalculatorWeb", text: "View Calculator", link: "JS-Calculator"}
     },
-
+    
     {
-        video: "juggling_web_app", title: "Juggling Web App",
+        // video: "juggling_web_app", 
+        title: "Juggling Web App",
+        skills: ["HTML", "SCSS", "JavaScript"],
+        image: "juggling_web_app",
         description: `
             For my undergraduate final year project, using <b>HTML</b>, <b>CSS</b> (including 
             <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>, I 
@@ -67,7 +87,9 @@ const projects = [
     },
 
     {
-        video: "jca_incubation", title: "JCA | London Fashion Academy Incubation Portal",
+        video: "jca_incubation", 
+        title: "JCA | London Fashion Academy Incubation Portal",
+        skills: ["HTML", "SCSS", "JavaScript"],
         description: `
             As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
             <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>. It 
@@ -79,7 +101,9 @@ const projects = [
     },
 
     {
-        video: "ticket_tracker", title: "Ticket Tracking System",
+        // video: "ticket_tracker", 
+        title: "Ticket Tracking System",
+        image: "ticket_tracker",
         description: `
             This is a web app that allows you to track the number of project tickets different 
             employees within a company have completed. You can also increase or decrease the 
@@ -93,7 +117,9 @@ const projects = [
     },
 
     {
-        video: "pizza", title: "Pizza Takeaway Management System",
+        video: "pizza", 
+        title: "Pizza Takeaway Management System",
+        skills: ["HTML", "SCSS", "JavaScript"],
         description: `
             Using <b>Java</b>, I produced a takeaway management system where staff can take
             relevant contact details and then the enter the order. It displays an order
@@ -104,7 +130,9 @@ const projects = [
     },
 
     {
-        video: "rename_files", title: "Rename Files",
+        video: "rename_files", 
+        title: "Rename Files",
+        skills: ["HTML", "SCSS", "JavaScript"],
         description: `
             A basic <b>C#</b> program that takes a given directory and renames a group 
             of files that are similar to one another in a convenient way. The user can 
@@ -113,8 +141,8 @@ const projects = [
         github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
         site: {id: "", text: "", link: ""}
     },
-
-].sort(() => Math.random() - 0.5); //shuffle array before loading
+];
+// ].sort(() => Math.random() - 0.5); //shuffle array before loading
 
 
 
@@ -143,12 +171,18 @@ const buttonClick = ({ id, text, link }) => {
 }
 
 // looping through projects to output them to slideshow container
-projects.forEach(({ video, title, description, github, site }) => {
-    document.querySelectorAll(".slideshow-container")[0].innerHTML += `
+projects.forEach(({ image, video, title, skills, description, github, site }) => {
+    document.querySelector(".slideshow-container").innerHTML += `
         <div class="project-slides fade">
-            <video controls>
-                <source src="./assets/videos/project_demos/${video}.mp4" type="video/mp4">
-            </video>
+            
+            ${
+                video ? `
+                    <video controls>
+                        <source src="./assets/videos/project_demos/${video}.mp4" type="video/mp4">
+                    </video>
+                ` :
+                `<img src="./assets/images/projects/${image}.png" />`
+            }
             <div class="text">
                 <div class="flexbox project-slides__caption-bar">
                     <a class="prev fas fa-chevron-circle-left"></a>
@@ -156,6 +190,17 @@ projects.forEach(({ video, title, description, github, site }) => {
                     <a class="next fas fa-chevron-circle-right"></a>
                 </div>
                 <p class="project-slides__description">${description}</p>
+                <br />
+                <p><b>Technologies used:</b> 
+                    ${
+                        skills.map((currentSkill, i) => {
+                            return i !== skills.length - 1 ? 
+                                " " + currentSkill : 
+                                " and "+currentSkill.replace(",", "")
+                        })
+                    }
+                </p>
+
                 <p class="project-slides__links">
                     ${generateButton(github)} 
                     ${generateButton(site)} 
