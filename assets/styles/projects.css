@@ -16,7 +16,7 @@
 .project-slides a:any-link {
   text-decoration: none;
 }
-.project-slides video {
+.project-slides img, .project-slides video {
   width: 60vw;
   height: auto;
   border-radius: 10px 10px 0 0;

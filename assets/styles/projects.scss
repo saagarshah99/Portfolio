@@ -4,7 +4,6 @@
 
 /* Slideshow container */
 .slideshow-container {
-    // max-width: 900px;
     position: relative;
     margin-top: 20px;
     text-align: center;
@@ -16,7 +15,7 @@
 
     a:any-link {text-decoration: none;}
 
-    video {    
+    img, video {    
         width: 60vw;
         height: auto;
         border-radius: 10px 10px 0 0;

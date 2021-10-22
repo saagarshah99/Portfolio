@@ -53,14 +53,14 @@
             
             <div class="flex-column flexbox" id="about-me-description">
                 <h3>About Me</h3>
-                <section class="">
-                    A London-based software developer currently on a 12-week 
-                    intensive Software Engineering course as part of the <b>_nology Tech Consultancy 
-                    Programme</b>. It focuses on key areas of programming, covering concepts in 
-                    <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Java</b>, <b>Testing Strategy</b> 
-                    and <b>Agile Projects</b>. I will also be given the opportunity to complete a 
-                    <b>real-life client project</b>. I decided to enrol myself onto this programme 
-                    to fuel my hunger for solving problems using creative and analytical skills.
+                <section>
+                    A London-based Trainee Full Stack Engineer on the <b>_nology Tech Consultancy 
+                    Programme</b>. The bootcamp focuses on key areas of programming, covering 
+                    concepts in <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Java</b>, 
+                    <b>Testing Strategy</b> and <b>Agile Projects</b>. I will also be given the 
+                    opportunity to complete a <b>real-life client project</b>. I decided to enrol 
+                    myself onto this programme to fuel my hunger for solving problems using creative 
+                    and analytical skills.
                 </section>
             </div>            
         </div>        
@@ -69,25 +69,20 @@
     <div id="portfolio-section"></div>
     <main>
         <h1 id="development-portfolio"></h1>
-
-        <!-- TODO: 
-            * change order more flexibly?
-        -->
         <div class="slideshow-container"></div>
     </main>
 
+    <!--image thumbnail links to linkedin and github-->
     <footer class="flexbox">
-        
-        <!--image thumbnail links to linkedin and github-->
         <div class="flexbox" id="about-image-links">
             <div>Saagar Shah &copy; <span id="output-year"></span></div>
             
-            <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
-                <img src="./assets/images/linkedIn_logo.png" alt="LinkedIn Logo" />
-            </a>
-            
             <a href="https://github.com/saagarshah99/" target="_blank">
                 <img src="./assets/images/github_logo.png" alt="GitHub Logo" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/saagarshah/" target="_blank">
+                <img src="./assets/images/linkedIn_logo.png" alt="LinkedIn Logo" />
             </a>
         </div>        
     </footer>
@@ -95,7 +90,7 @@
     <script src="https://kit.fontawesome.com/4fd86c743c.js" crossorigin="anonymous"></script>    
     <script src="./assets/scripts/generic.js"></script>
     <script src="./assets/scripts/skills.js"></script>
-    <script src="./assets/scripts/projects.js"></script>
-    <script src="./assets/scripts/project_slideshow.js"></script>
+    <script type="module" src="./assets/scripts/projects.js"></script>
+    <script type="module" src="./assets/scripts/project_slideshow.js"></script>
 </body>
 </html>
