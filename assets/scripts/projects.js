@@ -1,13 +1,9 @@
 /***********************************PROJECT DATA*************************************/
 
 /*TODO: 
-    - add "technologies used" array to array of objects
-
     - additional projects (take screenshots and record videos for both of these)
         * java OOP game
         * client project
-    
-    - delete unwanted videos and commented out video names in array of objects
 */
 
 // object storing specific project details, all videos assumed to be .mp4's
@@ -54,24 +50,20 @@ const projects = [
         title: "Calculator Web App",
         skills: ["HTML", "CSS", "JavaScript"],
         image: "calculator",
-        description: `
-        Here is a basic calculator that accepts both mouse and keyboard input.
-        `,
+        description: `Here is a basic calculator that accepts both mouse and keyboard input.`,
         github: {id: "btnCalculatorGit", text: "GitHub", link: "JS-Calculator"},
         site: {id: "btnCalculatorWeb", text: "View Calculator", link: "JS-Calculator"}
     },
     
     {
         title: "Juggling Web App",
-        skills: ["HTML", "SCSS", "JavaScript"],
+        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
         image: "juggling_web_app",
         description: `
-            For my undergraduate final year project, using <b>HTML</b>, <b>CSS</b> (including 
-            <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>, I 
-            built a social network and portal for jugglers that integrates many tools for 
-            managing one’s juggling experience. Users can organise juggling tricks and set 
-            goals, visually learn tricks using a graphical simulation, communicate with 
-            others and host events.
+        For my undergraduate final year project, I built a social network and portal for 
+        jugglers that integrates many tools for managing one’s juggling experience. Users 
+        can organise juggling tricks and set goals, visually learn tricks using a graphical 
+        simulation, communicate with others and host events.
         `,
         github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
         site: 
@@ -80,31 +72,28 @@ const projects = [
             link: "https://saagarshah.pythonanywhere.com/Juggleology/"
         }
     },
-
+    
     {
         video: "jca_incubation", 
         title: "JCA | London Fashion Academy Incubation Portal",
-        skills: ["HTML", "SCSS", "JavaScript"],
+        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
         description: `
-            As part of my internship, I built a web app using <b>HTML</b>, <b>CSS</b> (including 
-            <b>Bootstrap</b>), <b>JavaScript</b> (including <b>jQuery</b>) and <b>Django</b>. It 
-            allows JCA Incubation members to exclusively communicate, share events and skills with 
-            each other, access newsletters and more.
+            As part of my internship, I built a web app that allows JCA Incubation members to 
+            exclusively communicate, share events and skills with each other, access newsletters 
+            and more.
         `,
-        github: {id: "", text: "", link: ""},
-        site: {id: "", text: "", link: ""}
     },
 
     {
         title: "Ticket Tracking System",
         image: "ticket_tracker",
+        skills: ["HTML", "CSS", "SCSS", "Vanilla JS", "React", "JSON"],
         description: `
             This is a web app that allows you to track the number of project tickets different 
             employees within a company have completed. You can also increase or decrease the 
             number for each employee if the situation changes. This was a paired programming 
             task completed alongside one of my colleagues on the _nology bootcamp. It was built 
-            using <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>Vanilla JS</b>, <b>React</b> and 
-            <b>JSON</b>.
+            using .
         `,
         github: {id: "btnTicketGit", text: "GitHub", link: "ticket-tracker"},
         site: {id: "btnTicketWeb", text: "View Web App", link: "ticket-tracker"}
@@ -113,27 +102,25 @@ const projects = [
     {
         video: "pizza", 
         title: "Pizza Takeaway Management System",
-        skills: ["HTML", "SCSS", "JavaScript"],
+        skills: ["Java"],
         description: `
-            Using <b>Java</b>, I produced a takeaway management system where staff can take
+            I produced a takeaway management system where staff can take
             relevant contact details and then the enter the order. It displays an order
             summary with the option to print the receipt.
         `,
         github: {id: "btnPizzaGit", text: "GitHub", link: "Java-Pizza-Program"},
-        site: {id: "", text: "", link: ""}
     },
 
     {
         video: "rename_files", 
         title: "Rename Files",
-        skills: ["HTML", "SCSS", "JavaScript"],
+        skills: ["C#"],
         description: `
-            A basic <b>C#</b> program that takes a given directory and renames a group 
+            A basic program that takes a given directory and renames a group 
             of files that are similar to one another in a convenient way. The user can 
             even change the file extension if they wish.
         `,
         github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
-        site: {id: "", text: "", link: ""}
     },
 ];
 
@@ -143,9 +130,7 @@ const projects = [
 
 
 // receive button object containing specific attributes and generate button if there's an id
-const generateButton = ({ id, text }) => {
-    return id !== "" ? `<input type="button" value="${text}" id="${id}" />` : "";
-}
+const generateButton = ({ id, text }) => `<input type="button" value="${text}" id="${id}" />`;
 
 // receive button object and add event listener if there is an id
 const buttonClick = ({ id, text, link }) => {
@@ -167,7 +152,6 @@ const buttonClick = ({ id, text, link }) => {
 projects.forEach(({ image, video, title, skills, description, github, site }) => {
     document.querySelector(".slideshow-container").innerHTML += `
         <div class="project-slides fade">
-            
             ${
                 video ? `
                     <video controls>
@@ -187,7 +171,7 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
                 <p><b>Technologies used:</b> 
                     ${
                         skills.map((currentSkill, i) => {
-                            return i !== skills.length - 1 ? 
+                            return skills.length === 1 || i !== skills.length - 1 ? 
                                 " " + currentSkill : 
                                 " and "+currentSkill.replace(",", "")
                         })
@@ -195,11 +179,17 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
                 </p>
 
                 <p class="project-slides__links">
-                    ${generateButton(github)} 
-                    ${generateButton(site)} 
+                    ${github ? generateButton(github) : ""}
+                    ${site ? generateButton(site) : ""}
                 </p>
             </div>
         </div>
     `;
 });
-projects.forEach(({ github, site }) => {buttonClick(github); buttonClick(site);});
+
+
+//adding event handlers if these buttons exist in array of objects
+projects.forEach(({ github, site }) => {
+    github && buttonClick(github); 
+    site && buttonClick(site);
+});
