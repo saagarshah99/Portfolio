@@ -38,13 +38,10 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
                     <a class="next fas fa-chevron-circle-right"></a>
                 </div>
                 <p class="project-slides__description">${description}</p>
+                
                 <br /><p>
-                    <b>Technologies Used:</b>
-                    ${skills.map((currentSkill, i) => (
-                        skills.length === 1 || i !== skills.length - 1 ? 
-                            " " + currentSkill : 
-                            " and "+currentSkill.replace(",", "")
-                    ))}
+                    <b>Technologies Used: </b>
+                    ${skills.join(", ").replace(/, ((?:.(?!, ))+)$/, ' and $1')}
                 </p>
 
                 <p class="project-slides__links">
