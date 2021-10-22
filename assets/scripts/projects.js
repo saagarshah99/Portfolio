@@ -13,7 +13,6 @@
 // object storing specific project details, all videos assumed to be .mp4's
 const projects = [
     {
-        // video: "spaceships", 
         title: "Spaceships Game",
         skills: ["HTML", "CSS", "SCSS", "JavaScript"],
         image: "spaceships",
@@ -27,7 +26,6 @@ const projects = [
     },
     
     {
-        // video: "punk_api", 
         title: "Punk API",
         skills: ["HTML", "CSS", "SCSS", "Vanilla JS", "React", "JSON"],
         image: "punk_api",
@@ -42,7 +40,6 @@ const projects = [
     },
     
     {
-        // video: "morse_code_translator", 
         title: "Morse Code Translator",
         skills: ["HTML", "CSS", "SCSS", "JavaScript", "Jest"],
         image: "morse_code",
@@ -54,7 +51,6 @@ const projects = [
     },
     
     {
-        // video: "calculator", 
         title: "Calculator Web App",
         skills: ["HTML", "CSS", "JavaScript"],
         image: "calculator",
@@ -66,7 +62,6 @@ const projects = [
     },
     
     {
-        // video: "juggling_web_app", 
         title: "Juggling Web App",
         skills: ["HTML", "SCSS", "JavaScript"],
         image: "juggling_web_app",
@@ -101,7 +96,6 @@ const projects = [
     },
 
     {
-        // video: "ticket_tracker", 
         title: "Ticket Tracking System",
         image: "ticket_tracker",
         description: `
@@ -142,7 +136,6 @@ const projects = [
         site: {id: "", text: "", link: ""}
     },
 ];
-// ].sort(() => Math.random() - 0.5); //shuffle array before loading
 
 
 
