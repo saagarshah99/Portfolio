@@ -1,13 +1,20 @@
-// TODO: add description for client project and update OOP quiz README on github
-
 // object storing specific project details, all videos/images assumed to be .mp4's/.png's
 const projects = [
     {
-        title: "Client Project - _charlie",
+        title: "_nology Client Project",
         skills: ["HTML", "Bootstrap", "SCSS", "JavaScript", "React", "Spring Boot", "MYSQL"],
         video: "client_project",
         description: `
-            [insert description here...]
+            Alongside 5 other colleagues on my _nology bootcamp and with the guidance of some of 
+            the coaches, I implemented a platform that allows coaches to keep track of different
+            students and the progress they have made with projects assigned to them during the bootcamp.
+
+            The frontend and backend API are 2 separate applications designed to communicate 
+            with each other to perform various data manipulation tasks (backend API is connected to 
+            a MYSQL database).
+
+            There is a strong likelihood that _nology will continue to develop this platform to eventually
+            use it for real. 
         `,
         github: {
             id: "btnClientProjectGit", 

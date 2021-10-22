@@ -39,7 +39,7 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
                 </div>
                 <p class="project-slides__description">${description}</p>
                 <br /><p>
-                    <b>Technologies used:</b>
+                    <b>Technologies Used:</b>
                     ${skills.map((currentSkill, i) => (
                         skills.length === 1 || i !== skills.length - 1 ? 
                             " " + currentSkill : 
