@@ -28,6 +28,8 @@
         font-size: 15px;
         margin: 0 auto;    
 
+        
+        // TODO: fix issue where the caption bar is bigger than the image/video on smaller screens
         .project-slides__caption-bar {
             color: white; 
             font-weight: bold;

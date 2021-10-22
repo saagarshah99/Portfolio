@@ -4,6 +4,8 @@
     - additional projects (take screenshots and record videos for both of these)
         * java OOP game
         * client project
+
+    - move projects array of objects to separate file and import here
 */
 
 // object storing specific project details, all videos assumed to be .mp4's
