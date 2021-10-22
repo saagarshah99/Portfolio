@@ -1,5 +1,21 @@
+// TODO: add description for client project and update OOP quiz README on github
+
 // object storing specific project details, all videos/images assumed to be .mp4's/.png's
 const projects = [
+    {
+        title: "Client Project - _charlie",
+        skills: ["HTML", "Bootstrap", "SCSS", "JavaScript", "React", "Spring Boot", "MYSQL"],
+        video: "client_project",
+        description: `
+            [insert description here...]
+        `,
+        github: {
+            id: "btnClientProjectGit", 
+            text: "GitHub", 
+            link: "https://github.com/nology-tech/_charlie"
+        },
+    },
+    
     {
         title: "Spaceships Game",
         skills: ["HTML", "CSS", "SCSS", "JavaScript"],

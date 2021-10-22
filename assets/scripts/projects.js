@@ -2,7 +2,7 @@ import { projects } from "../data/projects_data.js";
 
 /***********************************PROJECT DATA*************************************/
 
-// TODO: additional projects (take screenshots and record videos for both java OOP game and client project)
+// TODO: additional projects (take screenshots and record videos for both client project)
 
 /***************************PROJECT DISPLAY******************************/
 
@@ -12,7 +12,9 @@ const generateButton = ({ id, text }) => `<input type="button" value="${text}" i
 // receive button object and add event listener if there is an id
 const buttonClick = ({ id, text, link }) => {
     if(text === "GitHub") {
-        link = "https://github.com/saagarshah99/" + link;
+        if(link !== "https://github.com/nology-tech/_charlie") {
+            link = "https://github.com/saagarshah99/" + link;
+        }
     }
     else if(id !== "btnJugglingWeb") {
         link = "https://saagarshah99.github.io/" + link;
