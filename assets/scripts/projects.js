@@ -1,9 +1,5 @@
 import { projects } from "../data/projects_data.js";
 
-/***********************************PROJECT DATA*************************************/
-
-// TODO: additional projects (take screenshots and record videos for both client project)
-
 /***************************PROJECT DISPLAY******************************/
 
 // receive button object containing specific attributes and generate button if there's an id
