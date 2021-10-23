@@ -22,6 +22,17 @@ const projects = [
             link: "https://github.com/nology-tech/_charlie"
         },
     },
+
+    {
+        video: "jca_incubation", 
+        title: "JCA | London Fashion Academy Incubation Portal",
+        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
+        description: `
+            As part of my internship, I built a web app that allows JCA Incubation members to 
+            exclusively communicate, share events and skills with each other, access newsletters 
+            and more.
+        `,
+    },
     
     {
         title: "Spaceships Game",
@@ -87,17 +98,6 @@ const projects = [
             id: "btnJugglingWeb", text: "Visit Website", 
             link: "https://saagarshah.pythonanywhere.com/Juggleology/"
         }
-    },
-    
-    {
-        video: "jca_incubation", 
-        title: "JCA | London Fashion Academy Incubation Portal",
-        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
-        description: `
-            As part of my internship, I built a web app that allows JCA Incubation members to 
-            exclusively communicate, share events and skills with each other, access newsletters 
-            and more.
-        `,
     },
 
     {
