@@ -3,10 +3,7 @@ const skillIcons = [
     ["css3-plain-wordmark", "CSS3"],
     ["bootstrap-plain-wordmark", "Bootstrap"],
     ["javascript-plain", "JavaScript"],
-    // ["nodejs-plain-wordmark", "NodeJS"],
     ["react-original-wordmark", "React"],
-    // ["jquery-plain-wordmark", "jQuery"],
-    ["jest-plain", "Jest"],
     ["java-plain-wordmark", "Java"],
     ["spring-plain-wordmark", "Spring Boot"],
     ["googlecloud-plain", "Google Cloud Platform"],
@@ -15,7 +12,8 @@ const skillIcons = [
     ["mysql-plain-wordmark", "SQL"],
     ["linux-plain", "Linux"],
     ["git-plain-wordmark", "Git"],
-    ["github-original-wordmark", "GitHub"],
+    ["docker-plain-wordmark", "Docker"],
+    ["jenkins-plain", "Jenkins"],
 ];
 
 // looping through array of objects to output skills icons, title used for tooltips

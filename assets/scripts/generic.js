@@ -1,3 +1,6 @@
+const jobTitle = "Junior DevOps Engineer";
+const portfolioTitle = "Development Portfolio";
+
 //output current year in footer
 document.getElementById("output-year").innerHTML = new Date().getFullYear();
         
@@ -5,11 +8,11 @@ document.getElementById("output-year").innerHTML = new Date().getFullYear();
 const goToPageTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    typeWriter("#software-developer", "Software Developer");
+    typeWriter("#job-title", jobTitle);
 }
 const goToPageBottom = () => {
     location.href = "#portfolio-section";
-    typeWriter("#development-portfolio", "Development Portfolio");
+    typeWriter("#development-portfolio", portfolioTitle);
 }
 
 //show top scroll button when user scrolls down at least 20px from top of document
@@ -46,7 +49,7 @@ const typeWriter = (selector, txt, currentChar) => {
 
 //created array to invoke typewriter for multiple headings upon page load
 const linkHeadingArr = [
-    ["#software-developer", "Software Developer"], 
-    ["#development-portfolio", "Development Portfolio"]
+    ["#job-title", jobTitle], 
+    ["#development-portfolio", portfolioTitle]
 ];
 linkHeadingArr.forEach(link => typeWriter(link[0], link[1]));
