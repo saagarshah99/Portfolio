@@ -1,4 +1,4 @@
-const jobTitle = "Junior DevOps Engineer";
+const jobTitle = "DevOps Engineer";
 const portfolioTitle = "Development Portfolio";
 
 //output current year in footer
