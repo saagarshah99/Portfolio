@@ -19,7 +19,7 @@ const projects = [
         github: {
             id: "btnClientProjectGit", 
             text: "GitHub", 
-            link: "https://github.com/nology-tech/_charlie"
+            link: "_charlie",
         },
     },
 
