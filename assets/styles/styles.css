@@ -135,9 +135,6 @@ footer #about-image-links img {
 footer #about-image-links img:hover {
   filter: opacity(0.5);
 }
-footer #about-image-links #cv-link:hover {
-  position: relative;
-}
 
 .blink-text {
   animation: blink-text 1s step-start infinite;
