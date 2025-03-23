@@ -7,11 +7,9 @@ const generateButton = ({ id, text }) => `<input type="button" value="${text}" t
 
 // receive button object and add event listener if there is an id
 const buttonClick = ({ id, text, link }) => {
-    if(text === "GitHub") {
-        if(link !== "https://github.com/nology-tech/_charlie") {
-            link = "https://github.com/saagarshah99/" + link;
-        }
-    }
+    if(text === "GitHub") {link = "https://github.com/saagarshah99/" + link;}
+    
+    // separate condition for the juggling web app because that's not HOSTED on GitHub.
     else if(id !== "btnJugglingWeb") {
         link = "https://saagarshah99.github.io/" + link;
     }
@@ -21,6 +19,8 @@ const buttonClick = ({ id, text, link }) => {
 
 // looping through projects to output them to slideshow container
 projects.forEach(({ image, video, title, skills, description, github, site }) => {
+    const skillsList = skills.join(", ").replace(/, ((?:.(?!, ))+)$/, ' and $1');
+
     document.querySelector(".slideshow-container").innerHTML += `
         <div class="project-slides fade" title="${title}">
             ${
@@ -39,10 +39,7 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
                 </div>
                 <p class="project-slides__description">${description}</p>
                 
-                <br /><p>
-                    <b>Technologies Used: </b>
-                    ${skills.join(", ").replace(/, ((?:.(?!, ))+)$/, ' and $1')}
-                </p>
+                <br /><p title="${skillsList}"><b>Technologies Used: </b> ${skillsList}</p>
 
                 <p class="project-slides__links">
                     ${github ? generateButton(github) : ""}
