@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
+/********************************ABOUT ME SECTION STYLES********************************/
+/* profile picture in the about section */
+#profile-picture {
+  width: 30vw;
+  height: auto;
+}
+#profile-picture:hover {
+  cursor: pointer;
+}
+
+#about-me-description li {
+  padding: 5px;
+}
+
 /********************************SKILLS GRID STYLES********************************/
 /* arranging images in rows/columns */
 #skills {
@@ -46,13 +60,4 @@
 }
 .flex-body .flex-column section h3 {
   margin-bottom: 10px;
-}
-
-/* profile picture in the about section */
-#profile-picture {
-  width: 30vw;
-  height: auto;
-}
-#profile-picture:hover {
-  cursor: pointer;
 }

@@ -1,5 +1,22 @@
 @import "variables";
 
+/********************************ABOUT ME SECTION STYLES********************************/
+
+/* profile picture in the about section */
+#profile-picture {
+    width: 30vw; 
+    height: auto;
+    
+    &:hover {cursor: pointer;}
+}
+
+#about-me-description {
+    li {
+        padding: 5px;
+    }
+}
+
+
 /********************************SKILLS GRID STYLES********************************/
 
 
@@ -51,12 +68,4 @@
             h3 {margin-bottom: 10px;}
         }
     }
-}
-
-/* profile picture in the about section */
-#profile-picture {
-    width: 30vw; 
-    height: auto;
-    
-    &:hover {cursor: pointer;}
 }
