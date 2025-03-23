@@ -11,8 +11,10 @@
 }
 
 #about-me-description {
-    li {
-        padding: 5px;
+    li {padding: 5px;}
+    b {
+        color: $tertiary-blue;
+        cursor: pointer;
     }
 }
 

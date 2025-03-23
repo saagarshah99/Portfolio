@@ -13,6 +13,10 @@
 #about-me-description li {
   padding: 5px;
 }
+#about-me-description b {
+  color: #3943B7;
+  cursor: pointer;
+}
 
 /********************************SKILLS GRID STYLES********************************/
 /* arranging images in rows/columns */
