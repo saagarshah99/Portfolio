@@ -3,7 +3,7 @@ import { projects } from "../data/projects_data.js";
 /***************************PROJECT DISPLAY******************************/
 
 // receive button object containing specific attributes and generate button if there's an id
-const generateButton = ({ id, text }) => `<input type="button" value="${text}" id="${id}" />`;
+const generateButton = ({ id, text }) => `<input type="button" value="${text}" title="${text}" id="${id}" />`;
 
 // receive button object and add event listener if there is an id
 const buttonClick = ({ id, text, link }) => {
@@ -22,7 +22,7 @@ const buttonClick = ({ id, text, link }) => {
 // looping through projects to output them to slideshow container
 projects.forEach(({ image, video, title, skills, description, github, site }) => {
     document.querySelector(".slideshow-container").innerHTML += `
-        <div class="project-slides fade">
+        <div class="project-slides fade" title="${title}">
             ${
                 video ? `
                     <video controls>
@@ -33,9 +33,9 @@ projects.forEach(({ image, video, title, skills, description, github, site }) =>
             }
             <div class="text">
                 <div class="flexbox project-slides__caption-bar">
-                    <a class="prev fas fa-chevron-circle-left"></a>
+                    <a class="prev fas fa-chevron-circle-left" title="Previous Project"></a>
                     ${title}
-                    <a class="next fas fa-chevron-circle-right"></a>
+                    <a class="next fas fa-chevron-circle-right" title="Next Project"></a>
                 </div>
                 <p class="project-slides__description">${description}</p>
                 
