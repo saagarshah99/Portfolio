@@ -16,10 +16,6 @@ html {
 main {
   margin: 7% 0 0 2%;
 }
-main b {
-  color: #3943B7;
-  cursor: pointer;
-}
 main h1, main h3 {
   color: #150578;
 }

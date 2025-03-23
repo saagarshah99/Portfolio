@@ -15,11 +15,6 @@ html {scroll-behavior: smooth;}
 main {  
   margin: 7% 0 0 2%;
 
-  b {
-    color: $tertiary-blue;
-    cursor: pointer;
-  }
-
   h1, h3 {color: $primary-blue;}
 }
 main h1, h3 { text-align: center;}

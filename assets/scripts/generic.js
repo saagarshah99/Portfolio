@@ -19,8 +19,7 @@ const goToPageBottom = () => {
 const scrollFunction = () => {
     const btnScrollToTop = document.getElementById("btnScrollToTop");
     
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
-    {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         btnScrollToTop.style.display = "block";
     } 
     else {btnScrollToTop.style.display = "none";}
