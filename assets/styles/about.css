@@ -5,7 +5,7 @@
 #skills {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* new row if more than 3 images */
+  /* new row if more than 5 images */
   margin-top: 10px;
   grid-gap: 50px;
   font-size: 5vw;
@@ -13,11 +13,11 @@
   justify-items: center;
   /* styles for each image in skill grid */
 }
-#skills i {
+#skills i, #skills svg {
   height: auto;
   line-height: 60%;
 }
-#skills i:hover {
+#skills i:hover, #skills svg:hover {
   cursor: pointer;
   color: #00d4ff;
 }

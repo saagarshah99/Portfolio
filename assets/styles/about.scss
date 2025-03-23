@@ -6,7 +6,7 @@
 /* arranging images in rows/columns */
 #skills {
     display: grid; 
-    grid-template-columns: repeat(5, 1fr); /* new row if more than 3 images */
+    grid-template-columns: repeat(5, 1fr); /* new row if more than 5 images */
     margin-top: 10px;
     grid-gap: 50px;  
     font-size: 5vw;
@@ -14,7 +14,7 @@
     justify-items: center;
 
     /* styles for each image in skill grid */
-    i {
+    i, svg {
         height: auto; 
         line-height: 60%;
 
