@@ -32,14 +32,14 @@
     align-items: center;
     justify-items: center;
 
-    /* styles for each image in skill grid */
+    /* styles for each image/icon in skill grid */
     i, svg {
         height: auto;
         line-height: 60%;
 
         &:hover {
             cursor: pointer;
-            color: $secondary-blue;
+            color: $secondary-blue; // only works for i, not svg
         }
     }
 }

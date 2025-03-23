@@ -29,7 +29,7 @@
   font-size: 5vw;
   align-items: center;
   justify-items: center;
-  /* styles for each image in skill grid */
+  /* styles for each image/icon in skill grid */
 }
 #skills i, #skills svg {
   height: auto;
