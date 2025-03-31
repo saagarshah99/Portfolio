@@ -5,7 +5,7 @@ const projects = [
         skills: ["Linux", "SSH", "UFW", "Bash", "Jenkins", "Django"],
         video: "linux_server_sandbox",
         description: `
-            This project involved using an old laptop to build a Linux server (running Linux Mint) from scratch. I setup ssh and configure various firewall settings to ensure it can be accessed by other machines on the local network. I installed Jenkins on it which I've used to run basic bash scripts to deploy/self-host a Django webapp (one of my previous projects) locally: <a href="https://github.com/saagarshah99/Juggleology/">Juggling Web App</a>. Some future tasks I'd like to work on for this server include: enabling HTTPS for Jenkins using Apache, replacing bash scripts with Ansible and Groovy, building a Docker image from an existing project and configuring port forwarding on router to access the server outside of my local network.
+            This project involved using an old laptop to build a Linux server (running Linux Mint) from scratch. I setup ssh and configured various firewall settings to ensure it can be accessed by other machines on the local network. I installed Jenkins on it which I've used to run basic bash scripts to deploy/self-host a Django web app (one of my previous projects) locally: <a href="https://github.com/saagarshah99/Juggleology/">Juggling Web App</a>. Some future tasks I'd like to work on for this server include: enabling HTTPS for Jenkins using Apache, replacing bash scripts with Ansible and Groovy, building a Docker image from an existing project and configuring port forwarding on my router to access the server outside of my local network.
         `,
         github: {
             id: "btnLinuxServerSandbox", 
