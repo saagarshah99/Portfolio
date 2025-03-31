@@ -36,8 +36,7 @@ const projects = [
             with each other to perform various data manipulation tasks (backend API is connected to 
             a MYSQL database).
 
-            There is a strong likelihood that _nology will continue to develop this platform to eventually
-            use it for real. 
+            Upon successful completion of this project, _nology expressed interest in continuing to develop this platform to eventually use it for real. 
         `,
         github: {
             id: "btnClientProjectGit", 
@@ -51,10 +50,7 @@ const projects = [
         skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django", "PythonAnywhere"],
         image: "juggling_web_app",
         description: `
-        For my undergraduate final year project, I built a social network and portal for 
-        jugglers that integrates many tools for managing one’s juggling experience. Users 
-        can organise juggling tricks and set goals, visually learn tricks using a graphical 
-        simulation, communicate with others and host events.
+        Fueled by a personal interest of mine, for my undergraduate final year project at university, I built a social network and portal that integrates multiple tools for jugglers. Users can organise juggling tricks and set goals, visually learn tricks using a graphical simulation, communicate with others and host events.
         `,
         github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
         site: 
@@ -78,9 +74,7 @@ const projects = [
         skills: ["HTML", "CSS", "SCSS", "JavaScript"],
         image: "spaceships",
         description: `
-            Here is a basic spaceship game where the objective is to move the spaceship around 
-            to keep destroying all planets and stars on the screen. It accepts 
-            both keyboard input and mouse clicking/tapping. 
+            Here is a basic spaceship game where the objective is to move the spaceship around to keep destroying all planets and stars on the screen. It accepts both keyboard input and mouse clicking/tapping. 
         `,
         github: {id: "btnSpaceshipsGit", text: "GitHub", link: "Spaceships"},
         site: {id: "btnSpaceshipsWeb", text: "Play Game", link: "Spaceships"}
@@ -140,8 +134,7 @@ const projects = [
             This is a web app that allows you to track the number of project tickets different 
             employees within a company have completed. You can also increase or decrease the 
             number for each employee if the situation changes. This was a paired programming 
-            task completed alongside one of my colleagues on the _nology bootcamp. It was built 
-            using .
+            task completed alongside one of my colleagues on the _nology bootcamp.
         `,
         github: {id: "btnTicketGit", text: "GitHub", link: "ticket-tracker"},
         site: {id: "btnTicketWeb", text: "View Web App", link: "ticket-tracker"}
@@ -152,7 +145,7 @@ const projects = [
         title: "Pizza Takeaway Management System",
         skills: ["Java"],
         description: `
-            I produced a takeaway management system where staff can take
+            I produced a pizza takeaway management system where staff can take
             relevant contact details and then the enter the order. It displays an order
             summary with the option to print the receipt.
         `,
@@ -165,7 +158,7 @@ const projects = [
         skills: ["C#"],
         description: `
             A basic program that takes a given directory and renames a group 
-            of files that are similar to one another in a convenient way. The user can 
+            of files contained within it that are similar to one another in a convenient way. The user can 
             even change the file extension if they wish.
         `,
         github: {id: "btnRenameGit", text: "GitHub", link: "Rename-Files"},
