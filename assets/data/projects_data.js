@@ -1,17 +1,26 @@
 // object storing specific project details, all videos/images assumed to be .mp4's/.png's
 const projects = [
     {
-        title: "GCP Associate Cloud Engineer Certification",
-        skills: ["VPC", "GKE", "Cloud Storage", "Compute Engine", "Cloud SQL", "Terraform", "IAM"],
-        image: "gcp_associate_cloud_engineer", // TODO: figure out why this image is a different size to all others in the slideshow
+        title: "Linux Server (Sandbox Environment)",
+        skills: ["Linux", "SSH", "UFW", "Bash", "Jenkins", "Django"],
+        video: "", // TODO: figure out why this video is a different size to all others in the slideshow
         description: `
-            I completed the GCP Associate Cloud Engineer certification where I achieved multiple skill badges which are visible on my <b title="Cloud Skills Boost Public Profile"><a href="https://www.cloudskillsboost.google/public_profiles/2395d103-96b7-4b5e-b71c-e219deef581e" target="_blank">Cloud Skills Boost Public Profile</a></b>.
+            This project involved using an old laptop to build a Linux server (running Linux Mint) from scratch. I setup ssh and configure various firewall settings to ensure it can be accessed by other machines on the local network. I installed Jenkins on it which I've used to run basic bash scripts to deploy/self-host a Django webapp (one of my previous projects) locally: <a href="https://github.com/saagarshah99/Juggleology/">Juggling Web App</a>.
         `,
         github: {
             id: "btnLinuxServerSandbox", 
             text: "GitHub", 
             link: "Linux-Server-Sandbox",
         },
+    },
+
+    {
+        title: "GCP Associate Cloud Engineer Certification",
+        skills: ["VPC", "GKE", "Cloud Storage", "Compute Engine", "Cloud SQL", "Terraform", "IAM"],
+        image: "gcp_associate_cloud_engineer", // TODO: figure out why this image is a different size to all others in the slideshow
+        description: `
+            I completed the GCP Associate Cloud Engineer certification where I achieved multiple skill badges which are visible on my <b title="Cloud Skills Boost Public Profile"><a href="https://www.cloudskillsboost.google/public_profiles/2395d103-96b7-4b5e-b71c-e219deef581e" target="_blank">Cloud Skills Boost Public Profile</a></b>.
+        `,
     },
 
     {
@@ -35,6 +44,24 @@ const projects = [
             text: "GitHub", 
             link: "_charlie",
         },
+    },
+
+    {
+        title: "Juggling Web App",
+        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django", "PythonAnywhere"],
+        image: "juggling_web_app",
+        description: `
+        For my undergraduate final year project, I built a social network and portal for 
+        jugglers that integrates many tools for managing one’s juggling experience. Users 
+        can organise juggling tricks and set goals, visually learn tricks using a graphical 
+        simulation, communicate with others and host events.
+        `,
+        github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
+        site: 
+        {
+            id: "btnJugglingWeb", text: "Visit Website", 
+            link: "https://saagarshah.pythonanywhere.com/Juggleology/"
+        }
     },
 
     {
@@ -94,24 +121,6 @@ const projects = [
         description: `Here is a basic calculator that accepts both mouse and keyboard input.`,
         github: {id: "btnCalculatorGit", text: "GitHub", link: "JS-Calculator"},
         site: {id: "btnCalculatorWeb", text: "View Calculator", link: "JS-Calculator"}
-    },
-    
-    {
-        title: "Juggling Web App",
-        skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
-        image: "juggling_web_app",
-        description: `
-        For my undergraduate final year project, I built a social network and portal for 
-        jugglers that integrates many tools for managing one’s juggling experience. Users 
-        can organise juggling tricks and set goals, visually learn tricks using a graphical 
-        simulation, communicate with others and host events.
-        `,
-        github: {id: "btnJugglingGit", text: "GitHub", link: "Juggleology"},
-        site: 
-        {
-            id: "btnJugglingWeb", text: "Visit Website", 
-            link: "https://saagarshah.pythonanywhere.com/Juggleology/"
-        }
     },
 
     {
