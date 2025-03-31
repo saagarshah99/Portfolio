@@ -1,6 +1,20 @@
 // object storing specific project details, all videos/images assumed to be .mp4's/.png's
 const projects = [
     {
+        title: "GCP Associate Cloud Engineer Certification",
+        skills: ["VPC", "GKE", "Cloud Storage", "Compute Engine", "Cloud SQL", "Terraform", "IAM"],
+        image: "gcp_associate_cloud_engineer", // TODO: figure out why this image is a different size to all others in the slideshow
+        description: `
+            I completed the GCP Associate Cloud Engineer certification where I achieved multiple skill badges which are visible on my <b title="Cloud Skills Boost Public Profile"><a href="https://www.cloudskillsboost.google/public_profiles/2395d103-96b7-4b5e-b71c-e219deef581e" target="_blank">Cloud Skills Boost Public Profile</a></b>.
+        `,
+        github: {
+            id: "btnLinuxServerSandbox", 
+            text: "GitHub", 
+            link: "Linux-Server-Sandbox",
+        },
+    },
+
+    {
         title: "_nology Client Project",
         skills: ["HTML", "Bootstrap", "SCSS", "JavaScript", "React", "Spring Boot", "MYSQL"],
         video: "client_project",
