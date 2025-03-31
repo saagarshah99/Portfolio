@@ -5,7 +5,7 @@ const projects = [
         skills: ["Linux", "SSH", "UFW", "Bash", "Jenkins", "Django"],
         video: "linux_server_sandbox",
         description: `
-            This project involved using an old laptop to build a Linux server (running Linux Mint) from scratch. I setup ssh and configured various firewall settings to ensure it can be accessed by other machines on the local network. I installed Jenkins on it which I've used to run basic bash scripts to deploy/self-host a Django web app (one of my previous projects) locally: <a href="https://github.com/saagarshah99/Juggleology/">Juggling Web App</a>. Some future tasks I'd like to work on for this server include: enabling HTTPS for Jenkins using Apache, replacing bash scripts with Ansible and Groovy, building a Docker image from an existing project and configuring port forwarding on my router to access the server outside of my local network.
+            This project involved the setup of a local Linux server (running Linux Mint) on a repurposed laptop, focusing on network accessibility and automated deployment. SSH and firewall configurations were implemented for secure local network access, and Jenkins was installed to automate such tasks as deploying a Django web application using basic bash scripts. Future enhancements include enabling HTTPS via Apache, transitioning from bash to Ansible and Groovy for deployment automation, containerising applications with Docker and configuring router port forwarding to enable external access.
         `,
         github: {
             id: "btnLinuxServerSandbox", 
@@ -19,7 +19,7 @@ const projects = [
         skills: ["VPC", "GKE", "Cloud Storage", "Compute Engine", "Cloud SQL", "Terraform", "IAM"],
         image: "gcp_associate_cloud_engineer",
         description: `
-            I completed the GCP Associate Cloud Engineer certification where I achieved multiple skill badges which are visible on my <b title="Cloud Skills Boost Public Profile"><a href="https://www.cloudskillsboost.google/public_profiles/2395d103-96b7-4b5e-b71c-e219deef581e" target="_blank">Cloud Skills Boost Public Profile</a></b>.
+            I have successfully earned the Google Cloud Associate Cloud Engineer certification, demonstrating proficiency in cloud infrastructure management on Google Cloud Platform. My <b title="Cloud Skills Boost Public Profile"><a href="https://www.cloudskillsboost.google/public_profiles/2395d103-96b7-4b5e-b71c-e219deef581e" target="_blank">Cloud Skills Boost Public Profile</a></b> showcases the specific skill badges achieved.
         `,
     },
 
