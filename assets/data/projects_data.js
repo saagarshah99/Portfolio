@@ -69,9 +69,7 @@ const projects = [
         title: "JCA | London Fashion Academy Incubation Portal",
         skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django"],
         description: `
-            As part of my internship, I built a web app that allows JCA Incubation members to 
-            exclusively communicate, share events and skills with each other, access newsletters 
-            and more.
+            As part of my internship with JCA | London Fashion Academy, I built a platform using Django that enabled JCA Incubation members to communicate exclusively, share events and skills, access newsletters, and foster a collaborative community.
         `,
     },
     
